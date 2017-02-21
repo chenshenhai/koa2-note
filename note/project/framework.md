@@ -11,6 +11,10 @@
     - 前端渲染：用webpack2环境编译react.js动态渲染页面，使用ani-design框架
 
 ## 文件目录设计
+demo源码
+
+[https://github.com/ChenShenhai/koa2-note/blob/master/demo/project/](https://github.com/ChenShenhai/koa2-note/blob/master/demo/project/config.js)
+
 ```sh
 ├── init # 数据库初始化目录
 │   ├── index.js # 初始化入口文件

@@ -5,6 +5,10 @@
 
 ## 快速开始
 
+demo源码
+
+[https://github.com/ChenShenhai/koa2-note/blob/master/demo/mysql/](https://github.com/ChenShenhai/koa2-note/blob/master/demo/mysql/)
+
 ### 源码目录
 
 ``` sh

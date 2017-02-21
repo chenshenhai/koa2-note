@@ -9,6 +9,10 @@
 
 ### 解析出POST请求上下文中的表单数据
 
+demo源码
+
+[https://github.com/ChenShenhai/koa2-note/blob/master/demo/request/post.js](https://github.com/ChenShenhai/koa2-note/blob/master/demo/request/post.js)
+
 ```js
 // 解析上下文里node原生请求的POST参数
 function parsePostData( ctx ) {

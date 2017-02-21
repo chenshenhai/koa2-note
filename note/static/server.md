@@ -8,6 +8,10 @@
 
 ## 原生koa2 静态资源服务器例子
 
+demo源码 
+
+[https://github.com/ChenShenhai/koa2-note/blob/master/demo/static-server/](https://github.com/ChenShenhai/koa2-note/blob/master/demo/static-server/)
+
 ### 代码目录
 ```sh
 ├── static # 静态资源目录

@@ -29,6 +29,7 @@
     * [async/await封装使用mysql](note/mysql/async.md)
     * [项目建表初始化](note/mysql/init.md)
 * [项目框架搭建]()
+    * [快速启动](note/project/start.md)
     * [框架设计](note/project/framework.md)
     * [分层操作](note/project/layer.md)
     * [数据库设计](note/project/sql.md)

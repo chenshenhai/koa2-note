@@ -9,9 +9,13 @@ npm install --save koa-bodyparser@3
 ```
 
 ## 举个例子
-源码在 /demos/request/post-middleware.js中
 
 ### 例子代码
+
+demo源码
+
+ [https://github.com/ChenShenhai/koa2-note/blob/master/demo/request/post-middleware.js](https://github.com/ChenShenhai/koa2-note/blob/master/demo/request/post-middleware.js)
+
 ```js
 const Koa = require('koa')
 const app = new Koa()

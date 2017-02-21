@@ -15,6 +15,11 @@ koa2原生功能只提供了cookie的操作，但是没有提供session操作。
 - 根据cookie的sessionId去获取对于的session信息
 
 ## 快速使用
+
+demo源码 
+
+[https://github.com/ChenShenhai/koa2-note/blob/master/demo/session/index.js](https://github.com/ChenShenhai/koa2-note/blob/master/demo/session/index.js)
+
 ### 例子代码
 ```js
 const Koa = require('koa')

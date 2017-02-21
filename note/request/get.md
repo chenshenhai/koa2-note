@@ -11,7 +11,9 @@
 
 ## 举个例子
 
-源码在 /demos/request/get.js中
+demo源码
+
+[https://github.com/ChenShenhai/koa2-note/blob/master/demo/request/get.js](https://github.com/ChenShenhai/koa2-note/blob/master/demo/request/get.js)
 
 ### 例子代码
 ```js

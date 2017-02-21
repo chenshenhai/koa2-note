@@ -14,6 +14,10 @@ npm install --save ejs
 
 ### 使用模板引擎
 
+demo源码
+
+[https://github.com/ChenShenhai/koa2-note/blob/master/demo/ejs/](https://github.com/ChenShenhai/koa2-note/blob/master/demo/ejs/)
+
 #### 文件目录
 ```
 ├── package.json

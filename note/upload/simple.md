@@ -12,6 +12,10 @@ npm install --save busboy
 
 ## 例子源码
 
+demo源码
+
+[https://github.com/ChenShenhai/koa2-note/blob/master/demo/upload/](https://github.com/ChenShenhai/koa2-note/blob/master/demo/upload/)
+
 ### 封装上传文件到写入服务的方法
 
 ```js
