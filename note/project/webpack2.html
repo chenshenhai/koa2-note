@@ -1,0 +1,948 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>webpack2环境搭建 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="react.html" />
+    
+    
+    <link rel="prev" href="route.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    koa2开始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../start/quick.html">
+            
+                <a href="../start/quick.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../start/async.html">
+            
+                <a href="../start/async.html">
+            
+                    
+                    async/await使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../start/info.html">
+            
+                <a href="../start/info.html">
+            
+                    
+                    koa2简析结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../start/middleware.html">
+            
+                <a href="../start/middleware.html">
+            
+                    
+                    koa中间件开发与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    路由
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../route/simple.html">
+            
+                <a href="../route/simple.html">
+            
+                    
+                    原生koa2实现路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../route/koa-router.html">
+            
+                <a href="../route/koa-router.html">
+            
+                    
+                    koa-router中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    请求数据获取
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../request/get.html">
+            
+                <a href="../request/get.html">
+            
+                    
+                    GET请求数据获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../request/post.html">
+            
+                <a href="../request/post.html">
+            
+                    
+                    POST请求数据获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../request/post-use-middleware.html">
+            
+                <a href="../request/post-use-middleware.html">
+            
+                    
+                    koa-bodyparser中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    静态资源加载
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../static/server.html">
+            
+                <a href="../static/server.html">
+            
+                    
+                    原生koa2实现静态资源服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../static/middleware.html">
+            
+                <a href="../static/middleware.html">
+            
+                    
+                    koa-static中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    cookie/session
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../cookie/info.html">
+            
+                <a href="../cookie/info.html">
+            
+                    
+                    koa2使用cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../session/info.html">
+            
+                <a href="../session/info.html">
+            
+                    
+                    koa2实现session
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    模板引擎
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../template/add.html">
+            
+                <a href="../template/add.html">
+            
+                    
+                    koa2加载模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../template/ejs.html">
+            
+                <a href="../template/ejs.html">
+            
+                    
+                    ejs模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    文件上传
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../upload/busboy.html">
+            
+                <a href="../upload/busboy.html">
+            
+                    
+                    busboy模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../upload/simple.html">
+            
+                <a href="../upload/simple.html">
+            
+                    
+                    上传文件简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    数据库mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../mysql/info.html">
+            
+                <a href="../mysql/info.html">
+            
+                    
+                    mysql模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../mysql/async.html">
+            
+                <a href="../mysql/async.html">
+            
+                    
+                    async/await封装使用mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../mysql/init.html">
+            
+                <a href="../mysql/init.html">
+            
+                    
+                    项目建表初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    项目框架搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="start.html">
+            
+                <a href="start.html">
+            
+                    
+                    快速启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="framework.html">
+            
+                <a href="framework.html">
+            
+                    
+                    框架设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="layer.html">
+            
+                <a href="layer.html">
+            
+                    
+                    分层操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="sql.html">
+            
+                <a href="sql.html">
+            
+                    
+                    数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="route.html">
+            
+                <a href="route.html">
+            
+                    
+                    路由设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.6" data-path="webpack2.html">
+            
+                <a href="webpack2.html">
+            
+                    
+                    webpack2环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="react.html">
+            
+                <a href="react.html">
+            
+                    
+                    使用react.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="sign.html">
+            
+                <a href="sign.html">
+            
+                    
+                    登录注册功能实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="session.html">
+            
+                <a href="session.html">
+            
+                    
+                    session登录态判断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    debug
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    开发debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >webpack2环境搭建</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="webpack2-&#x73AF;&#x5883;&#x642D;&#x5EFA;">webpack2 &#x73AF;&#x5883;&#x642D;&#x5EFA;</h1>
+<h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p>&#x7531;&#x4E8E;demos/project &#x524D;&#x7AEF;&#x6E32;&#x67D3;&#x662F;&#x901A;&#x8FC7;react.js&#x6E32;&#x67D3;&#x7684;&#xFF0C;&#x8FD9;&#x5C31;&#x9700;&#x8981;webpack2 &#x5BF9;react.js&#x53CA;&#x5176;&#x76F8;&#x5173;JSX&#xFF0C;ES6/7&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x548C;&#x6DF7;&#x6DC6;&#x538B;&#x7F29;&#x3002;</p>
+<h2 id="webpack2">webpack2</h2>
+<h3 id="&#x5B89;&#x88C5;&#x548C;&#x6587;&#x6863;">&#x5B89;&#x88C5;&#x548C;&#x6587;&#x6863;</h3>
+<p>&#x53EF;&#x8BBF;&#x95EE;&#x7F51;<a href="https://webpack.js.org/" target="_blank">https://webpack.js.org/</a></p>
+<h2 id="&#x914D;&#x7F6E;webpack2&#x7F16;&#x8BD1;reactjs--less--sass--antd-&#x73AF;&#x5883;">&#x914D;&#x7F6E;webpack2&#x7F16;&#x8BD1;react.js + less + sass + antd &#x73AF;&#x5883;</h2>
+<h3 id="&#x6587;&#x4EF6;&#x76EE;&#x5F55;">&#x6587;&#x4EF6;&#x76EE;&#x5F55;</h3>
+<pre><code class="lang-sh">&#x2514;&#x2500;&#x2500; static <span class="hljs-comment"># &#x9879;&#x76EE;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</span>
+    &#x251C;&#x2500;&#x2500; build
+    &#x2502;   &#x251C;&#x2500;&#x2500; webpack.base.config.js <span class="hljs-comment"># &#x57FA;&#x7840;&#x7F16;&#x8BD1;&#x811A;&#x672C;</span>
+    &#x2502;   &#x251C;&#x2500;&#x2500; webpack.dev.config.js <span class="hljs-comment"># &#x5F00;&#x53D1;&#x73AF;&#x5883;&#x7F16;&#x8BD1;&#x811A;&#x672C;</span>
+    &#x2502;   &#x2514;&#x2500;&#x2500; webpack.prod.config.js <span class="hljs-comment"># &#x751F;&#x4EA7;&#x73AF;&#x5883;&#x7F16;&#x8BD1;&#x811A;&#x672C;</span>
+    &#x251C;&#x2500;&#x2500; output <span class="hljs-comment"># &#x7F16;&#x8BD1;&#x540E;&#x8F93;&#x51FA;&#x76EE;&#x5F55;</span>
+    &#x2502;   &#x251C;&#x2500;&#x2500; asset
+    &#x2502;   &#x251C;&#x2500;&#x2500; dist
+    &#x2502;   &#x2514;&#x2500;&#x2500; upload
+    &#x2514;&#x2500;&#x2500; src <span class="hljs-comment"># &#x5F85;&#x7F16;&#x8BD1;&#x7684;ES6/7&#x3001;JSX&#x6E90;&#x4EE3;&#x7801;</span>
+        &#x251C;&#x2500;&#x2500; api
+        &#x251C;&#x2500;&#x2500; apps
+        &#x251C;&#x2500;&#x2500; components
+        &#x251C;&#x2500;&#x2500; pages
+        &#x251C;&#x2500;&#x2500; texts
+        &#x2514;&#x2500;&#x2500; utils
+</code></pre>
+<h3 id="webpack2-&#x7F16;&#x8BD1;&#x57FA;&#x7840;&#x914D;&#x7F6E;">webpack2 &#x7F16;&#x8BD1;&#x57FA;&#x7840;&#x914D;&#x7F6E;</h3>
+<h4 id="webpackbaseconfigjs">webpack.base.config.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
+<span class="hljs-keyword">const</span> ExtractTextPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;extract-text-webpack-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> sourcePath = path.join(__dirname, <span class="hljs-string">&apos;./static/src&apos;</span>);
+<span class="hljs-keyword">const</span> outputPath = path.join(__dirname, <span class="hljs-string">&apos;./../output/dist/&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-comment">// &#x5165;&#x53E3;&#x6587;&#x4EF6;</span>
+  entry: {
+    <span class="hljs-string">&apos;admin&apos;</span> : <span class="hljs-string">&apos;./static/src/pages/admin.js&apos;</span>,
+    <span class="hljs-string">&apos;work&apos;</span> : <span class="hljs-string">&apos;./static/src/pages/work.js&apos;</span>,
+    <span class="hljs-string">&apos;index&apos;</span> : <span class="hljs-string">&apos;./static/src/pages/index.js&apos;</span>,
+    <span class="hljs-string">&apos;error&apos;</span> : <span class="hljs-string">&apos;./static/src/pages/error.js&apos;</span>,
+    vendor: [<span class="hljs-string">&apos;react&apos;</span>, <span class="hljs-string">&apos;react-dom&apos;</span>, <span class="hljs-string">&apos;whatwg-fetch&apos;</span>],
+  },
+  <span class="hljs-comment">// &#x51FA;&#x53E3;&#x6587;&#x4EF6;</span>
+  output: {
+    path: outputPath,
+    publicPath: <span class="hljs-string">&apos;/static/output/dist/&apos;</span>,
+    filename: <span class="hljs-string">&apos;js/[name].js&apos;</span>,
+  },
+  <span class="hljs-built_in">module</span>: {
+    <span class="hljs-comment">// &#x914D;&#x7F6E;&#x7F16;&#x8BD1;&#x6253;&#x5305;&#x89C4;&#x5219;</span>
+    rules: [
+      {
+        test: <span class="hljs-regexp">/\.(js|jsx)$/</span>,
+        exclude: <span class="hljs-regexp">/node_modules/</span>,
+        use: [
+          {
+            loader: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+            query: {
+              <span class="hljs-comment">// presets: [&apos;es2015&apos;, &apos;react&apos;],</span>
+              cacheDirectory: <span class="hljs-literal">true</span>
+            }
+          }
+        ]
+      },
+      {
+        test: <span class="hljs-regexp">/\.css$/</span>,
+        use: ExtractTextPlugin.extract({
+          fallback: <span class="hljs-string">&quot;style-loader&quot;</span>,
+          use: [<span class="hljs-string">&apos;css-loader&apos;</span>]
+        }),
+      },
+      {
+        test: <span class="hljs-regexp">/\.scss$/</span>,
+        use: ExtractTextPlugin.extract({
+          fallback: <span class="hljs-string">&quot;style-loader&quot;</span>,
+          use: [<span class="hljs-string">&apos;css-loader&apos;</span>, <span class="hljs-string">&apos;sass-loader&apos;</span>]
+        })
+      },
+      {
+        test: <span class="hljs-regexp">/\.less$/</span>,
+        use: ExtractTextPlugin.extract({
+          fallback: <span class="hljs-string">&quot;style-loader&quot;</span>,
+          use: [<span class="hljs-string">&apos;css-loader&apos;</span>, <span class="hljs-string">&apos;less-loader&apos;</span>]
+        })
+      },
+    ]
+  },
+  resolve: {
+    extensions: [<span class="hljs-string">&apos;.js&apos;</span>, <span class="hljs-string">&apos;.jsx&apos;</span>],
+    modules: [
+      sourcePath,
+      <span class="hljs-string">&apos;node_modules&apos;</span>
+    ]
+  },
+  plugins: [
+    <span class="hljs-keyword">new</span> ExtractTextPlugin(<span class="hljs-string">&apos;css/[name].css&apos;</span>),
+    <span class="hljs-keyword">new</span> webpack.optimize.CommonsChunkPlugin({
+      names: [<span class="hljs-string">&apos;vendor&apos;</span>],
+      minChunks: <span class="hljs-literal">Infinity</span>,
+      filename: <span class="hljs-string">&apos;js/[name].js&apos;</span>
+    }),
+  ]
+};
+</code></pre>
+<h3 id="&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x751F;&#x4EA7;&#x73AF;&#x5883;webpack2-&#x7F16;&#x8BD1;&#x8BBE;&#x7F6E;">&#x914D;&#x7F6E;&#x5F00;&#x53D1;&amp;&#x751F;&#x4EA7;&#x73AF;&#x5883;webpack2 &#x7F16;&#x8BD1;&#x8BBE;&#x7F6E;</h3>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x7F16;&#x8BD1;&#x57FA;&#x672C;&#x914D;&#x7F6E;&#x4EE3;&#x7801;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#xFF0C;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF08;wepack.dev.config.js&#xFF09;&#x548C;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#xFF08;webpack.prod.config.js&#xFF09;&#x7684;&#x7F16;&#x8BD1;&#x914D;&#x7F6E;&#x90FD;&#x662F;&#x7EE7;&#x627F;&#x4E86;&#x57FA;&#x672C;&#x914D;&#x7F6E;&#xFF08;wepack.base.config.js&#xFF09;&#x7684;&#x4EE3;&#x7801;</p>
+<h4 id="&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x914D;&#x7F6E;-wepackdevconfigjs">&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x914D;&#x7F6E; wepack.dev.config.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> merge = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack-merge&apos;</span>)
+<span class="hljs-keyword">var</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>)
+<span class="hljs-keyword">var</span> baseWebpackConfig = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./webpack.base.config&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = merge(baseWebpackConfig, {
+
+  devtool: <span class="hljs-string">&apos;source-map&apos;</span>,
+  plugins: [
+
+    <span class="hljs-keyword">new</span> webpack.DefinePlugin({
+      <span class="hljs-string">&apos;process.env&apos;</span>: {
+        NODE_ENV: <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-string">&apos;development&apos;</span>)
+      }
+    }),
+  ]
+})
+</code></pre>
+<h4 id="&#x7F16;&#x8BD1;&#x73AF;&#x5883;&#x914D;&#x7F6E;-wepackprodconfigjs">&#x7F16;&#x8BD1;&#x73AF;&#x5883;&#x914D;&#x7F6E; wepack.prod.config.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
+<span class="hljs-keyword">var</span> merge = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack-merge&apos;</span>);
+<span class="hljs-keyword">var</span> baseWebpackConfig = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./webpack.base.config&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = merge(baseWebpackConfig, {
+  <span class="hljs-comment">// eval-source-map is faster for development</span>
+
+  plugins: [
+
+    <span class="hljs-keyword">new</span> webpack.DefinePlugin({
+      <span class="hljs-string">&apos;process.env&apos;</span>: {
+        NODE_ENV: <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-string">&apos;production&apos;</span>)
+      }
+    }),
+    <span class="hljs-keyword">new</span> webpack.optimize.UglifyJsPlugin({
+      minimize: <span class="hljs-literal">true</span>,
+      compress: {
+        warnings: <span class="hljs-literal">false</span>,
+      }
+    })
+  ]
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="route.html" class="navigation navigation-prev " aria-label="Previous page: 路由设计">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="react.html" class="navigation navigation-next " aria-label="Next page: 使用react.js">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"webpack2环境搭建","level":"1.9.6","depth":2,"next":{"title":"使用react.js","level":"1.9.7","depth":2,"path":"note/project/react.md","ref":"note/project/react.md","articles":[]},"previous":{"title":"路由设计","level":"1.9.5","depth":2,"path":"note/project/route.md","ref":"note/project/route.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/project/webpack2.md","mtime":"2017-02-19T14:54:43.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-21T13:54:58.989Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

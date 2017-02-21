@@ -1,0 +1,1034 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>原生koa2实现静态资源服务器 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="middleware.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    koa2开始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../start/quick.html">
+            
+                <a href="../start/quick.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../start/async.html">
+            
+                <a href="../start/async.html">
+            
+                    
+                    async/await使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../start/info.html">
+            
+                <a href="../start/info.html">
+            
+                    
+                    koa2简析结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../start/middleware.html">
+            
+                <a href="../start/middleware.html">
+            
+                    
+                    koa中间件开发与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    路由
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../route/simple.html">
+            
+                <a href="../route/simple.html">
+            
+                    
+                    原生koa2实现路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../route/koa-router.html">
+            
+                <a href="../route/koa-router.html">
+            
+                    
+                    koa-router中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    请求数据获取
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../request/get.html">
+            
+                <a href="../request/get.html">
+            
+                    
+                    GET请求数据获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../request/post.html">
+            
+                <a href="../request/post.html">
+            
+                    
+                    POST请求数据获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../request/post-use-middleware.html">
+            
+                <a href="../request/post-use-middleware.html">
+            
+                    
+                    koa-bodyparser中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    静态资源加载
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="server.html">
+            
+                <a href="server.html">
+            
+                    
+                    原生koa2实现静态资源服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="middleware.html">
+            
+                <a href="middleware.html">
+            
+                    
+                    koa-static中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    cookie/session
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../cookie/info.html">
+            
+                <a href="../cookie/info.html">
+            
+                    
+                    koa2使用cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../session/info.html">
+            
+                <a href="../session/info.html">
+            
+                    
+                    koa2实现session
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    模板引擎
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../template/add.html">
+            
+                <a href="../template/add.html">
+            
+                    
+                    koa2加载模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../template/ejs.html">
+            
+                <a href="../template/ejs.html">
+            
+                    
+                    ejs模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    文件上传
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../upload/busboy.html">
+            
+                <a href="../upload/busboy.html">
+            
+                    
+                    busboy模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../upload/simple.html">
+            
+                <a href="../upload/simple.html">
+            
+                    
+                    上传文件简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    数据库mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../mysql/info.html">
+            
+                <a href="../mysql/info.html">
+            
+                    
+                    mysql模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../mysql/async.html">
+            
+                <a href="../mysql/async.html">
+            
+                    
+                    async/await封装使用mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../mysql/init.html">
+            
+                <a href="../mysql/init.html">
+            
+                    
+                    项目建表初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    项目框架搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../project/start.html">
+            
+                <a href="../project/start.html">
+            
+                    
+                    快速启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../project/framework.html">
+            
+                <a href="../project/framework.html">
+            
+                    
+                    框架设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../project/layer.html">
+            
+                <a href="../project/layer.html">
+            
+                    
+                    分层操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../project/sql.html">
+            
+                <a href="../project/sql.html">
+            
+                    
+                    数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../project/route.html">
+            
+                <a href="../project/route.html">
+            
+                    
+                    路由设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../project/webpack2.html">
+            
+                <a href="../project/webpack2.html">
+            
+                    
+                    webpack2环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../project/react.html">
+            
+                <a href="../project/react.html">
+            
+                    
+                    使用react.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../project/sign.html">
+            
+                <a href="../project/sign.html">
+            
+                    
+                    登录注册功能实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../project/session.html">
+            
+                <a href="../project/session.html">
+            
+                    
+                    session登录态判断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    debug
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    开发debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >原生koa2实现静态资源服务器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x539F;&#x751F;koa2&#x5B9E;&#x73B0;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x670D;&#x52A1;&#x5668;">&#x539F;&#x751F;koa2&#x5B9E;&#x73B0;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x670D;&#x52A1;&#x5668;</h1>
+<h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p>&#x4E00;&#x4E2A;http&#x8BF7;&#x6C42;&#x8BBF;&#x95EE;web&#x670D;&#x52A1;&#x9759;&#x6001;&#x8D44;&#x6E90;&#xFF0C;&#x4E00;&#x822C;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x6709;&#x4E09;&#x79CD;&#x60C5;&#x51B5;</p>
+<ul>
+<li>&#x8BBF;&#x95EE;&#x6587;&#x672C;&#xFF0C;&#x4F8B;&#x5982;js&#xFF0C;css&#xFF0C;png&#xFF0C;jpg&#xFF0C;gif</li>
+<li>&#x8BBF;&#x95EE;&#x9759;&#x6001;&#x76EE;&#x5F55;</li>
+<li>&#x627E;&#x4E0D;&#x5230;&#x8D44;&#x6E90;&#xFF0C;&#x629B;&#x51FA;404&#x9519;&#x8BEF;</li>
+</ul>
+<h2 id="&#x539F;&#x751F;koa2-&#x9759;&#x6001;&#x8D44;&#x6E90;&#x670D;&#x52A1;&#x5668;&#x4F8B;&#x5B50;">&#x539F;&#x751F;koa2 &#x9759;&#x6001;&#x8D44;&#x6E90;&#x670D;&#x52A1;&#x5668;&#x4F8B;&#x5B50;</h2>
+<p>demo&#x6E90;&#x7801; </p>
+<p><a href="https://github.com/ChenShenhai/koa2-note/blob/master/demo/static-server/" target="_blank">https://github.com/ChenShenhai/koa2-note/blob/master/demo/static-server/</a></p>
+<h3 id="&#x4EE3;&#x7801;&#x76EE;&#x5F55;">&#x4EE3;&#x7801;&#x76EE;&#x5F55;</h3>
+<pre><code class="lang-sh">&#x251C;&#x2500;&#x2500; static <span class="hljs-comment"># &#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; css/
+&#x2502;   &#x251C;&#x2500;&#x2500; image/
+&#x2502;   &#x251C;&#x2500;&#x2500; js/
+&#x2502;   &#x2514;&#x2500;&#x2500; index.html
+&#x251C;&#x2500;&#x2500; util <span class="hljs-comment"># &#x5DE5;&#x5177;&#x4EE3;&#x7801;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; content.js <span class="hljs-comment"># &#x8BFB;&#x53D6;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; dir.js <span class="hljs-comment"># &#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#x5185;&#x5BB9;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; file.js <span class="hljs-comment"># &#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; mimes.js <span class="hljs-comment"># &#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x5217;&#x8868;</span>
+&#x2502;   &#x2514;&#x2500;&#x2500; walk.js <span class="hljs-comment"># &#x904D;&#x5386;&#x76EE;&#x5F55;&#x5185;&#x5BB9;</span>
+&#x2514;&#x2500;&#x2500; index.js <span class="hljs-comment"># &#x542F;&#x52A8;&#x5165;&#x53E3;&#x6587;&#x4EF6;</span>
+</code></pre>
+<h3 id="&#x4EE3;&#x7801;&#x89E3;&#x6790;">&#x4EE3;&#x7801;&#x89E3;&#x6790;</h3>
+<h4 id="indexjs">index.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-keyword">const</span> content = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./util/content&apos;</span>)
+<span class="hljs-keyword">const</span> mimes = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./util/mimes&apos;</span>)
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Koa()
+
+<span class="hljs-comment">// &#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;&#x5BF9;&#x4E8E;&#x76F8;&#x5BF9;&#x5165;&#x53E3;&#x6587;&#x4EF6;index.js&#x7684;&#x8DEF;&#x5F84;</span>
+<span class="hljs-keyword">const</span> staticPath = <span class="hljs-string">&apos;./static&apos;</span>
+
+<span class="hljs-comment">// &#x89E3;&#x6790;&#x8D44;&#x6E90;&#x7C7B;&#x578B;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">parseMime</span>(<span class="hljs-params"> url </span>) </span>{
+  <span class="hljs-keyword">let</span> extName = path.extname( url )
+  extName = extName ?  extName.slice(<span class="hljs-number">1</span>) : <span class="hljs-string">&apos;unknown&apos;</span>
+  <span class="hljs-keyword">return</span>  mimes[ extName ]
+}
+
+app.use( <span class="hljs-keyword">async</span> ( ctx ) =&gt; {
+  <span class="hljs-comment">// &#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;&#x5728;&#x672C;&#x5730;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
+  <span class="hljs-keyword">let</span> fullStaticPath = path.join(__dirname, staticPath)
+
+  <span class="hljs-comment">// &#x83B7;&#x53D6;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5185;&#x5BB9;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x76EE;&#x5F55;&#xFF0C;&#x6216;404</span>
+  <span class="hljs-keyword">let</span> _content = <span class="hljs-keyword">await</span> content( ctx, fullStaticPath )
+
+  <span class="hljs-comment">// &#x89E3;&#x6790;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#x7684;&#x7C7B;&#x578B;</span>
+  <span class="hljs-keyword">let</span> _mime = parseMime( ctx.url )
+
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x5C31;&#x914D;&#x7F6E;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x7C7B;&#x578B;</span>
+  <span class="hljs-keyword">if</span> ( _mime ) {
+    ctx.type = _mime
+  }
+
+  <span class="hljs-comment">// &#x8F93;&#x51FA;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5185;&#x5BB9;</span>
+  <span class="hljs-keyword">if</span> ( _mime &amp;&amp; _mime.indexOf(<span class="hljs-string">&apos;image/&apos;</span>) &gt;= <span class="hljs-number">0</span> ) {
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x56FE;&#x7247;&#xFF0C;&#x5219;&#x7528;node&#x539F;&#x751F;res&#xFF0C;&#x8F93;&#x51FA;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;</span>
+    ctx.res.writeHead(<span class="hljs-number">200</span>)
+    ctx.res.write(_content, <span class="hljs-string">&apos;binary&apos;</span>)
+    ctx.res.end()
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// &#x5176;&#x4ED6;&#x5219;&#x8F93;&#x51FA;&#x6587;&#x672C;</span>
+    ctx.body = _content
+  }
+})
+
+app.listen(<span class="hljs-number">3000</span>)
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;[demo] static-server is starting at port 3000&apos;</span>)
+</code></pre>
+<h4 id="utilcontentjs">util/content.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>)
+
+<span class="hljs-comment">// &#x5C01;&#x88C5;&#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#x5185;&#x5BB9;&#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">const</span> dir = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./dir&apos;</span>)
+
+<span class="hljs-comment">// &#x5C01;&#x88C5;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">const</span> file = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./file&apos;</span>)
+
+
+<span class="hljs-comment">/**
+ * &#x83B7;&#x53D6;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5185;&#x5BB9;
+ * @param  {object} ctx koa&#x4E0A;&#x4E0B;&#x6587;
+ * @param  {string} &#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;&#x5728;&#x672C;&#x5730;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+ * @return  {string} &#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x672C;&#x5730;&#x5185;&#x5BB9;
+ */</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">content</span>(<span class="hljs-params"> ctx, fullStaticPath </span>) </span>{
+
+  <span class="hljs-comment">// &#x5C01;&#x88C5;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x7684;&#x5B8C;&#x7EDD;&#x5BF9;&#x5F84;</span>
+  <span class="hljs-keyword">let</span> reqPath = path.join(fullStaticPath, ctx.url)
+
+  <span class="hljs-comment">// &#x5224;&#x65AD;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;&#x662F;&#x5426;&#x4E3A;&#x5B58;&#x5728;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x6587;&#x4EF6;</span>
+  <span class="hljs-keyword">let</span> exist = fs.existsSync( reqPath )
+
+  <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#xFF0C; &#x9ED8;&#x8BA4;&#x4E3A;&#x7A7A;</span>
+  <span class="hljs-keyword">let</span> content = <span class="hljs-string">&apos;&apos;</span>
+
+  <span class="hljs-keyword">if</span>( !exist ) {
+    <span class="hljs-comment">//&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x8FD4;&#x56DE;404</span>
+    content = <span class="hljs-string">&apos;404 Not Found! o(&#x256F;&#x25A1;&#x2570;)o&#xFF01;&apos;</span>
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">//&#x5224;&#x65AD;&#x8BBF;&#x95EE;&#x5730;&#x5740;&#x662F;&#x6587;&#x4EF6;&#x5939;&#x8FD8;&#x662F;&#x6587;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> stat = fs.statSync( reqPath )
+
+    <span class="hljs-keyword">if</span>( stat.isDirectory() ) {
+      <span class="hljs-comment">//&#x5982;&#x679C;&#x4E3A;&#x76EE;&#x5F55;&#xFF0C;&#x5219;&#x6E32;&#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#x5185;&#x5BB9;</span>
+      content = dir( ctx.url, reqPath )
+
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// &#x5982;&#x679C;&#x8BF7;&#x6C42;&#x4E3A;&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</span>
+      content = <span class="hljs-keyword">await</span> file( reqPath )
+    }
+  }
+
+  <span class="hljs-keyword">return</span> content
+}
+
+<span class="hljs-built_in">module</span>.exports = content
+</code></pre>
+<h4 id="utildirjs">util/dir.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>)
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>)
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+
+<span class="hljs-comment">// &#x904D;&#x5386;&#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#x5185;&#x5BB9;&#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">const</span> walk = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./walk&apos;</span>)
+
+<span class="hljs-comment">/**
+ * &#x5C01;&#x88C5;&#x76EE;&#x5F55;&#x5185;&#x5BB9;
+ * @param  {string} url &#x5F53;&#x524D;&#x8BF7;&#x6C42;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;url&#xFF0C;&#x5373;ctx.url
+ * @param  {string} reqPath &#x8BF7;&#x6C42;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x7684;&#x5B8C;&#x6574;&#x672C;&#x5730;&#x8DEF;&#x5F84;
+ * @return {string} &#x8FD4;&#x56DE;&#x76EE;&#x5F55;&#x5185;&#x5BB9;&#xFF0C;&#x5C01;&#x88C5;&#x6210;HTML
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dir</span> (<span class="hljs-params"> url, reqPath </span>) </span>{
+
+  <span class="hljs-comment">// &#x904D;&#x5386;&#x8BFB;&#x53D6;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x3001;&#x5B50;&#x76EE;&#x5F55;</span>
+  <span class="hljs-keyword">let</span> contentList = walk( reqPath )
+
+  <span class="hljs-keyword">let</span> html = <span class="hljs-string">`&lt;ul&gt;`</span>
+  <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ index, item ] <span class="hljs-keyword">of</span> contentList.entries() ) {
+    html = <span class="hljs-string">`<span class="hljs-subst">${html}</span>&lt;li&gt;&lt;a href=&quot;<span class="hljs-subst">${url === &apos;/&apos; ? &apos;&apos; : url}</span>/<span class="hljs-subst">${item}</span>&quot;&gt;<span class="hljs-subst">${item}</span>&lt;/a&gt;`</span> 
+  }
+  html = <span class="hljs-string">`<span class="hljs-subst">${html}</span>&lt;/ul&gt;`</span>
+
+  <span class="hljs-keyword">return</span> html
+}
+
+<span class="hljs-built_in">module</span>.exports = dir
+</code></pre>
+<h4 id="utilfilejs">util/file.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>)
+
+<span class="hljs-comment">/**
+ * &#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x65B9;&#x6CD5;
+ * @param  {string} &#x6587;&#x4EF6;&#x672C;&#x5730;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+ * @return {string|binary} 
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">file</span> (<span class="hljs-params"> filePath </span>) </span>{
+
+ <span class="hljs-keyword">let</span> content = fs.readFileSync(filePath, <span class="hljs-string">&apos;binary&apos;</span> )
+ <span class="hljs-keyword">return</span> content
+}
+
+<span class="hljs-built_in">module</span>.exports = file
+</code></pre>
+<h4 id="utilwalkjs">util/walk.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>)
+<span class="hljs-keyword">const</span> mimes = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./mimes&apos;</span>)
+
+<span class="hljs-comment">/**
+ * &#x904D;&#x5386;&#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#x5185;&#x5BB9;&#xFF08;&#x5B50;&#x76EE;&#x5F55;&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#xFF09;
+ * @param  {string} reqPath &#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+ * @return {array} &#x76EE;&#x5F55;&#x5185;&#x5BB9;&#x5217;&#x8868;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">walk</span>(<span class="hljs-params"> reqPath </span>)</span>{
+
+  <span class="hljs-keyword">let</span> files = fs.readdirSync( reqPath );
+
+  <span class="hljs-keyword">let</span> dirList = [], fileList = [];
+  <span class="hljs-keyword">for</span>( <span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>, len=files.length; i&lt;len; i++ ) {
+    <span class="hljs-keyword">let</span> item = files[i];
+    <span class="hljs-keyword">let</span> itemArr = item.split(<span class="hljs-string">&quot;\.&quot;</span>);
+    <span class="hljs-keyword">let</span> itemMime = ( itemArr.length &gt; <span class="hljs-number">1</span> ) ? itemArr[ itemArr.length - <span class="hljs-number">1</span> ] : <span class="hljs-string">&quot;undefined&quot;</span>;
+
+    <span class="hljs-keyword">if</span>( <span class="hljs-keyword">typeof</span> mimes[ itemMime ] === <span class="hljs-string">&quot;undefined&quot;</span> ) {
+      dirList.push( files[i] );
+    } <span class="hljs-keyword">else</span> {
+      fileList.push( files[i] );
+    }
+  }
+
+
+  <span class="hljs-keyword">let</span> result = dirList.concat( fileList );
+
+  <span class="hljs-keyword">return</span> result;
+};
+
+<span class="hljs-built_in">module</span>.exports = walk;
+</code></pre>
+<h4 id="utilmimejs">util/mime.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> mimes = {
+  <span class="hljs-string">&apos;css&apos;</span>: <span class="hljs-string">&apos;text/css&apos;</span>,
+  <span class="hljs-string">&apos;less&apos;</span>: <span class="hljs-string">&apos;text/css&apos;</span>,
+  <span class="hljs-string">&apos;gif&apos;</span>: <span class="hljs-string">&apos;image/gif&apos;</span>,
+  <span class="hljs-string">&apos;html&apos;</span>: <span class="hljs-string">&apos;text/html&apos;</span>,
+  <span class="hljs-string">&apos;ico&apos;</span>: <span class="hljs-string">&apos;image/x-icon&apos;</span>,
+  <span class="hljs-string">&apos;jpeg&apos;</span>: <span class="hljs-string">&apos;image/jpeg&apos;</span>,
+  <span class="hljs-string">&apos;jpg&apos;</span>: <span class="hljs-string">&apos;image/jpeg&apos;</span>,
+  <span class="hljs-string">&apos;js&apos;</span>: <span class="hljs-string">&apos;text/javascript&apos;</span>,
+  <span class="hljs-string">&apos;json&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+  <span class="hljs-string">&apos;pdf&apos;</span>: <span class="hljs-string">&apos;application/pdf&apos;</span>,
+  <span class="hljs-string">&apos;png&apos;</span>: <span class="hljs-string">&apos;image/png&apos;</span>,
+  <span class="hljs-string">&apos;svg&apos;</span>: <span class="hljs-string">&apos;image/svg+xml&apos;</span>,
+  <span class="hljs-string">&apos;swf&apos;</span>: <span class="hljs-string">&apos;application/x-shockwave-flash&apos;</span>,
+  <span class="hljs-string">&apos;tiff&apos;</span>: <span class="hljs-string">&apos;image/tiff&apos;</span>,
+  <span class="hljs-string">&apos;txt&apos;</span>: <span class="hljs-string">&apos;text/plain&apos;</span>,
+  <span class="hljs-string">&apos;wav&apos;</span>: <span class="hljs-string">&apos;audio/x-wav&apos;</span>,
+  <span class="hljs-string">&apos;wma&apos;</span>: <span class="hljs-string">&apos;audio/x-ms-wma&apos;</span>,
+  <span class="hljs-string">&apos;wmv&apos;</span>: <span class="hljs-string">&apos;video/x-ms-wmv&apos;</span>,
+  <span class="hljs-string">&apos;xml&apos;</span>: <span class="hljs-string">&apos;text/xml&apos;</span>
+}
+
+<span class="hljs-built_in">module</span>.exports = mimes
+</code></pre>
+<h3 id="&#x8FD0;&#x884C;&#x6548;&#x679C;">&#x8FD0;&#x884C;&#x6548;&#x679C;</h3>
+<h4 id="&#x542F;&#x52A8;&#x670D;&#x52A1;">&#x542F;&#x52A8;&#x670D;&#x52A1;</h4>
+<pre><code class="lang-sh">node --harmony index.js
+</code></pre>
+<h4 id="&#x6548;&#x679C;">&#x6548;&#x679C;</h4>
+<h5 id="&#x8BBF;&#x95EE;httplocalhost3000">&#x8BBF;&#x95EE;<a href="http://localhost:3000" target="_blank">http://localhost:3000</a></h5>
+<p><img src="../images/static-server-result-01.png" alt="static-server-result"></p>
+<h5 id="&#x8BBF;&#x95EE;httplocalhost3000indexhtml">&#x8BBF;&#x95EE;<a href="http://localhost:3000/index.html" target="_blank">http://localhost:3000/index.html</a></h5>
+<p><img src="../images/static-server-result-02.png" alt="static-server-result"></p>
+<h5 id="&#x8BBF;&#x95EE;httplocalhost3000jsindexjs">&#x8BBF;&#x95EE;<a href="http://localhost:3000/js/index.js" target="_blank">http://localhost:3000/js/index.js</a></h5>
+<p><img src="../images/static-server-result-03.png" alt="static-server-result"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="middleware.html" class="navigation navigation-next navigation-unique" aria-label="Next page: koa-static中间件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"原生koa2实现静态资源服务器","level":"1.4.1","depth":2,"next":{"title":"koa-static中间件","level":"1.4.2","depth":2,"path":"note/static/middleware.md","ref":"note/static/middleware.md","articles":[]},"previous":{"title":"静态资源加载","level":"1.4","depth":1,"ref":"","articles":[{"title":"原生koa2实现静态资源服务器","level":"1.4.1","depth":2,"path":"note/static/server.md","ref":"note/static/server.md","articles":[]},{"title":"koa-static中间件","level":"1.4.2","depth":2,"path":"note/static/middleware.md","ref":"note/static/middleware.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/static/server.md","mtime":"2017-02-21T14:15:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-21T13:54:58.989Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
