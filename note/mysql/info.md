@@ -2,7 +2,10 @@
 
 ## 快速开始
 
-### 安装
+### 安装MySQL数据库
+[https://www.mysql.com/downloads/](https://www.mysql.com/downloads/)
+
+### 安装 node.js的mysql模块
 
 ```
 npm install --save mysql
