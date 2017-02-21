@@ -39,4 +39,4 @@
     * [登录注册功能实现](note/project/sign.md)
     * [session登录态判断处理](note/project/session.md) 
 * [debug]()
-    * [开发debug](README.md)
+    * [开发debug](note/debug/info.md)
