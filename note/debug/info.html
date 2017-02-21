@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>快速开始 · GitBook</title>
+        <title>开发debug · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -56,8 +56,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
-    
-    <link rel="next" href="async.html" />
     
     
 
@@ -114,9 +112,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="quick.html">
+        <li class="chapter " data-level="1.2.1" data-path="../start/quick.html">
             
-                <a href="quick.html">
+                <a href="../start/quick.html">
             
                     
                     快速开始
@@ -127,9 +125,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="async.html">
+        <li class="chapter " data-level="1.2.2" data-path="../start/async.html">
             
-                <a href="async.html">
+                <a href="../start/async.html">
             
                     
                     async/await使用
@@ -140,9 +138,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="info.html">
+        <li class="chapter " data-level="1.2.3" data-path="../start/info.html">
             
-                <a href="info.html">
+                <a href="../start/info.html">
             
                     
                     koa2简析结构
@@ -153,9 +151,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="middleware.html">
+        <li class="chapter " data-level="1.2.4" data-path="../start/middleware.html">
             
-                <a href="middleware.html">
+                <a href="../start/middleware.html">
             
                     
                     koa中间件开发与使用
@@ -662,9 +660,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1" data-path="../debug/info.html">
+        <li class="chapter active" data-level="1.11.1" data-path="info.html">
             
-                <a href="../debug/info.html">
+                <a href="info.html">
             
                     
                     开发debug
@@ -710,7 +708,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >快速开始</a>
+        <a href="../.." >开发debug</a>
     </h1>
 </div>
 
@@ -725,47 +723,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="koa2-&#x5FEB;&#x901F;&#x5F00;&#x59CB;">koa2 &#x5FEB;&#x901F;&#x5F00;&#x59CB;</h1>
-<h2 id="&#x73AF;&#x5883;&#x51C6;&#x5907;">&#x73AF;&#x5883;&#x51C6;&#x5907;</h2>
-<ul>
-<li>node.js&#x73AF;&#x5883; &#x7248;&#x672C;v7.x&#x4EE5;&#x4E0A;<ul>
-<li>&#x76F4;&#x63A5;&#x5B89;&#x88C5;node.js 7.x&#xFF1A;node.js&#x5B98;&#x7F51;&#x5730;&#x5740;<a href="https://nodejs.org" target="_blank">https://nodejs.org</a> </li>
-<li>nvm&#x7BA1;&#x7406;&#x591A;&#x7248;&#x672C;node.js&#xFF1A;&#x53EF;&#x4EE5;&#x7528;nvm &#x8FDB;&#x884C;node&#x7248;&#x672C;&#x8FDB;&#x884C;&#x7BA1;&#x7406;<ul>
-<li>Mac&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;nvm <a href="https://github.com/creationix/nvm#manual-install" target="_blank">https://github.com/creationix/nvm#manual-install</a></li>
-<li>windows&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;nvm <a href="https://github.com/coreybutler/nvm-windows" target="_blank">https://github.com/coreybutler/nvm-windows</a></li>
-<li>Ubuntu&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;nvm <a href="https://github.com/creationix/nvm" target="_blank">https://github.com/creationix/nvm</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>npm &#x7248;&#x672C;3.x&#x4EE5;&#x4E0A; </li>
-</ul>
+                                <h1 id="&#x5F00;&#x53D1;debug">&#x5F00;&#x53D1;debug</h1>
 <h2 id="&#x5FEB;&#x901F;&#x5F00;&#x59CB;">&#x5FEB;&#x901F;&#x5F00;&#x59CB;</h2>
-<h3 id="&#x5B89;&#x88C5;koa2">&#x5B89;&#x88C5;koa2</h3>
-<pre><code class="lang-sh"><span class="hljs-comment"># &#x521D;&#x59CB;&#x5316;package.json</span>
-npm init
-
-<span class="hljs-comment"># &#x5B89;&#x88C5;koa2 </span>
-<span class="hljs-comment"># &#x7531;&#x4E8E;&#x76EE;&#x524D;koa2 &#x706D;&#x6709;&#x6B63;&#x5F0F;&#x53D1;&#x5E03;&#xFF0C;&#x5C5E;&#x4E8E;&#x4E0B;&#x4E00;&#x4E2A;&#x7248;&#x672C;</span>
-npm install koa@next
-</code></pre>
-<h3 id="hello-world-&#x4EE3;&#x7801;">hello world &#x4EE3;&#x7801;</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
-<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Koa()
-
-app.use( <span class="hljs-keyword">async</span> ( ctx ) =&gt; {
-  ctx.body = <span class="hljs-string">&apos;hello koa2&apos;</span>
-})
-
-app.listen(<span class="hljs-number">3000</span>)
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;[demo] start-quick is starting at port 3000&apos;</span>)
-</code></pre>
-<h3 id="&#x542F;&#x52A8;demo">&#x542F;&#x52A8;demo</h3>
-<p>&#x7531;&#x4E8E;koa2&#x662F;&#x57FA;&#x4E8E;async/await&#x64CD;&#x4F5C;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x76EE;&#x524D;node.js 7.x&#x7684;harmony&#x6A21;&#x5F0F;&#x4E0B;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x7684;&#x811A;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-sh">node --harmony index.js
-</code></pre>
-<p>&#x8BBF;&#x95EE;<a href="http:localhost:3000" target="_blank">http:localhost:3000</a>&#xFF0C;&#x6548;&#x679C;&#x5982;&#x4E0B;</p>
-<p><img src="../images/start-result-01.png" alt="start-result-01"></p>
+<h3 id="&#x73AF;&#x5883;">&#x73AF;&#x5883;</h3>
+<ul>
+<li>node&#x73AF;&#x5883; 7.x</li>
+</ul>
+<h3 id="&#x542F;&#x52A8;&#x811A;&#x672C;">&#x542F;&#x52A8;&#x811A;&#x672C;</h3>
+<h4 id="&#x8C03;&#x8BD5;demo">&#x8C03;&#x8BD5;demo</h4>
+<p><a href="https://github.com/ChenShenhai/koa2-note/blob/master/demo/start-quick/index.js" target="_blank">https://github.com/ChenShenhai/koa2-note/blob/master/demo/start-quick/</a></p>
+<pre><code>node --harmony --debug-brk --inspect index.js
+</code></pre><h4 id="&#x6307;&#x4EE4;&#x6846;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;">&#x6307;&#x4EE4;&#x6846;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;</h4>
+<p><img src="../images/debug-result-01.png" alt="debug-result"></p>
+<h4 id="&#x6307;&#x4EE4;&#x6846;&#x4E2D;&#x663E;&#x793A;&#x7684;">&#x6307;&#x4EE4;&#x6846;&#x4E2D;&#x663E;&#x793A;&#x7684;</h4>
+<p>chrome-devtools://devtools/bundled/inspector.html?experiments=true&amp;v8only=true&amp;ws=127.0.0.1:9229/c3f33c44-9f12-4065-b3c3-4f392983a6c0
+&#x5C31;&#x662F;node.js&#x8FDE;&#x63A5;chrome&#x8C03;&#x8BD5;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x8BA9;node.js&#x4EE3;&#x7801;&#x7684;&#x8C03;&#x8BD5;&#x548C;&#x524D;&#x7AEF;js&#x4EE3;&#x7801;&#x4E00;&#x6837;</p>
+<h4 id="&#x8BBF;&#x95EE;&#x6307;&#x4EE4;&#x6846;&#x8C03;&#x8BD5;&#x8FDE;&#x63A5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;chrome&#x4E2D;&#x50CF;&#x524D;&#x7AEF;&#x90A3;&#x6837;&#x8C03;&#x8BD5;nodejs&#x4EE3;&#x7801;&#x4E86;">&#x8BBF;&#x95EE;&#x6307;&#x4EE4;&#x6846;&#x8C03;&#x8BD5;&#x8FDE;&#x63A5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;chrome&#x4E2D;&#x50CF;&#x524D;&#x7AEF;&#x90A3;&#x6837;&#x8C03;&#x8BD5;node.js&#x4EE3;&#x7801;&#x4E86;</h4>
+<p><img src="../images/debug-result-02.png" alt="debug-result"></p>
+<h4 id="&#x8BBF;&#x95EE;&#x8FDE;&#x63A5;&#x540E;&#x628A;&#x9ED8;&#x8BA4;&#x65AD;&#x70B9;&#x6253;&#x5F00;&#xFF0C;&#x5C31;&#x542F;&#x52A8;&#x4E86;nodejs&#x670D;&#x52A1;">&#x8BBF;&#x95EE;&#x8FDE;&#x63A5;&#x540E;&#x628A;&#x9ED8;&#x8BA4;&#x65AD;&#x70B9;&#x6253;&#x5F00;&#xFF0C;&#x5C31;&#x542F;&#x52A8;&#x4E86;node.js&#x670D;&#x52A1;</h4>
+<p><img src="../images/debug-result-03.png" alt="debug-result"></p>
 
                                 
                                 </section>
@@ -794,10 +770,6 @@ app.listen(<span class="hljs-number">3000</span>)
             
                 
                 
-                <a href="async.html" class="navigation navigation-next navigation-unique" aria-label="Next page: async/await使用">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
             
         
     </div>
@@ -805,7 +777,7 @@ app.listen(<span class="hljs-number">3000</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"快速开始","level":"1.2.1","depth":2,"next":{"title":"async/await使用","level":"1.2.2","depth":2,"path":"note/start/async.md","ref":"note/start/async.md","articles":[]},"previous":{"title":"koa2开始","level":"1.2","depth":1,"ref":"","articles":[{"title":"快速开始","level":"1.2.1","depth":2,"path":"note/start/quick.md","ref":"note/start/quick.md","articles":[]},{"title":"async/await使用","level":"1.2.2","depth":2,"path":"note/start/async.md","ref":"note/start/async.md","articles":[]},{"title":"koa2简析结构","level":"1.2.3","depth":2,"path":"note/start/info.md","ref":"note/start/info.md","articles":[]},{"title":"koa中间件开发与使用","level":"1.2.4","depth":2,"path":"note/start/middleware.md","ref":"note/start/middleware.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/start/quick.md","mtime":"2017-02-20T23:43:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-21T13:54:58.989Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"开发debug","level":"1.11.1","depth":2,"previous":{"title":"debug","level":"1.11","depth":1,"ref":"","articles":[{"title":"开发debug","level":"1.11.1","depth":2,"path":"note/debug/info.md","ref":"note/debug/info.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/debug/info.md","mtime":"2017-02-21T15:28:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-21T13:54:58.989Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
