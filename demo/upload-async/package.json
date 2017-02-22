@@ -1,7 +1,7 @@
 {
-  "name": "static-use-middleware",
+  "name": "upload-async",
   "version": "1.0.0",
-  "description": "koa start demo",
+  "description": "koa upload-async demo",
   "main": "index.js",
   "scripts": {
     "start": "node --harmony index.js"
@@ -14,7 +14,8 @@
   "dependencies": {
     "koa": "^2.0.0-alpha.8",
     "koa-convert": "^1.2.0",
-    "koa-static": "^2.1.0"
+    "koa-static": "^2.1.0",
+    "koa-views": "^5.2.0"
   },
   "engines": {
     "node": ">=7.0.0",

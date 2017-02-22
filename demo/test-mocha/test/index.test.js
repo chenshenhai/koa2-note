@@ -5,7 +5,6 @@ const app = require('./../index')
 const expect = chai.expect
 const request = supertest( app.listen() )
 
-
 describe( '开始测试demo的GET请求', ( ) => {
   
   it('测试/getString.json请求', ( done ) => {
