@@ -29,7 +29,7 @@ app.use(convert(static(
 
 app.use( async ( ctx ) => {
   if ( ctx.method === 'GET' ) {
-    let title = 'hello koa2'
+    let title = 'upload pic async'
     await ctx.render('index', {
       title,
     })
@@ -51,9 +51,6 @@ app.use( async ( ctx ) => {
   
 })
 
-app.use( async ( ctx ) => {
-
-})
 
 app.listen(3000)
-console.log('[demo] ejs is starting at port 3000')
+console.log('[demo] upload-pic-async is starting at port 3000')

@@ -24,6 +24,7 @@
 * [文件上传]()
     * [busboy模块](note/upload/busboy.md)
     * [上传文件简单实现](note/upload/simple.md)
+    * [异步上传图片实现](note/upload/pic-async.md)
 * [数据库mysql]()
     * [mysql模块](note/mysql/info.md)    
     * [async/await封装使用mysql](note/mysql/async.md)
