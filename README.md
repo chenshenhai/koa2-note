@@ -25,7 +25,7 @@
 * [文件上传]()
     * [busboy模块](https://github.com/ChenShenhai/koa2-note/blob/master/note/upload/busboy.md)
     * [上传文件简单实现](https://github.com/ChenShenhai/koa2-note/blob/master/note/upload/simple.md)
-    * [异步上传图片实现](https://github.com/ChenShenhai/koa2-note/blob/master/note/upload/upload/pic-async.md)
+    * [异步上传图片实现](https://github.com/ChenShenhai/koa2-note/blob/master/note/upload/pic-async.md)
 * [数据库mysql]()
     * [mysql模块](https://github.com/ChenShenhai/koa2-note/blob/master/note/mysql/info.md)    
     * [async/await封装使用mysql](https://github.com/ChenShenhai/koa2-note/blob/master/note/mysql/async.md)
