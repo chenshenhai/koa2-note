@@ -1,5 +1,7 @@
 # 《koa2进阶学习笔记》
 
+## 持续更新中...
+
 ## 目录
 * [koa2开始]()
     * [快速开始](https://github.com/ChenShenhai/koa2-note/blob/master/note/start/quick.md)
