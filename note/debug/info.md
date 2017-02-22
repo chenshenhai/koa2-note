@@ -22,6 +22,8 @@ node --harmony --debug-brk --inspect index.js
 chrome-devtools://devtools/bundled/inspector.html?experiments=true&v8only=true&ws=127.0.0.1:9229/c3f33c44-9f12-4065-b3c3-4f392983a6c0
 就是node.js连接chrome调试的连接，让node.js代码的调试和前端js代码一样
 
+> 注意：chrome的debug链接是随机生成的
+
 ####访问指令框调试连接，就可以直接在chrome中像前端那样调试node.js代码了
 ![debug-result](./../images/debug-result-02.png)
 
