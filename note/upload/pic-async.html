@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>上传文件简单实现 · GitBook</title>
+        <title>异步上传图片实现 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="pic-async.html" />
     
-    
-    <link rel="prev" href="busboy.html" />
+    <link rel="prev" href="simple.html" />
     
 
     </head>
@@ -438,7 +436,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.2" data-path="simple.html">
+        <li class="chapter " data-level="1.8.2" data-path="simple.html">
             
                 <a href="simple.html">
             
@@ -451,7 +449,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="pic-async.html">
+        <li class="chapter active" data-level="1.8.3" data-path="pic-async.html">
             
                 <a href="pic-async.html">
             
@@ -725,7 +723,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >上传文件简单实现</a>
+        <a href="../.." >异步上传图片实现</a>
     </h1>
 </div>
 
@@ -740,18 +738,83 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7B80;&#x5355;&#x5B9E;&#x73B0;">&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7B80;&#x5355;&#x5B9E;&#x73B0;</h1>
-<h2 id="&#x4F9D;&#x8D56;&#x6A21;&#x5757;">&#x4F9D;&#x8D56;&#x6A21;&#x5757;</h2>
-<h3 id="&#x5B89;&#x88C5;&#x4F9D;&#x8D56;">&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</h3>
-<pre><code class="lang-sh">npm install --save busboy
+                                <h1 id="&#x5F02;&#x6B65;&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x5B9E;&#x73B0;">&#x5F02;&#x6B65;&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x5B9E;&#x73B0;</h1>
+<h2 id="&#x5FEB;&#x901F;&#x4E0A;&#x624B;">&#x5FEB;&#x901F;&#x4E0A;&#x624B;</h2>
+<p>demo &#x5730;&#x5740;</p>
+<p><a href="https://github.com/ChenShenhai/koa2-note/tree/master/demo/upload-async" target="_blank">https://github.com/ChenShenhai/koa2-note/tree/master/demo/upload-async</a></p>
+<h2 id="&#x6E90;&#x7801;&#x7406;&#x89E3;">&#x6E90;&#x7801;&#x7406;&#x89E3;</h2>
+<h3 id="demo&#x6E90;&#x7801;&#x76EE;&#x5F55;">demo&#x6E90;&#x7801;&#x76EE;&#x5F55;</h3>
+<pre><code class="lang-sh">.
+&#x251C;&#x2500;&#x2500; index.js <span class="hljs-comment"># &#x540E;&#x7AEF;&#x542F;&#x52A8;&#x6587;&#x4EF6;</span>
+&#x251C;&#x2500;&#x2500; node_modules
+&#x251C;&#x2500;&#x2500; package.json
+&#x251C;&#x2500;&#x2500; static <span class="hljs-comment"># &#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; image <span class="hljs-comment"># &#x5F02;&#x6B65;&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x5B58;&#x50A8;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x2514;&#x2500;&#x2500; js
+&#x2502;       &#x2514;&#x2500;&#x2500; index.js <span class="hljs-comment"># &#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x524D;&#x7AEF;js&#x64CD;&#x4F5C;</span>
+&#x251C;&#x2500;&#x2500; util
+&#x2502;   &#x2514;&#x2500;&#x2500; upload.js <span class="hljs-comment"># &#x540E;&#x7AEF;&#x5904;&#x7406;&#x56FE;&#x7247;&#x6D41;&#x64CD;&#x4F5C;</span>
+&#x2514;&#x2500;&#x2500; view
+    &#x2514;&#x2500;&#x2500; index.ejs <span class="hljs-comment"># ejs&#x540E;&#x7AEF;&#x6E32;&#x67D3;&#x6A21;&#x677F;</span>
 </code></pre>
-<ul>
-<li>busboy &#x662F;&#x7528;&#x6765;&#x89E3;&#x6790;&#x51FA;&#x8BF7;&#x6C42;&#x4E2D;&#x6587;&#x4EF6;&#x6D41;</li>
-</ul>
-<h2 id="&#x4F8B;&#x5B50;&#x6E90;&#x7801;">&#x4F8B;&#x5B50;&#x6E90;&#x7801;</h2>
-<p>demo&#x6E90;&#x7801;</p>
-<p><a href="https://github.com/ChenShenhai/koa2-note/blob/master/demo/upload/" target="_blank">https://github.com/ChenShenhai/koa2-note/blob/master/demo/upload/</a></p>
-<h3 id="&#x5C01;&#x88C5;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x5230;&#x5199;&#x5165;&#x670D;&#x52A1;&#x7684;&#x65B9;&#x6CD5;">&#x5C01;&#x88C5;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x5230;&#x5199;&#x5165;&#x670D;&#x52A1;&#x7684;&#x65B9;&#x6CD5;</h3>
+<h3 id="&#x540E;&#x7AEF;&#x4EE3;&#x7801;">&#x540E;&#x7AEF;&#x4EE3;&#x7801;</h3>
+<p>&#x5165;&#x53E3;&#x6587;&#x4EF6; demo/upload-async/index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
+<span class="hljs-keyword">const</span> views = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-views&apos;</span>)
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-keyword">const</span> convert = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-convert&apos;</span>)
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">static</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-static&apos;</span>)
+<span class="hljs-keyword">const</span> { uploadFile } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./util/upload&apos;</span>)
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Koa()
+
+<span class="hljs-comment">/**
+ * &#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x4E2D;&#x95F4;&#x4EF6; start 
+ */</span>
+app.use(views(path.join(__dirname, <span class="hljs-string">&apos;./view&apos;</span>), {
+  extension: <span class="hljs-string">&apos;ejs&apos;</span>
+}))
+
+<span class="hljs-comment">// &#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;&#x5BF9;&#x4E8E;&#x76F8;&#x5BF9;&#x5165;&#x53E3;&#x6587;&#x4EF6;index.js&#x7684;&#x8DEF;&#x5F84;</span>
+<span class="hljs-keyword">const</span> staticPath = <span class="hljs-string">&apos;./static&apos;</span>
+<span class="hljs-comment">// &#x7531;&#x4E8E;koa-static&#x76EE;&#x524D;&#x4E0D;&#x652F;&#x6301;koa2</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x53EA;&#x80FD;&#x7528;koa-convert&#x5C01;&#x88C5;&#x4E00;&#x4E0B;</span>
+app.use(convert(<span class="hljs-keyword">static</span>(
+  path.join( __dirname,  staticPath)
+)))
+<span class="hljs-comment">/**
+ * &#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x4E2D;&#x95F4;&#x4EF6; end 
+ */</span>
+
+app.use( <span class="hljs-keyword">async</span> ( ctx ) =&gt; {
+  <span class="hljs-keyword">if</span> ( ctx.method === <span class="hljs-string">&apos;GET&apos;</span> ) {
+    <span class="hljs-keyword">let</span> title = <span class="hljs-string">&apos;upload pic async&apos;</span>
+    <span class="hljs-keyword">await</span> ctx.render(<span class="hljs-string">&apos;index&apos;</span>, {
+      title,
+    })
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( ctx.url === <span class="hljs-string">&apos;/api/picture/upload.json&apos;</span> &amp;&amp; ctx.method === <span class="hljs-string">&apos;POST&apos;</span> ) {
+    <span class="hljs-comment">// &#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x8BF7;&#x6C42;&#x5904;&#x7406;</span>
+    <span class="hljs-keyword">let</span> result = { success: <span class="hljs-literal">false</span> }
+    <span class="hljs-keyword">let</span> serverFilePath = path.join( __dirname, <span class="hljs-string">&apos;static/image&apos;</span> )
+
+    <span class="hljs-comment">// &#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x4E8B;&#x4EF6;</span>
+    result = <span class="hljs-keyword">await</span> uploadFile( ctx, {
+      fileType: <span class="hljs-string">&apos;album&apos;</span>,
+      path: serverFilePath
+    })
+    ctx.body = result
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// &#x5176;&#x4ED6;&#x8BF7;&#x6C42;&#x663E;&#x793A;404</span>
+    ctx.body = <span class="hljs-string">&apos;&lt;h1&gt;404&#xFF01;&#xFF01;&#xFF01; o(&#x256F;&#x25A1;&#x2570;)o&lt;/h1&gt;&apos;</span>
+  }
+
+})
+
+app.listen(<span class="hljs-number">3000</span>)
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;[demo] upload-pic-async is starting at port 3000&apos;</span>)
+</code></pre>
+<p>&#x540E;&#x7AEF;&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x6D41;&#x5199;&#x64CD;&#x4F5C;
+&#x5165;&#x53E3;&#x6587;&#x4EF6; demo/upload-async/util/upload.js</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> inspect = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;util&apos;</span>).inspect
 <span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
 <span class="hljs-keyword">const</span> os = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;os&apos;</span>)
@@ -803,7 +866,9 @@
   <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x4E2D;...&apos;</span>)
     <span class="hljs-keyword">let</span> result = { 
-      success: <span class="hljs-literal">false</span>
+      success: <span class="hljs-literal">false</span>,
+      message: <span class="hljs-string">&apos;&apos;</span>,
+      data: <span class="hljs-literal">null</span>
     }
 
     <span class="hljs-comment">// &#x89E3;&#x6790;&#x8BF7;&#x6C42;&#x6587;&#x4EF6;&#x4E8B;&#x4EF6;</span>
@@ -819,7 +884,9 @@
       file.on(<span class="hljs-string">&apos;end&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
         result.success = <span class="hljs-literal">true</span>
         result.message = <span class="hljs-string">&apos;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6210;&#x529F;&apos;</span>
-
+        result.data = {
+          pictureUrl: <span class="hljs-string">`//<span class="hljs-subst">${ctx.host}</span>/image/<span class="hljs-subst">${fileType}</span>/<span class="hljs-subst">${fileName}</span>`</span>
+        }
         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6210;&#x529F;&#xFF01;&apos;</span>)
         resolve(result)
       })
@@ -842,61 +909,136 @@
 
 } 
 
-
 <span class="hljs-built_in">module</span>.exports =  {
   uploadFile
 }
 </code></pre>
-<h3 id="&#x5165;&#x53E3;&#x6587;&#x4EF6;">&#x5165;&#x53E3;&#x6587;&#x4EF6;</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
-<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
-<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Koa()
-<span class="hljs-comment">// const bodyParser = require(&apos;koa-bodyparser&apos;)</span>
+<h3 id="&#x524D;&#x7AEF;&#x4EE3;&#x7801;">&#x524D;&#x7AEF;&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;J_UploadPictureBtn&quot;</span>&gt;</span>&#x4E0A;&#x4F20;&#x56FE;&#x7247;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4E0A;&#x4F20;&#x8FDB;&#x5EA6;<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;J_UploadProgress&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>%<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4E0A;&#x4F20;&#x7ED3;&#x679C;&#x56FE;&#x7247;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;J_PicturePreview&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;preview-picture&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/js/index.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x4F20;&#x64CD;&#x4F5C;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
 
-<span class="hljs-keyword">const</span> { uploadFile } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./util/upload&apos;</span>)
-
-<span class="hljs-comment">// app.use(bodyParser())</span>
-
-app.use( <span class="hljs-keyword">async</span> ( ctx ) =&gt; {
-
-  <span class="hljs-keyword">if</span> ( ctx.url === <span class="hljs-string">&apos;/&apos;</span> &amp;&amp; ctx.method === <span class="hljs-string">&apos;GET&apos;</span> ) {
-    <span class="hljs-comment">// &#x5F53;GET&#x8BF7;&#x6C42;&#x65F6;&#x5019;&#x8FD4;&#x56DE;&#x8868;&#x5355;&#x9875;&#x9762;</span>
-    <span class="hljs-keyword">let</span> html = <span class="hljs-string">`
-      &lt;h1&gt;koa2 upload demo&lt;/h1&gt;
-      &lt;form method=&quot;POST&quot; action=&quot;/upload.json&quot; enctype=&quot;multipart/form-data&quot;&gt;
-        &lt;p&gt;file upload&lt;/p&gt;
-        &lt;input name=&quot;file&quot; type=&quot;file&quot; /&gt;&lt;br/&gt;&lt;br/&gt;
-        &lt;button type=&quot;submit&quot;&gt;submit&lt;/button&gt;
-      &lt;/form&gt;
-    `</span>
-    ctx.body = html
-
-  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( ctx.url === <span class="hljs-string">&apos;/upload.json&apos;</span> &amp;&amp; ctx.method === <span class="hljs-string">&apos;POST&apos;</span> ) {
-    <span class="hljs-comment">// &#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x8BF7;&#x6C42;&#x5904;&#x7406;</span>
-    <span class="hljs-keyword">let</span> result = { success: <span class="hljs-literal">false</span> }
-    <span class="hljs-keyword">let</span> serverFilePath = path.join( __dirname, <span class="hljs-string">&apos;upload-files&apos;</span> )
-
-    <span class="hljs-comment">// &#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x4E8B;&#x4EF6;</span>
-    result = <span class="hljs-keyword">await</span> uploadFile( ctx, {
-      fileType: <span class="hljs-string">&apos;album&apos;</span>, <span class="hljs-comment">// common or album</span>
-      path: serverFilePath
-    })
-
-    ctx.body = result
-  } <span class="hljs-keyword">else</span> {
-    <span class="hljs-comment">// &#x5176;&#x4ED6;&#x8BF7;&#x6C42;&#x663E;&#x793A;404</span>
-    ctx.body = <span class="hljs-string">&apos;&lt;h1&gt;404&#xFF01;&#xFF01;&#xFF01; o(&#x256F;&#x25A1;&#x2570;)o&lt;/h1&gt;&apos;</span>
-  }
+<span class="hljs-keyword">let</span> btn = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;J_UploadPictureBtn&apos;</span>)
+<span class="hljs-keyword">let</span> progressElem = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;J_UploadProgress&apos;</span>)
+<span class="hljs-keyword">let</span> previewElem = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;J_PicturePreview&apos;</span>)
+btn.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  uploadAction({
+    success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> result </span>) </span>{
+      <span class="hljs-built_in">console</span>.log( result )
+      <span class="hljs-keyword">if</span> ( result &amp;&amp; result.success &amp;&amp; result.data &amp;&amp; result.data.pictureUrl ) {
+        previewElem.innerHTML = <span class="hljs-string">&apos;&lt;img src=&quot;&apos;</span>+ result.data.pictureUrl +<span class="hljs-string">&apos;&quot; style=&quot;max-width: 100%&quot;&gt;&apos;</span>
+      }
+    },
+    progress: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> data </span>) </span>{
+      <span class="hljs-keyword">if</span> ( data &amp;&amp; data * <span class="hljs-number">1</span> &gt; <span class="hljs-number">0</span> ) {
+        progressElem.innerText = data
+      }
+    }
+  })
 })
 
-app.listen(<span class="hljs-number">3000</span>)
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;[demo] upload-simple is starting at port 3000&apos;</span>)
+
+<span class="hljs-comment">/**
+ * &#x7C7B;&#x578B;&#x5224;&#x65AD;
+ * @type {Object}
+ */</span>
+<span class="hljs-keyword">let</span> UtilType = {
+  isPrototype: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> data </span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.prototype.toString.call(data).toLowerCase();
+  },
+
+  isJSON: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> data </span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.isPrototype( data ) === <span class="hljs-string">&apos;[object object]&apos;</span>;
+  },
+
+  isFunction: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> data </span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.isPrototype( data ) === <span class="hljs-string">&apos;[object function]&apos;</span>;
+  }
+}
+
+<span class="hljs-comment">/**
+ * form&#x8868;&#x5355;&#x4E0A;&#x4F20;&#x8BF7;&#x6C42;&#x4E8B;&#x4EF6;
+ * @param  {object} options &#x8BF7;&#x6C42;&#x53C2;&#x6570;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">requestEvent</span>(<span class="hljs-params"> options </span>) </span>{
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">let</span> formData = options.formData
+    <span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest()
+    xhr.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+      <span class="hljs-keyword">if</span> ( xhr.readyState === <span class="hljs-number">4</span> &amp;&amp; xhr.status === <span class="hljs-number">200</span> ) {
+        options.success(<span class="hljs-built_in">JSON</span>.parse(xhr.responseText))
+      } 
+    }
+
+    xhr.upload.onprogress = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>) </span>{
+      <span class="hljs-keyword">let</span> loaded = evt.loaded
+      <span class="hljs-keyword">let</span> tot = evt.total
+      <span class="hljs-keyword">let</span> per = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-number">100</span> * loaded / tot) 
+      options.progress(per)
+    }
+    xhr.open(<span class="hljs-string">&apos;post&apos;</span>, <span class="hljs-string">&apos;/api/picture/upload.json&apos;</span>)
+    xhr.send(formData)
+  } <span class="hljs-keyword">catch</span> ( err ) {
+    options.fail(err)
+  }
+}
+
+<span class="hljs-comment">/**
+ * &#x4E0A;&#x4F20;&#x4E8B;&#x4EF6;
+ * @param  {object} options &#x4E0A;&#x4F20;&#x53C2;&#x6570;      
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">uploadEvent</span> (<span class="hljs-params"> options </span>)</span>{
+  <span class="hljs-keyword">let</span> file
+  <span class="hljs-keyword">let</span> formData = <span class="hljs-keyword">new</span> FormData()
+  <span class="hljs-keyword">let</span> input = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;input&apos;</span>)
+  input.setAttribute(<span class="hljs-string">&apos;type&apos;</span>, <span class="hljs-string">&apos;file&apos;</span>)
+  input.setAttribute(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;files&apos;</span>)
+
+  input.click()
+  input.onchange = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    file = input.files[<span class="hljs-number">0</span>]
+    formData.append(<span class="hljs-string">&apos;files&apos;</span>, file)
+
+    requestEvent({
+      formData,
+      success: options.success,
+      fail: options.fail,
+      progress: options.progress
+    })  
+  }
+
+}
+
+<span class="hljs-comment">/**
+ * &#x4E0A;&#x4F20;&#x64CD;&#x4F5C;
+ * @param  {object} options &#x4E0A;&#x4F20;&#x53C2;&#x6570;     
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">uploadAction</span>(<span class="hljs-params"> options </span>) </span>{
+  <span class="hljs-keyword">if</span> ( !UtilType.isJSON( options ) ) {
+    <span class="hljs-built_in">console</span>.log( <span class="hljs-string">&apos;upload options is null&apos;</span> )
+    <span class="hljs-keyword">return</span>
+  }
+  <span class="hljs-keyword">let</span> _options = {}
+  _options.success = UtilType.isFunction(options.success) ? options.success : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+  _options.fail = UtilType.isFunction(options.fail) ? options.fail : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+  _options.progress = UtilType.isFunction(options.progress) ? options.progress : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+
+  uploadEvent(_options)
+}
+
+
+})()
 </code></pre>
-<h3 id="&#x8FD0;&#x884C;&#x7ED3;&#x679C;">&#x8FD0;&#x884C;&#x7ED3;&#x679C;</h3>
-<p><img src="../images/upload-simple-result-01.png" alt="upload-simple-result"></p>
-<p><img src="../images/upload-simple-result-02.png" alt="upload-simple-result"></p>
-<p><img src="../images/upload-simple-result-03.png" alt="upload-simple-result"></p>
-<p><img src="../images/upload-simple-result-04.png" alt="upload-simple-result"></p>
+<h3 id="&#x8FD0;&#x884C;&#x6548;&#x679C;">&#x8FD0;&#x884C;&#x6548;&#x679C;</h3>
+<p><img src="../images/upload-async-result-01.png" alt="images/upload-async-result"></p>
 
                                 
                                 </section>
@@ -924,14 +1066,10 @@ app.listen(<span class="hljs-number">3000</span>)
 
             
                 
-                <a href="busboy.html" class="navigation navigation-prev " aria-label="Previous page: busboy模块">
+                <a href="simple.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 上传文件简单实现">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="pic-async.html" class="navigation navigation-next " aria-label="Next page: 异步上传图片实现">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -940,7 +1078,7 @@ app.listen(<span class="hljs-number">3000</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"上传文件简单实现","level":"1.8.2","depth":2,"next":{"title":"异步上传图片实现","level":"1.8.3","depth":2,"path":"note/upload/pic-async.md","ref":"note/upload/pic-async.md","articles":[]},"previous":{"title":"busboy模块","level":"1.8.1","depth":2,"path":"note/upload/busboy.md","ref":"note/upload/busboy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/upload/simple.md","mtime":"2017-02-21T14:18:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-22T13:21:14.071Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"异步上传图片实现","level":"1.8.3","depth":2,"next":{"title":"数据库mysql","level":"1.9","depth":1,"ref":"","articles":[{"title":"mysql模块","level":"1.9.1","depth":2,"path":"note/mysql/info.md","ref":"note/mysql/info.md","articles":[]},{"title":"async/await封装使用mysql","level":"1.9.2","depth":2,"path":"note/mysql/async.md","ref":"note/mysql/async.md","articles":[]},{"title":"项目建表初始化","level":"1.9.3","depth":2,"path":"note/mysql/init.md","ref":"note/mysql/init.md","articles":[]}]},"previous":{"title":"上传文件简单实现","level":"1.8.2","depth":2,"path":"note/upload/simple.md","ref":"note/upload/simple.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/upload/pic-async.md","mtime":"2017-02-22T16:36:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-22T13:21:14.071Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
