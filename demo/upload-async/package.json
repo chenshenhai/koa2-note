@@ -12,6 +12,8 @@
   "author": "chenshenhai",
   "license": "MIT",
   "dependencies": {
+    "busboy": "^0.2.14",
+    "ejs": "^2.5.6",
     "koa": "^2.0.0-alpha.8",
     "koa-convert": "^1.2.0",
     "koa-static": "^2.1.0",
