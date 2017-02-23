@@ -2,6 +2,9 @@
 
 ## 持续更新中...
 
+## 附加gitbook快速阅读地址
+[https://chenshenhai.github.io/koa2-note/](https://chenshenhai.github.io/koa2-note/)
+
 ## 目录
 * [koa2开始]()
     * [快速开始](https://github.com/ChenShenhai/koa2-note/blob/master/note/start/quick.md)
