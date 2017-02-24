@@ -19,7 +19,7 @@
 npm init
 
 # 安装koa2 
-# 由于目前koa2 灭有正式发布，属于下一个版本
+# 由于目前koa2 没有正式发布，属于下一个版本
 npm install koa@next
 
 ```
