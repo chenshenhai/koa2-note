@@ -45,6 +45,8 @@
     * [使用react.js](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/react.md)
     * [登录注册功能实现](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/sign.md)
     * [session登录态判断处理](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/session.md) 
+* [测试]()
+    * [单元测试](https://github.com/ChenShenhai/koa2-note/blob/master/note/test/unit.md)
 * [debug]()
     * [开发debug](https://github.com/ChenShenhai/koa2-note/blob/master/note/debug/info.md)
 
