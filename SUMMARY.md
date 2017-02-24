@@ -39,5 +39,7 @@
     * [使用react.js](note/project/react.md)
     * [登录注册功能实现](note/project/sign.md)
     * [session登录态判断处理](note/project/session.md) 
+* [测试]()
+    * [单元测试](note/test/unit.md)
 * [debug]()
     * [开发debug](note/debug/info.md)
