@@ -1,8 +1,8 @@
 # koa2 快速开始
 
 ## 环境准备
-- node.js环境 版本v7.x以上
-    - 直接安装node.js 7.x：node.js官网地址[https://nodejs.org](https://nodejs.org) 
+- node.js环境 版本v7.6以上
+    - 直接安装node.js 7.6：node.js官网地址[https://nodejs.org](https://nodejs.org) 
     - nvm管理多版本node.js：可以用nvm 进行node版本进行管理
         - Mac系统安装nvm [https://github.com/creationix/nvm#manual-install](https://github.com/creationix/nvm#manual-install)
         - windows系统安装nvm [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
@@ -19,8 +19,7 @@
 npm init
 
 # 安装koa2 
-# 由于目前koa2 没有正式发布，属于下一个版本
-npm install koa@next
+npm install koa
 
 ```
 
@@ -43,7 +42,7 @@ console.log('[demo] start-quick is starting at port 3000')
 由于koa2是基于async/await操作中间件，目前node.js 7.x的harmony模式下才能使用，所以启动的时的脚本如下：
 
 ```sh
-node --harmony index.js
+node index.js
 ```
 
 访问[http:localhost:3000](http:localhost:3000)，效果如下

@@ -259,7 +259,7 @@ INSERT INTO `user` set email='3@example.com', password='123456';
 
 ### 执行脚本
 ```
-node --harmony index.js
+node index.js
 ```
 
 ### 执行结果

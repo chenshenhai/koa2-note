@@ -45,7 +45,7 @@ console.log('[demo] cookie is starting at port 3000')
 
 ### 执行脚本
 ```sh
-node --harmony index.js
+node index.js
 ```
 
 ### 运行结果

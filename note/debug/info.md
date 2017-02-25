@@ -12,7 +12,7 @@
 [https://github.com/ChenShenhai/koa2-note/blob/master/demo/start-quick/](https://github.com/ChenShenhai/koa2-note/blob/master/demo/start-quick/index.js)
 
 ```
-node --harmony --debug-brk --inspect index.js
+node --debug-brk --inspect index.js
 ```
 
 ####指令框就会出现

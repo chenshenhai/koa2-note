@@ -50,7 +50,7 @@ console.log('[demo] request get is starting at port 3000')
 
 ### 执行程序
 ```sh
-node --harmony get.js
+node get.js
 ```
 执行后程序后，用chrome访问 [http://localhost:3000/page/user?a=1&b=2](http://localhost:3000/page/user?a=1&b=2) 会出现以下情况
 > 注意：我是用了chrome的json格式化插件才会显示json的格式化

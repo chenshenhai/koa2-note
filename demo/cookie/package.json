@@ -4,7 +4,7 @@
   "description": "koa cookie demo",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "koajs"
@@ -12,10 +12,10 @@
   "author": "chenshenhai",
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.0.0-alpha.8"
+    "koa": "^2.0.1"
   },
   "engines": {
-    "node": ">=7.0.0",
-    "npm": "~3.0.0"
+    "node": ">=7.6.0",
+    "npm": ">=3.0.0"
   }
 }

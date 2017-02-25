@@ -82,7 +82,7 @@ console.log('[demo] session is starting at port 3000')
 ### 运行例子
 #### 执行命令
 ```sh
-node --harmony index.js
+node index.js
 ```
 
 #### 访问连接设置session

@@ -253,7 +253,7 @@ module.exports = mimes
 
 #### 启动服务
 ```sh
-node --harmony index.js
+node index.js
 ```
 
 #### 效果

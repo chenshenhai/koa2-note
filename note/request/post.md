@@ -116,7 +116,7 @@ console.log('[demo] request post is starting at port 3000')
 
 ### 启动例子
 ```sh
-node --harmony post.js
+node post.js
 ```
 
 ### 访问页面
