@@ -4,12 +4,12 @@
   "description": "a koa2 project",
   "main": "index.js",
   "scripts": {
-    "init_sql": "node --harmony ./init/index.js",
+    "init_sql": "node ./init/index.js",
     "dev": "npm run dev_server & npm run dev_react",
     "dev_server": "nodemon --harmony ./server/app",
     "dev_static": "webpack --watch --config ./static/build/webpack.dev.config.js",
     "start_static": "webpack --config ./static/build/webpack.prod.config.js",
-    "start_server": "node --harmony ./server/app.js",
+    "start_server": "node ./server/app.js",
     "start": "npm run start_static & npm run start_server"
   },
   "author": "chenshenhai",

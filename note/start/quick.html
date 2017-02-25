@@ -773,8 +773,9 @@
                                 <h1 id="koa2-&#x5FEB;&#x901F;&#x5F00;&#x59CB;">koa2 &#x5FEB;&#x901F;&#x5F00;&#x59CB;</h1>
 <h2 id="&#x73AF;&#x5883;&#x51C6;&#x5907;">&#x73AF;&#x5883;&#x51C6;&#x5907;</h2>
 <ul>
-<li>node.js&#x73AF;&#x5883; &#x7248;&#x672C;v7.x&#x4EE5;&#x4E0A;<ul>
-<li>&#x76F4;&#x63A5;&#x5B89;&#x88C5;node.js 7.x&#xFF1A;node.js&#x5B98;&#x7F51;&#x5730;&#x5740;<a href="https://nodejs.org" target="_blank">https://nodejs.org</a> </li>
+<li>&#x56E0;&#x4E3A;node.js v7.6.0&#x5F00;&#x59CB;&#x5B8C;&#x5168;&#x652F;&#x6301;async/await&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x52A0;flag&#xFF0C;&#x6240;&#x4EE5;node.js&#x73AF;&#x5883;&#x90FD;&#x8981;7.6.0&#x4EE5;&#x4E0A;</li>
+<li>node.js&#x73AF;&#x5883; &#x7248;&#x672C;v7.6&#x4EE5;&#x4E0A;<ul>
+<li>&#x76F4;&#x63A5;&#x5B89;&#x88C5;node.js 7.6&#xFF1A;node.js&#x5B98;&#x7F51;&#x5730;&#x5740;<a href="https://nodejs.org" target="_blank">https://nodejs.org</a> </li>
 <li>nvm&#x7BA1;&#x7406;&#x591A;&#x7248;&#x672C;node.js&#xFF1A;&#x53EF;&#x4EE5;&#x7528;nvm &#x8FDB;&#x884C;node&#x7248;&#x672C;&#x8FDB;&#x884C;&#x7BA1;&#x7406;<ul>
 <li>Mac&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;nvm <a href="https://github.com/creationix/nvm#manual-install" target="_blank">https://github.com/creationix/nvm#manual-install</a></li>
 <li>windows&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;nvm <a href="https://github.com/coreybutler/nvm-windows" target="_blank">https://github.com/coreybutler/nvm-windows</a></li>
@@ -791,8 +792,7 @@
 npm init
 
 <span class="hljs-comment"># &#x5B89;&#x88C5;koa2 </span>
-<span class="hljs-comment"># &#x7531;&#x4E8E;&#x76EE;&#x524D;koa2 &#x6CA1;&#x6709;&#x6B63;&#x5F0F;&#x53D1;&#x5E03;&#xFF0C;&#x5C5E;&#x4E8E;&#x4E0B;&#x4E00;&#x4E2A;&#x7248;&#x672C;</span>
-npm install koa@next
+npm install koa
 </code></pre>
 <h3 id="hello-world-&#x4EE3;&#x7801;">hello world &#x4EE3;&#x7801;</h3>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
@@ -807,7 +807,7 @@ app.listen(<span class="hljs-number">3000</span>)
 </code></pre>
 <h3 id="&#x542F;&#x52A8;demo">&#x542F;&#x52A8;demo</h3>
 <p>&#x7531;&#x4E8E;koa2&#x662F;&#x57FA;&#x4E8E;async/await&#x64CD;&#x4F5C;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x76EE;&#x524D;node.js 7.x&#x7684;harmony&#x6A21;&#x5F0F;&#x4E0B;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x7684;&#x811A;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-sh">node --harmony index.js
+<pre><code class="lang-sh">node index.js
 </code></pre>
 <p>&#x8BBF;&#x95EE;<a href="http:localhost:3000" target="_blank">http:localhost:3000</a>&#xFF0C;&#x6548;&#x679C;&#x5982;&#x4E0B;</p>
 <p><img src="../images/start-result-01.png" alt="start-result-01"></p>
@@ -850,7 +850,7 @@ app.listen(<span class="hljs-number">3000</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"快速开始","level":"1.2.1","depth":2,"next":{"title":"async/await使用","level":"1.2.2","depth":2,"path":"note/start/async.md","ref":"note/start/async.md","articles":[]},"previous":{"title":"koa2开始","level":"1.2","depth":1,"ref":"","articles":[{"title":"快速开始","level":"1.2.1","depth":2,"path":"note/start/quick.md","ref":"note/start/quick.md","articles":[]},{"title":"async/await使用","level":"1.2.2","depth":2,"path":"note/start/async.md","ref":"note/start/async.md","articles":[]},{"title":"koa2简析结构","level":"1.2.3","depth":2,"path":"note/start/info.md","ref":"note/start/info.md","articles":[]},{"title":"koa中间件开发与使用","level":"1.2.4","depth":2,"path":"note/start/middleware.md","ref":"note/start/middleware.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/start/quick.md","mtime":"2017-02-24T13:01:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-24T13:01:07.619Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"快速开始","level":"1.2.1","depth":2,"next":{"title":"async/await使用","level":"1.2.2","depth":2,"path":"note/start/async.md","ref":"note/start/async.md","articles":[]},"previous":{"title":"koa2开始","level":"1.2","depth":1,"ref":"","articles":[{"title":"快速开始","level":"1.2.1","depth":2,"path":"note/start/quick.md","ref":"note/start/quick.md","articles":[]},{"title":"async/await使用","level":"1.2.2","depth":2,"path":"note/start/async.md","ref":"note/start/async.md","articles":[]},{"title":"koa2简析结构","level":"1.2.3","depth":2,"path":"note/start/info.md","ref":"note/start/info.md","articles":[]},{"title":"koa中间件开发与使用","level":"1.2.4","depth":2,"path":"note/start/middleware.md","ref":"note/start/middleware.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/start/quick.md","mtime":"2017-02-25T12:34:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:35:07.775Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

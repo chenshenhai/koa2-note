@@ -4,7 +4,7 @@
   "description": "koa upload-async demo",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "koajs"
@@ -14,13 +14,13 @@
   "dependencies": {
     "busboy": "^0.2.14",
     "ejs": "^2.5.6",
-    "koa": "^2.0.0-alpha.8",
+    "koa": "^2.0.1",
     "koa-convert": "^1.2.0",
     "koa-static": "^2.1.0",
     "koa-views": "^5.2.0"
   },
   "engines": {
-    "node": ">=7.0.0",
-    "npm": "~3.0.0"
+    "node": ">=7.6.0",
+    "npm": ">=3.0.0"
   }
 }
