@@ -41,6 +41,7 @@
     * [session登录态判断处理](note/project/session.md) 
 * [JSONP实现]()
     * [原生koa2实现JSONP](note/jsonp/info.md)
+    * [koa-jsonp中间件](note/jsonp/koa-jsonp.md)
 * [测试]()
     * [单元测试](note/test/unit.md)
 * [debug]()
