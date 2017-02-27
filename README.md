@@ -35,6 +35,13 @@
     * [mysql模块](https://github.com/ChenShenhai/koa2-note/blob/master/note/mysql/info.md)    
     * [async/await封装使用mysql](https://github.com/ChenShenhai/koa2-note/blob/master/note/mysql/async.md)
     * [项目建表初始化](https://github.com/ChenShenhai/koa2-note/blob/master/note/mysql/init.md)
+* [JSONP实现]()
+    * [原生koa2实现JSONP](https://github.com/ChenShenhai/koa2-note/blob/master/note/jsonp/info.md)
+    * [koa-jsonp中间件](https://github.com/ChenShenhai/koa2-note/blob/master/note/jsonp/koa-jsonp.md)
+* [测试]()
+    * [单元测试](https://github.com/ChenShenhai/koa2-note/blob/master/note/test/unit.md)
+* [debug]()
+    * [开发debug](https://github.com/ChenShenhai/koa2-note/blob/master/note/debug/info.md)
 * [项目框架搭建]()
     * [快速启动](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/start.md)
     * [框架设计](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/framework.md)
@@ -45,13 +52,7 @@
     * [使用react.js](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/react.md)
     * [登录注册功能实现](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/sign.md)
     * [session登录态判断处理](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/session.md) 
-* [JSONP实现]()
-    * [原生koa2实现JSONP](https://github.com/ChenShenhai/koa2-note/blob/master/note/jsonp/info.md)
-    * [koa-jsonp中间件](https://github.com/ChenShenhai/koa2-note/blob/master/note/jsonp/koa-jsonp.md)
-* [测试]()
-    * [单元测试](https://github.com/ChenShenhai/koa2-note/blob/master/note/test/unit.md)
-* [debug]()
-    * [开发debug](https://github.com/ChenShenhai/koa2-note/blob/master/note/debug/info.md)
+
 
 ## 前言
 - ES6/7 带来的变革
