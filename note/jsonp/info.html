@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>上传文件简单实现 · GitBook</title>
+        <title>原生koa2实现JSONP · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="pic-async.html" />
+    <link rel="next" href="koa-jsonp.html" />
     
-    
-    <link rel="prev" href="busboy.html" />
     
 
     </head>
@@ -425,9 +423,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="busboy.html">
+        <li class="chapter " data-level="1.8.1" data-path="../upload/busboy.html">
             
-                <a href="busboy.html">
+                <a href="../upload/busboy.html">
             
                     
                     busboy模块
@@ -438,9 +436,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.2" data-path="simple.html">
+        <li class="chapter " data-level="1.8.2" data-path="../upload/simple.html">
             
-                <a href="simple.html">
+                <a href="../upload/simple.html">
             
                     
                     上传文件简单实现
@@ -451,9 +449,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="pic-async.html">
+        <li class="chapter " data-level="1.8.3" data-path="../upload/pic-async.html">
             
-                <a href="pic-async.html">
+                <a href="../upload/pic-async.html">
             
                     
                     异步上传图片实现
@@ -677,9 +675,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1" data-path="../jsonp/info.html">
+        <li class="chapter active" data-level="1.11.1" data-path="info.html">
             
-                <a href="../jsonp/info.html">
+                <a href="info.html">
             
                     
                     原生koa2实现JSONP
@@ -690,9 +688,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2" data-path="../jsonp/koa-jsonp.html">
+        <li class="chapter " data-level="1.11.2" data-path="koa-jsonp.html">
             
-                <a href="../jsonp/koa-jsonp.html">
+                <a href="koa-jsonp.html">
             
                     
                     koa-jsonp中间件
@@ -802,7 +800,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >上传文件简单实现</a>
+        <a href="../.." >原生koa2实现JSONP</a>
     </h1>
 </div>
 
@@ -817,163 +815,88 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7B80;&#x5355;&#x5B9E;&#x73B0;">&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7B80;&#x5355;&#x5B9E;&#x73B0;</h1>
-<h2 id="&#x4F9D;&#x8D56;&#x6A21;&#x5757;">&#x4F9D;&#x8D56;&#x6A21;&#x5757;</h2>
-<h3 id="&#x5B89;&#x88C5;&#x4F9D;&#x8D56;">&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</h3>
-<pre><code class="lang-sh">npm install --save busboy
+                                <h1 id="&#x539F;&#x751F;koa2&#x5B9E;&#x73B0;jsonp">&#x539F;&#x751F;koa2&#x5B9E;&#x73B0;jsonp</h1>
+<h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p>&#x5728;&#x9879;&#x76EE;&#x590D;&#x6742;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5728;&#x524D;&#x7AEF;&#x8DE8;&#x57DF;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x63D0;&#x4F9B;&#x6570;&#x636E;&#x7684;&#x670D;&#x52A1;&#x5C31;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x4F7F;&#x7528;JSONP&#x7684;&#x65B9;&#x5F0F;&#x63D0;&#x4F9B;&#x8DE8;&#x57DF;&#x63A5;&#x53E3;&#x3002;</p>
+<h2 id="&#x5B9E;&#x73B0;jsonp">&#x5B9E;&#x73B0;JSONP</h2>
+<p>demo&#x5730;&#x5740;</p>
+<p><a href="https://github.com/ChenShenhai/koa2-note/blob/master/demo/jsonp/" target="_blank">https://github.com/ChenShenhai/koa2-note/blob/master/demo/jsonp/</a></p>
+<h3 id="&#x5177;&#x4F53;&#x539F;&#x7406;">&#x5177;&#x4F53;&#x539F;&#x7406;</h3>
+<pre><code class="lang-js">
+  <span class="hljs-comment">// &#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;JSONP&#x7684;&#x8BF7;&#x6C42; </span>
+  <span class="hljs-keyword">if</span> ( ctx.method === <span class="hljs-string">&apos;GET&apos;</span> &amp;&amp; ctx.url.split(<span class="hljs-string">&apos;?&apos;</span>)[<span class="hljs-number">0</span>] === <span class="hljs-string">&apos;/getData.jsonp&apos;</span>) {
+    <span class="hljs-comment">// &#x83B7;&#x53D6;jsonp&#x7684;callback</span>
+    <span class="hljs-keyword">let</span> callbackName = ctx.query.callback || <span class="hljs-string">&apos;callback&apos;</span>
+    <span class="hljs-keyword">let</span> returnData = {
+      success: <span class="hljs-literal">true</span>,
+      data: {
+        text: <span class="hljs-string">&apos;this is a jsonp api&apos;</span>,
+        time: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime(),
+      }
+    } 
+
+    <span class="hljs-comment">// jsonp&#x7684;script&#x5B57;&#x7B26;&#x4E32;</span>
+    <span class="hljs-keyword">let</span> jsonpStr = <span class="hljs-string">`;<span class="hljs-subst">${callbackName}</span>(<span class="hljs-subst">${JSON.stringify(returnData)}</span>)`</span>
+
+    <span class="hljs-comment">// &#x7528;text/javascript&#xFF0C;&#x8BA9;&#x8BF7;&#x6C42;&#x652F;&#x6301;&#x8DE8;&#x57DF;&#x83B7;&#x53D6;</span>
+    ctx.type = <span class="hljs-string">&apos;text/javascript&apos;</span>
+
+    <span class="hljs-comment">// &#x8F93;&#x51FA;jsonp&#x5B57;&#x7B26;&#x4E32;</span>
+    ctx.body = jsonpStr
 </code></pre>
+<h3 id="&#x89E3;&#x6790;&#x539F;&#x7406;">&#x89E3;&#x6790;&#x539F;&#x7406;</h3>
 <ul>
-<li>busboy &#x662F;&#x7528;&#x6765;&#x89E3;&#x6790;&#x51FA;&#x8BF7;&#x6C42;&#x4E2D;&#x6587;&#x4EF6;&#x6D41;</li>
+<li>JSONP&#x8DE8;&#x57DF;&#x8F93;&#x51FA;&#x7684;&#x6570;&#x636E;&#x662F;&#x53EF;&#x6267;&#x884C;&#x7684;JavaScript&#x4EE3;&#x7801;<ul>
+<li>ctx&#x8F93;&#x51FA;&#x7684;&#x7C7B;&#x578B;&#x5E94;&#x8BE5;&#x662F;&apos;text/javascript&apos;</li>
+<li>ctx&#x8F93;&#x51FA;&#x7684;&#x5185;&#x5BB9;&#x4E3A;&#x53EF;&#x6267;&#x884C;&#x7684;&#x8FD4;&#x56DE;&#x6570;&#x636E;JavaScript&#x4EE3;&#x7801;&#x5B57;&#x7B26;&#x4E32;</li>
 </ul>
-<h2 id="&#x4F8B;&#x5B50;&#x6E90;&#x7801;">&#x4F8B;&#x5B50;&#x6E90;&#x7801;</h2>
-<p>demo&#x6E90;&#x7801;</p>
-<p><a href="https://github.com/ChenShenhai/koa2-note/blob/master/demo/upload/" target="_blank">https://github.com/ChenShenhai/koa2-note/blob/master/demo/upload/</a></p>
-<h3 id="&#x5C01;&#x88C5;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x5230;&#x5199;&#x5165;&#x670D;&#x52A1;&#x7684;&#x65B9;&#x6CD5;">&#x5C01;&#x88C5;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x5230;&#x5199;&#x5165;&#x670D;&#x52A1;&#x7684;&#x65B9;&#x6CD5;</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> inspect = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;util&apos;</span>).inspect
-<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
-<span class="hljs-keyword">const</span> os = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;os&apos;</span>)
-<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>)
-<span class="hljs-keyword">const</span> Busboy = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;busboy&apos;</span>)
-
-<span class="hljs-comment">/**
- * &#x540C;&#x6B65;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
- * @param  {string} dirname &#x76EE;&#x5F55;&#x7EDD;&#x5BF9;&#x5730;&#x5740;
- * @return {boolean}        &#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x7ED3;&#x679C;
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mkdirsSync</span>(<span class="hljs-params"> dirname </span>) </span>{
-  <span class="hljs-keyword">if</span> (fs.existsSync( dirname )) {
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
-  } <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">if</span> (mkdirsSync( path.dirname(dirname)) ) {
-      fs.mkdirSync( dirname )
-      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
-    }
-  }
-}
-
-<span class="hljs-comment">/**
- * &#x83B7;&#x53D6;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x540E;&#x7F00;&#x540D;
- * @param  {string} fileName &#x83B7;&#x53D6;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x540E;&#x7F00;&#x540D;
- * @return {string}          &#x6587;&#x4EF6;&#x540E;&#x7F00;&#x540D;
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSuffixName</span>(<span class="hljs-params"> fileName </span>) </span>{
-  <span class="hljs-keyword">let</span> nameList = fileName.split(<span class="hljs-string">&apos;.&apos;</span>)
-  <span class="hljs-keyword">return</span> nameList[nameList.length - <span class="hljs-number">1</span>]
-}
-
-<span class="hljs-comment">/**
- * &#x4E0A;&#x4F20;&#x6587;&#x4EF6;
- * @param  {object} ctx     koa&#x4E0A;&#x4E0B;&#x6587;
- * @param  {object} options &#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x53C2;&#x6570; fileType&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C; path&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x8DEF;&#x5F84;
- * @return {promise}         
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">uploadFile</span>(<span class="hljs-params"> ctx, options</span>) </span>{
-  <span class="hljs-keyword">let</span> req = ctx.req
-  <span class="hljs-keyword">let</span> res = ctx.res
-  <span class="hljs-keyword">let</span> busboy = <span class="hljs-keyword">new</span> Busboy({headers: req.headers})
-
-  <span class="hljs-comment">// &#x83B7;&#x53D6;&#x7C7B;&#x578B;</span>
-  <span class="hljs-keyword">let</span> fileType = options.fileType || <span class="hljs-string">&apos;common&apos;</span>
-  <span class="hljs-keyword">let</span> filePath = path.join( options.path,  fileType)
-  <span class="hljs-keyword">let</span> mkdirResult = mkdirsSync( filePath )
-
-  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x4E2D;...&apos;</span>)
-    <span class="hljs-keyword">let</span> result = { 
-      success: <span class="hljs-literal">false</span>
-    }
-
-    <span class="hljs-comment">// &#x89E3;&#x6790;&#x8BF7;&#x6C42;&#x6587;&#x4EF6;&#x4E8B;&#x4EF6;</span>
-    busboy.on(<span class="hljs-string">&apos;file&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">fieldname, file, filename, encoding, mimetype</span>) </span>{
-      <span class="hljs-keyword">let</span> fileName = <span class="hljs-built_in">Math</span>.random().toString(<span class="hljs-number">16</span>).substr(<span class="hljs-number">2</span>) + <span class="hljs-string">&apos;.&apos;</span> + getSuffixName(filename)
-      <span class="hljs-keyword">let</span> _uploadFilePath = path.join( filePath, fileName )
-      <span class="hljs-keyword">let</span> saveTo = path.join(_uploadFilePath)
-
-      <span class="hljs-comment">// &#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5230;&#x5236;&#x5B9A;&#x8DEF;&#x5F84;</span>
-      file.pipe(fs.createWriteStream(saveTo))
-
-      <span class="hljs-comment">// &#x6587;&#x4EF6;&#x5199;&#x5165;&#x4E8B;&#x4EF6;&#x7ED3;&#x675F;</span>
-      file.on(<span class="hljs-string">&apos;end&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        result.success = <span class="hljs-literal">true</span>
-        result.message = <span class="hljs-string">&apos;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6210;&#x529F;&apos;</span>
-
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6210;&#x529F;&#xFF01;&apos;</span>)
-        resolve(result)
-      })
-    })
-
-    <span class="hljs-comment">// &#x89E3;&#x6790;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;</span>
-    busboy.on(<span class="hljs-string">&apos;finish&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> </span>) </span>{
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6587;&#x4EF6;&#x4E0A;&#x7ED3;&#x675F;&apos;</span>)
-      resolve(result)
-    })
-
-    <span class="hljs-comment">// &#x89E3;&#x6790;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</span>
-    busboy.on(<span class="hljs-string">&apos;error&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6587;&#x4EF6;&#x4E0A;&#x51FA;&#x9519;&apos;</span>)
-      reject(result)
-    })
-
-    req.pipe(busboy)
-  })
-
-} 
-
-
-<span class="hljs-built_in">module</span>.exports =  {
-  uploadFile
-}
-</code></pre>
-<h3 id="&#x5165;&#x53E3;&#x6587;&#x4EF6;">&#x5165;&#x53E3;&#x6587;&#x4EF6;</h3>
+</li>
+<li>&#x9700;&#x8981;&#x6709;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x540D;callbackName&#xFF0C;&#x524D;&#x7AEF;&#x83B7;&#x53D6;&#x540E;&#x4F1A;&#x901A;&#x8FC7;&#x52A8;&#x6001;&#x6267;&#x884C;JavaScript&#x4EE3;&#x7801;&#x5B57;&#x7B26;&#xFF0C;&#x83B7;&#x53D6;&#x91CC;&#x9762;&#x7684;&#x6570;&#x636E;</li>
+</ul>
+<h3 id="&#x6548;&#x679C;&#x622A;&#x56FE;">&#x6548;&#x679C;&#x622A;&#x56FE;</h3>
+<h4 id="&#x540C;&#x57DF;&#x8BBF;&#x95EE;json&#x8BF7;&#x6C42;">&#x540C;&#x57DF;&#x8BBF;&#x95EE;JSON&#x8BF7;&#x6C42;</h4>
+<p><img src="../images/jsonp-result-01.png" alt="jsonp-result-01"></p>
+<h4 id="&#x8DE8;&#x57DF;&#x8BBF;&#x95EE;json&#x8BF7;&#x6C42;">&#x8DE8;&#x57DF;&#x8BBF;&#x95EE;JSON&#x8BF7;&#x6C42;</h4>
+<p><img src="../images/jsonp-result-02.png" alt="jsonp-result-02"></p>
+<h3 id="&#x5B8C;&#x6574;demo&#x4EE3;&#x7801;">&#x5B8C;&#x6574;demo&#x4EE3;&#x7801;</h3>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
-<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
 <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Koa()
-<span class="hljs-comment">// const bodyParser = require(&apos;koa-bodyparser&apos;)</span>
-
-<span class="hljs-keyword">const</span> { uploadFile } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./util/upload&apos;</span>)
-
-<span class="hljs-comment">// app.use(bodyParser())</span>
 
 app.use( <span class="hljs-keyword">async</span> ( ctx ) =&gt; {
 
-  <span class="hljs-keyword">if</span> ( ctx.url === <span class="hljs-string">&apos;/&apos;</span> &amp;&amp; ctx.method === <span class="hljs-string">&apos;GET&apos;</span> ) {
-    <span class="hljs-comment">// &#x5F53;GET&#x8BF7;&#x6C42;&#x65F6;&#x5019;&#x8FD4;&#x56DE;&#x8868;&#x5355;&#x9875;&#x9762;</span>
-    <span class="hljs-keyword">let</span> html = <span class="hljs-string">`
-      &lt;h1&gt;koa2 upload demo&lt;/h1&gt;
-      &lt;form method=&quot;POST&quot; action=&quot;/upload.json&quot; enctype=&quot;multipart/form-data&quot;&gt;
-        &lt;p&gt;file upload&lt;/p&gt;
-        &lt;input name=&quot;file&quot; type=&quot;file&quot; /&gt;&lt;br/&gt;&lt;br/&gt;
-        &lt;button type=&quot;submit&quot;&gt;submit&lt;/button&gt;
-      &lt;/form&gt;
-    `</span>
-    ctx.body = html
 
-  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( ctx.url === <span class="hljs-string">&apos;/upload.json&apos;</span> &amp;&amp; ctx.method === <span class="hljs-string">&apos;POST&apos;</span> ) {
-    <span class="hljs-comment">// &#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x8BF7;&#x6C42;&#x5904;&#x7406;</span>
-    <span class="hljs-keyword">let</span> result = { success: <span class="hljs-literal">false</span> }
-    <span class="hljs-keyword">let</span> serverFilePath = path.join( __dirname, <span class="hljs-string">&apos;upload-files&apos;</span> )
+  <span class="hljs-comment">// &#x5982;&#x679C;jsonp &#x7684;&#x8BF7;&#x6C42;&#x4E3A;GET</span>
+  <span class="hljs-keyword">if</span> ( ctx.method === <span class="hljs-string">&apos;GET&apos;</span> &amp;&amp; ctx.url.split(<span class="hljs-string">&apos;?&apos;</span>)[<span class="hljs-number">0</span>] === <span class="hljs-string">&apos;/getData.jsonp&apos;</span>) {
 
-    <span class="hljs-comment">// &#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x4E8B;&#x4EF6;</span>
-    result = <span class="hljs-keyword">await</span> uploadFile( ctx, {
-      fileType: <span class="hljs-string">&apos;album&apos;</span>, <span class="hljs-comment">// common or album</span>
-      path: serverFilePath
-    })
+    <span class="hljs-comment">// &#x83B7;&#x53D6;jsonp&#x7684;callback</span>
+    <span class="hljs-keyword">let</span> callbackName = ctx.query.callback || <span class="hljs-string">&apos;callback&apos;</span>
+    <span class="hljs-keyword">let</span> returnData = {
+      success: <span class="hljs-literal">true</span>,
+      data: {
+        text: <span class="hljs-string">&apos;this is a jsonp api&apos;</span>,
+        time: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime(),
+      }
+    }
 
-    ctx.body = result
+    <span class="hljs-comment">// jsonp&#x7684;script&#x5B57;&#x7B26;&#x4E32;</span>
+    <span class="hljs-keyword">let</span> jsonpStr = <span class="hljs-string">`;<span class="hljs-subst">${callbackName}</span>(<span class="hljs-subst">${JSON.stringify(returnData)}</span>)`</span>
+
+    <span class="hljs-comment">// &#x7528;text/javascript&#xFF0C;&#x8BA9;&#x8BF7;&#x6C42;&#x652F;&#x6301;&#x8DE8;&#x57DF;&#x83B7;&#x53D6;</span>
+    ctx.type = <span class="hljs-string">&apos;text/javascript&apos;</span>
+
+    <span class="hljs-comment">// &#x8F93;&#x51FA;jsonp&#x5B57;&#x7B26;&#x4E32;</span>
+    ctx.body = jsonpStr
+
   } <span class="hljs-keyword">else</span> {
-    <span class="hljs-comment">// &#x5176;&#x4ED6;&#x8BF7;&#x6C42;&#x663E;&#x793A;404</span>
-    ctx.body = <span class="hljs-string">&apos;&lt;h1&gt;404&#xFF01;&#xFF01;&#xFF01; o(&#x256F;&#x25A1;&#x2570;)o&lt;/h1&gt;&apos;</span>
+
+    ctx.body = <span class="hljs-string">&apos;hello jsonp&apos;</span>
+
   }
 })
 
 app.listen(<span class="hljs-number">3000</span>)
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;[demo] upload-simple is starting at port 3000&apos;</span>)
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;[demo] jsonp is starting at port 3000&apos;</span>)
 </code></pre>
-<h3 id="&#x8FD0;&#x884C;&#x7ED3;&#x679C;">&#x8FD0;&#x884C;&#x7ED3;&#x679C;</h3>
-<p><img src="../images/upload-simple-result-01.png" alt="upload-simple-result"></p>
-<p><img src="../images/upload-simple-result-02.png" alt="upload-simple-result"></p>
-<p><img src="../images/upload-simple-result-03.png" alt="upload-simple-result"></p>
-<p><img src="../images/upload-simple-result-04.png" alt="upload-simple-result"></p>
 
                                 
                                 </section>
@@ -1001,12 +924,8 @@ app.listen(<span class="hljs-number">3000</span>)
 
             
                 
-                <a href="busboy.html" class="navigation navigation-prev " aria-label="Previous page: busboy模块">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="pic-async.html" class="navigation navigation-next " aria-label="Next page: 异步上传图片实现">
+                <a href="koa-jsonp.html" class="navigation navigation-next navigation-unique" aria-label="Next page: koa-jsonp中间件">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1017,7 +936,7 @@ app.listen(<span class="hljs-number">3000</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"上传文件简单实现","level":"1.8.2","depth":2,"next":{"title":"异步上传图片实现","level":"1.8.3","depth":2,"path":"note/upload/pic-async.md","ref":"note/upload/pic-async.md","articles":[]},"previous":{"title":"busboy模块","level":"1.8.1","depth":2,"path":"note/upload/busboy.md","ref":"note/upload/busboy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/upload/simple.md","mtime":"2017-02-25T12:19:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-27T14:10:22.288Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"原生koa2实现JSONP","level":"1.11.1","depth":2,"next":{"title":"koa-jsonp中间件","level":"1.11.2","depth":2,"path":"note/jsonp/koa-jsonp.md","ref":"note/jsonp/koa-jsonp.md","articles":[]},"previous":{"title":"JSONP实现","level":"1.11","depth":1,"ref":"","articles":[{"title":"原生koa2实现JSONP","level":"1.11.1","depth":2,"path":"note/jsonp/info.md","ref":"note/jsonp/info.md","articles":[]},{"title":"koa-jsonp中间件","level":"1.11.2","depth":2,"path":"note/jsonp/koa-jsonp.md","ref":"note/jsonp/koa-jsonp.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/jsonp/info.md","mtime":"2017-02-27T14:11:43.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-27T14:10:22.288Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
