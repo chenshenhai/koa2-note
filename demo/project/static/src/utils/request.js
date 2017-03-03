@@ -123,6 +123,7 @@ const request = {
       _input.value = _value;
       _form.appendChild( _input );
     }
+    document.body.appendChild(_form);
     _form.submit();
 
   }
