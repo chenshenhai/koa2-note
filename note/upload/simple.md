@@ -171,11 +171,11 @@ console.log('[demo] upload-simple is starting at port 3000')
 
 ### 运行结果
 
-![upload-simple-result](./../images/upload-simple-result-01.png)
+![upload-simple-result](./../images/upload-simple-result-03.png)
 
 ![upload-simple-result](./../images/upload-simple-result-02.png)
 
-![upload-simple-result](./../images/upload-simple-result-03.png)
+![upload-simple-result](./../images/upload-simple-result-01.png)
 
 ![upload-simple-result](./../images/upload-simple-result-04.png)
 
