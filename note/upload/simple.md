@@ -141,6 +141,7 @@ app.use( async ( ctx ) => {
       <h1>koa2 upload demo</h1>
       <form method="POST" action="/upload.json" enctype="multipart/form-data">
         <p>file upload</p>
+        <span>picName:</span><input name="picName" type="text" /><br/>
         <input name="file" type="file" /><br/><br/>
         <button type="submit">submit</button>
       </form>
