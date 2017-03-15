@@ -1,11 +1,8 @@
 const Koa = require('koa')
 const path = require('path')
 const app = new Koa()
-// const bodyParser = require('koa-bodyparser')
 
 const { uploadFile } = require('./util/upload')
-
-// app.use(bodyParser())
 
 app.use( async ( ctx ) => {
 
@@ -15,6 +12,7 @@ app.use( async ( ctx ) => {
       <h1>koa2 upload demo</h1>
       <form method="POST" action="/upload.json" enctype="multipart/form-data">
         <p>file upload</p>
+        <span>picName:</span><input name="picName" type="text" /><br/>
         <input name="file" type="file" /><br/><br/>
         <button type="submit">submit</button>
       </form>
