@@ -49,7 +49,8 @@ function uploadFile( ctx, options) {
   return new Promise((resolve, reject) => {
     console.log('文件上传中...')
     let result = { 
-      success: false
+      success: false,
+      formData: {},
     }
 
     // 解析请求文件事件
@@ -65,11 +66,15 @@ function uploadFile( ctx, options) {
       file.on('end', function() {
         result.success = true
         result.message = '文件上传成功'
-
         console.log('文件上传成功！')
-        resolve(result)
       })
     })
+
+    // 解析表单中其他字段信息
+    busboy.on('field', function(fieldname, val, fieldnameTruncated, valTruncated, encoding, mimetype) {
+      console.log('表单字段数据 [' + fieldname + ']: value: ' + inspect(val));
+      result.formData[fieldname] = inspect(val);
+    });
 
     // 解析结束事件
     busboy.on('finish', function( ) {
