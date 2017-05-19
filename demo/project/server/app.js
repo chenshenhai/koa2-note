@@ -28,15 +28,15 @@ app.use(session({
 }))
 
 // 配置控制台日志中间件
-app.use(convert(koaLogger()))
+app.use(koaLogger())
 
 // 配置ctx.body解析中间件
 app.use(bodyParser())
 
 // 配置静态资源加载中间件
-app.use(convert(koaStatic(
+app.use(koaStatic(
   path.join(__dirname , './../static')
-)))
+))
 
 // 配置服务端模板渲染引擎中间件
 app.use(views(path.join(__dirname, './views'), {
