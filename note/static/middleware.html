@@ -821,7 +821,6 @@
 <p><a href="https://github.com/ChenShenhai/koa2-note/blob/master/demo/static-use-middleware/" target="_blank">https://github.com/ChenShenhai/koa2-note/blob/master/demo/static-use-middleware/</a></p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
 <span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
-<span class="hljs-keyword">const</span> convert = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-convert&apos;</span>)
 <span class="hljs-keyword">const</span> <span class="hljs-keyword">static</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-static&apos;</span>)
 
 <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Koa()
@@ -829,11 +828,9 @@
 <span class="hljs-comment">// &#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;&#x5BF9;&#x4E8E;&#x76F8;&#x5BF9;&#x5165;&#x53E3;&#x6587;&#x4EF6;index.js&#x7684;&#x8DEF;&#x5F84;</span>
 <span class="hljs-keyword">const</span> staticPath = <span class="hljs-string">&apos;./static&apos;</span>
 
-<span class="hljs-comment">// &#x7531;&#x4E8E;koa-static&#x76EE;&#x524D;&#x4E0D;&#x652F;&#x6301;koa2</span>
-<span class="hljs-comment">// &#x6240;&#x4EE5;&#x53EA;&#x80FD;&#x7528;koa-convert&#x5C01;&#x88C5;&#x4E00;&#x4E0B;</span>
-app.use(convert(<span class="hljs-keyword">static</span>(
+app.use(<span class="hljs-keyword">static</span>(
   path.join( __dirname,  staticPath)
-)))
+))
 
 
 app.use( <span class="hljs-keyword">async</span> ( ctx ) =&gt; {
@@ -889,7 +886,7 @@ app.listen(<span class="hljs-number">3000</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.2 koa-static中间件","level":"1.5.2","depth":2,"next":{"title":"5. cookie/session","level":"1.6","depth":1,"ref":"","articles":[{"title":"5.1 koa2使用cookie","level":"1.6.1","depth":2,"path":"note/cookie/info.md","ref":"note/cookie/info.md","articles":[]},{"title":"5.2 koa2实现session","level":"1.6.2","depth":2,"path":"note/session/info.md","ref":"note/session/info.md","articles":[]}]},"previous":{"title":"4.1 原生koa2实现静态资源服务器","level":"1.5.1","depth":2,"path":"note/static/server.md","ref":"note/static/server.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/static/middleware.md","mtime":"2017-05-08T15:03:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-08T15:03:36.737Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.2 koa-static中间件","level":"1.5.2","depth":2,"next":{"title":"5. cookie/session","level":"1.6","depth":1,"ref":"","articles":[{"title":"5.1 koa2使用cookie","level":"1.6.1","depth":2,"path":"note/cookie/info.md","ref":"note/cookie/info.md","articles":[]},{"title":"5.2 koa2实现session","level":"1.6.2","depth":2,"path":"note/session/info.md","ref":"note/session/info.md","articles":[]}]},"previous":{"title":"4.1 原生koa2实现静态资源服务器","level":"1.5.1","depth":2,"path":"note/static/server.md","ref":"note/static/server.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/static/middleware.md","mtime":"2017-05-19T13:57:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-19T14:08:28.738Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
