@@ -20,9 +20,6 @@ demo源码
 const Koa = require('koa')
 const app = new Koa()
 
-const Koa = require('koa')
-const app = new Koa()
-
 app.use( async ( ctx ) => {
   let url = ctx.url
   // 从上下文的request对象中获取
