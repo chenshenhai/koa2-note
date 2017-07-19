@@ -1,4 +1,6 @@
-# 《koa2进阶学习笔记》
+# 《Koa2进阶学习笔记》
+
+<img src="https://user-images.githubusercontent.com/8216630/28377878-d0fdc62a-6ce0-11e7-8099-595ab20d41a3.png"  width="320"/>
 
 ## 持续更新中...
 
