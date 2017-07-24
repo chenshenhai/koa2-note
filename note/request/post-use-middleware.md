@@ -22,11 +22,6 @@ const app = new Koa()
 const bodyParser = require('koa-bodyparser')
 
 // 使用ctx.body解析中间件
-const Koa = require('koa')
-const app = new Koa()
-const bodyParser = require('koa-bodyparser')
-
-// 使用ctx.body解析中间件
 app.use(bodyParser())
 
 app.use( async ( ctx ) => {
