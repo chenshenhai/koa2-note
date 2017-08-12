@@ -44,5 +44,7 @@ app.use( async ( ctx ) => {
   
 })
 
-app.listen(3000)
-console.log('[demo] static-server is starting at port 3000')
+app.listen(3000, () => {
+  console.log('[demo] static-server is starting at port 3000')
+})
+

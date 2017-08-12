@@ -12,9 +12,9 @@
   "author": "chenshenhai",
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.0.1",
+    "koa": "^2.3.0",
     "koa-mysql-session": "^0.0.2",
-    "koa-session-minimal": "^3.0.3"
+    "koa-session-minimal": "^3.0.4"
   },
   "engines": {
     "node": ">=7.6.0",

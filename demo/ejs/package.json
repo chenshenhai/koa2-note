@@ -12,8 +12,9 @@
   "author": "chenshenhai",
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.0.1",
-    "koa-views": "^5.2.0"
+    "ejs": "^2.5.7",
+    "koa": "^2.3.0",
+    "koa-views": "^5.2.1"
   },
   "engines": {
     "node": ">=7.6.0",

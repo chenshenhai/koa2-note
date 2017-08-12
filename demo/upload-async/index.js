@@ -1,7 +1,6 @@
 const Koa = require('koa')
 const views = require('koa-views')
-const path = require('path')
-const convert = require('koa-convert')
+const path = require('path') 
 const static = require('koa-static')
 const { uploadFile } = require('./util/upload')
 
@@ -16,12 +15,11 @@ app.use(views(path.join(__dirname, './view'), {
 }))
 
 // 静态资源目录对于相对入口文件index.js的路径
-const staticPath = './static'
-// 由于koa-static目前不支持koa2
-// 所以只能用koa-convert封装一下
-app.use(convert(static(
+const staticPath = './static' 
+
+app.use(static(
   path.join( __dirname,  staticPath)
-)))
+))
 /**
  * 使用第三方中间件 end 
  */
@@ -52,5 +50,7 @@ app.use( async ( ctx ) => {
 })
 
 
-app.listen(3000)
-console.log('[demo] upload-pic-async is starting at port 3000')
+app.listen(3000, () => {
+  console.log('[demo] upload-pic-async is starting at port 3000')
+})
+

@@ -33,5 +33,7 @@ router.use('/page', page.routes(), page.allowedMethods())
 // 加载路由中间件
 app.use(router.routes()).use(router.allowedMethods())
 
-app.listen(3000)
-console.log('[demo] route-use-middleware is starting at port 3000')
+app.listen(3000, () => {
+  console.log('[demo] route-use-middleware is starting at port 3000')
+})
+

@@ -54,5 +54,7 @@ app.use( async ( ctx ) => {
   ctx.body = html
 })
 
-app.listen(3000)
-console.log('[demo] route-simple is starting at port 3000')
+app.listen(3000, () => {
+  console.log('[demo] route-simple is starting at port 3000')
+})
+
