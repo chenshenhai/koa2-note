@@ -32,7 +32,7 @@ demo地址
 
     // 输出jsonp字符串
     ctx.body = jsonpStr
-    
+  }  
 ```
 ### 解析原理
 - JSONP跨域输出的数据是可执行的JavaScript代码
@@ -87,8 +87,8 @@ app.use( async ( ctx ) => {
   }
 })
 
-app.listen(3000)
-console.log('[demo] jsonp is starting at port 3000')
-
+app.listen(3000, () => {
+  console.log('[demo] jsonp is starting at port 3000')
+})
 
 ```

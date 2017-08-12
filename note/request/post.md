@@ -109,8 +109,9 @@ function parseQueryStr( queryStr ) {
   return queryData
 }
 
-app.listen(3000)
-console.log('[demo] request post is starting at port 3000')
+app.listen(3000, () => {
+  console.log('[demo] request post is starting at port 3000')
+})
 
 ```
 

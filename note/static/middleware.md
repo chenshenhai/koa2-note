@@ -24,8 +24,9 @@ app.use( async ( ctx ) => {
   ctx.body = 'hello world'
 })
 
-app.listen(3000)
-console.log('[demo] static-use-middleware is starting at port 3000')
+app.listen(3000, () => {
+  console.log('[demo] static-use-middleware is starting at port 3000')
+})
 
 ```
 

@@ -41,6 +41,8 @@ app.use( async ( ctx ) => {
   ctx.body = returnData
 })
 
-app.listen(3000)
-console.log('[demo] jsonp is starting at port 3000')
+app.listen(3000, () => {
+  console.log('[demo] jsonp is starting at port 3000')
+})
+
 ```

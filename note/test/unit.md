@@ -72,8 +72,10 @@ app.use(server)
 
 module.exports = app
 
-app.listen(3000)
-console.log('[demo] test-unit is starting at port 3000')
+app.listen(3000, () => {
+  console.log('[demo] test-unit is starting at port 3000')
+})
+
 ```
 
 启动服务后访问接口会看到以下数据
