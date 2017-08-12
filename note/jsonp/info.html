@@ -843,6 +843,7 @@
 
     <span class="hljs-comment">// &#x8F93;&#x51FA;jsonp&#x5B57;&#x7B26;&#x4E32;</span>
     ctx.body = jsonpStr
+  }
 </code></pre>
 <h3 id="&#x89E3;&#x6790;&#x539F;&#x7406;">&#x89E3;&#x6790;&#x539F;&#x7406;</h3>
 <ul>
@@ -894,8 +895,9 @@ app.use( <span class="hljs-keyword">async</span> ( ctx ) =&gt; {
   }
 })
 
-app.listen(<span class="hljs-number">3000</span>)
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;[demo] jsonp is starting at port 3000&apos;</span>)
+app.listen(<span class="hljs-number">3000</span>, () =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;[demo] jsonp is starting at port 3000&apos;</span>)
+})
 </code></pre>
 
                                 
@@ -936,7 +938,7 @@ app.listen(<span class="hljs-number">3000</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9.1 原生koa2实现JSONP","level":"1.10.1","depth":2,"next":{"title":"9.2 koa-jsonp中间件","level":"1.10.2","depth":2,"path":"note/jsonp/koa-jsonp.md","ref":"note/jsonp/koa-jsonp.md","articles":[]},"previous":{"title":"9. JSONP实现","level":"1.10","depth":1,"ref":"","articles":[{"title":"9.1 原生koa2实现JSONP","level":"1.10.1","depth":2,"path":"note/jsonp/info.md","ref":"note/jsonp/info.md","articles":[]},{"title":"9.2 koa-jsonp中间件","level":"1.10.2","depth":2,"path":"note/jsonp/koa-jsonp.md","ref":"note/jsonp/koa-jsonp.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/jsonp/info.md","mtime":"2017-08-05T13:48:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-05T14:51:35.307Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9.1 原生koa2实现JSONP","level":"1.10.1","depth":2,"next":{"title":"9.2 koa-jsonp中间件","level":"1.10.2","depth":2,"path":"note/jsonp/koa-jsonp.md","ref":"note/jsonp/koa-jsonp.md","articles":[]},"previous":{"title":"9. JSONP实现","level":"1.10","depth":1,"ref":"","articles":[{"title":"9.1 原生koa2实现JSONP","level":"1.10.1","depth":2,"path":"note/jsonp/info.md","ref":"note/jsonp/info.md","articles":[]},{"title":"9.2 koa-jsonp中间件","level":"1.10.2","depth":2,"path":"note/jsonp/koa-jsonp.md","ref":"note/jsonp/koa-jsonp.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/jsonp/info.md","mtime":"2017-08-12T07:23:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-12T07:35:47.762Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

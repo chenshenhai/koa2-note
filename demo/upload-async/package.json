@@ -13,11 +13,10 @@
   "license": "MIT",
   "dependencies": {
     "busboy": "^0.2.14",
-    "ejs": "^2.5.6",
-    "koa": "^2.0.1",
-    "koa-convert": "^1.2.0",
-    "koa-static": "^2.1.0",
-    "koa-views": "^5.2.0"
+    "ejs": "^2.5.7",
+    "koa": "^2.3.0",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1"
   },
   "engines": {
     "node": ">=7.6.0",
