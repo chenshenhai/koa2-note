@@ -817,24 +817,37 @@
 <h2 id="&#x5FEB;&#x901F;&#x5F00;&#x59CB;">&#x5FEB;&#x901F;&#x5F00;&#x59CB;</h2>
 <h3 id="&#x73AF;&#x5883;">&#x73AF;&#x5883;</h3>
 <ul>
-<li>node&#x73AF;&#x5883; 7.x +</li>
+<li>node&#x73AF;&#x5883; 8.x +</li>
+<li>chrome 60+</li>
 </ul>
 <h3 id="&#x542F;&#x52A8;&#x811A;&#x672C;">&#x542F;&#x52A8;&#x811A;&#x672C;</h3>
 <h4 id="&#x8C03;&#x8BD5;demo">&#x8C03;&#x8BD5;demo</h4>
 <p><a href="https://github.com/ChenShenhai/koa2-note/blob/master/demo/start-quick/index.js" target="_blank">https://github.com/ChenShenhai/koa2-note/blob/master/demo/start-quick/</a></p>
-<pre><code>node --debug-brk --inspect index.js
-</code></pre><h4 id="&#x6307;&#x4EE4;&#x6846;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;">&#x6307;&#x4EE4;&#x6846;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;</h4>
-<p><img src="../images/debug-result-01.png" alt="debug-result"></p>
-<h4 id="&#x6307;&#x4EE4;&#x6846;&#x4E2D;&#x663E;&#x793A;&#x7684;">&#x6307;&#x4EE4;&#x6846;&#x4E2D;&#x663E;&#x793A;&#x7684;</h4>
-<p><code>chrome-devtools://devtools/bundled/inspector.html?experiments=true&amp;v8only=true&amp;ws=127.0.0.1:9229/c3f33c44-9f12-4065-b3c3-4f392983a6c0</code></p>
-<p>&#x5C31;&#x662F;node.js&#x8FDE;&#x63A5;chrome&#x8C03;&#x8BD5;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x8BA9;node.js&#x4EE3;&#x7801;&#x7684;&#x8C03;&#x8BD5;&#x548C;&#x524D;&#x7AEF;js&#x4EE3;&#x7801;&#x4E00;&#x6837;</p>
+<pre><code>node --inspect index.js
+</code></pre><h4 id="&#x6307;&#x4EE4;&#x6846;&#x663E;&#x793A;">&#x6307;&#x4EE4;&#x6846;&#x663E;&#x793A;</h4>
 <blockquote>
-<p>&#x6CE8;&#x610F;&#xFF1A;chrome&#x7684;debug&#x94FE;&#x63A5;&#x662F;&#x968F;&#x673A;&#x751F;&#x6210;&#x7684;</p>
+<p>&#x6307;&#x4EE4;&#x6846;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x4EE5;&#x4E0B;&#x5B57;&#x6837;</p>
 </blockquote>
-<h4 id="&#x8BBF;&#x95EE;&#x6307;&#x4EE4;&#x6846;&#x8C03;&#x8BD5;&#x8FDE;&#x63A5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;chrome&#x4E2D;&#x50CF;&#x524D;&#x7AEF;&#x90A3;&#x6837;&#x8C03;&#x8BD5;nodejs&#x4EE3;&#x7801;&#x4E86;">&#x8BBF;&#x95EE;&#x6307;&#x4EE4;&#x6846;&#x8C03;&#x8BD5;&#x8FDE;&#x63A5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;chrome&#x4E2D;&#x50CF;&#x524D;&#x7AEF;&#x90A3;&#x6837;&#x8C03;&#x8BD5;node.js&#x4EE3;&#x7801;&#x4E86;</h4>
-<p><img src="../images/debug-result-02.png" alt="debug-result"></p>
-<h4 id="&#x8BBF;&#x95EE;&#x8FDE;&#x63A5;&#x540E;&#x628A;&#x9ED8;&#x8BA4;&#x65AD;&#x70B9;&#x6253;&#x5F00;&#xFF0C;&#x5C31;&#x542F;&#x52A8;&#x4E86;nodejs&#x670D;&#x52A1;">&#x8BBF;&#x95EE;&#x8FDE;&#x63A5;&#x540E;&#x628A;&#x9ED8;&#x8BA4;&#x65AD;&#x70B9;&#x6253;&#x5F00;&#xFF0C;&#x5C31;&#x542F;&#x52A8;&#x4E86;node.js&#x670D;&#x52A1;</h4>
-<p><img src="../images/debug-result-03.png" alt="debug-result"></p>
+<pre><code class="lang-sh">Debugger listening on ws://127.0.0.1:9229/4c23c723-5197-4d23-9b90<span class="hljs-_">-d</span>473f1164abe
+For <span class="hljs-built_in">help</span> see https://nodejs.org/en/docs/inspector
+</code></pre>
+<p><img src="../images/debug-result-001.png" alt="debug-result"></p>
+<h4 id="&#x8BBF;&#x95EE;chrome&#x6D4F;&#x89C8;&#x5668;&#x8C03;&#x8BD5;server">&#x8BBF;&#x95EE;chrome&#x6D4F;&#x89C8;&#x5668;&#x8C03;&#x8BD5;server</h4>
+<p><img src="../images/debug-result-002.png" alt="debug-result"></p>
+<blockquote>
+<p> &#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8C03;&#x8BD5;&#x7A97;&#x53E3;&#x4F1A;&#x770B;&#x5230;&#x4E00;&#x4E2A;node.js &#x7684;&#x5C0F;logo</p>
+</blockquote>
+<p><img src="../images/debug-result-003.png" alt="debug-result"></p>
+<h4 id="&#x6253;&#x5F00;chrome&#x6D4F;&#x89C8;&#x5668;&#x7684;node&#x8C03;&#x8BD5;&#x7A97;&#x53E3;">&#x6253;&#x5F00;chrome&#x6D4F;&#x89C8;&#x5668;&#x7684;node&#x8C03;&#x8BD5;&#x7A97;&#x53E3;</h4>
+<p><img src="../images/debug-result-004.png" alt="debug-result"></p>
+<p><img src="../images/debug-result-006.png" alt="debug-result"></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#x6253;&#x5F00;&#x4E86;node&#x7684;&#x8C03;&#x8BD5;&#x7A97;&#x53E3;&#x540E;&#xFF0C;&#x539F;&#x6765;&#x7EFF;&#x8272;&#x7684;node&#x6309;&#x94AE;&#x4F1A;&#x53D8;&#x7070;&#x8272;&#xFF0C;&#x540C;&#x65F6;&#x8C03;&#x8BD5;&#x6846;&#x4F1A;&#x663E;&#x793A;debug&#x72B6;&#x6001;</p>
+</blockquote>
+<p><img src="../images/debug-result-005.png" alt="debug-result"></p>
+<p><img src="../images/debug-result-008.png" alt="debug-result"></p>
+<h4 id="&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x6253;&#x65AD;&#x70B9;&#x8C03;&#x8BD5;&#x4E86;">&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x6253;&#x65AD;&#x70B9;&#x8C03;&#x8BD5;&#x4E86;</h4>
+<p><img src="../images/debug-result-007.png" alt="debug-result"></p>
 
                                 
                                 </section>
@@ -870,7 +883,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"11.1 开发debug","level":"1.12.1","depth":2,"next":{"title":"12. 项目框架搭建","level":"1.13","depth":1,"ref":"","articles":[{"title":"12.1 快速启动","level":"1.13.1","depth":2,"path":"note/project/start.md","ref":"note/project/start.md","articles":[]},{"title":"12.2 框架设计","level":"1.13.2","depth":2,"path":"note/project/framework.md","ref":"note/project/framework.md","articles":[]},{"title":"12.3 分层操作","level":"1.13.3","depth":2,"path":"note/project/layer.md","ref":"note/project/layer.md","articles":[]},{"title":"12.4 数据库设计","level":"1.13.4","depth":2,"path":"note/project/sql.md","ref":"note/project/sql.md","articles":[]},{"title":"12.5 路由设计","level":"1.13.5","depth":2,"path":"note/project/route.md","ref":"note/project/route.md","articles":[]},{"title":"12.6 webpack2环境搭建","level":"1.13.6","depth":2,"path":"note/project/webpack2.md","ref":"note/project/webpack2.md","articles":[]},{"title":"12.7 使用react.js","level":"1.13.7","depth":2,"path":"note/project/react.md","ref":"note/project/react.md","articles":[]},{"title":"12.8 登录注册功能实现","level":"1.13.8","depth":2,"path":"note/project/sign.md","ref":"note/project/sign.md","articles":[]},{"title":"12.9 session登录态判断处理","level":"1.13.9","depth":2,"path":"note/project/session.md","ref":"note/project/session.md","articles":[]}]},"previous":{"title":"11. debug","level":"1.12","depth":1,"ref":"","articles":[{"title":"11.1 开发debug","level":"1.12.1","depth":2,"path":"note/debug/info.md","ref":"note/debug/info.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/debug/info.md","mtime":"2017-08-12T07:22:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-12T07:35:47.762Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"11.1 开发debug","level":"1.12.1","depth":2,"next":{"title":"12. 项目框架搭建","level":"1.13","depth":1,"ref":"","articles":[{"title":"12.1 快速启动","level":"1.13.1","depth":2,"path":"note/project/start.md","ref":"note/project/start.md","articles":[]},{"title":"12.2 框架设计","level":"1.13.2","depth":2,"path":"note/project/framework.md","ref":"note/project/framework.md","articles":[]},{"title":"12.3 分层操作","level":"1.13.3","depth":2,"path":"note/project/layer.md","ref":"note/project/layer.md","articles":[]},{"title":"12.4 数据库设计","level":"1.13.4","depth":2,"path":"note/project/sql.md","ref":"note/project/sql.md","articles":[]},{"title":"12.5 路由设计","level":"1.13.5","depth":2,"path":"note/project/route.md","ref":"note/project/route.md","articles":[]},{"title":"12.6 webpack2环境搭建","level":"1.13.6","depth":2,"path":"note/project/webpack2.md","ref":"note/project/webpack2.md","articles":[]},{"title":"12.7 使用react.js","level":"1.13.7","depth":2,"path":"note/project/react.md","ref":"note/project/react.md","articles":[]},{"title":"12.8 登录注册功能实现","level":"1.13.8","depth":2,"path":"note/project/sign.md","ref":"note/project/sign.md","articles":[]},{"title":"12.9 session登录态判断处理","level":"1.13.9","depth":2,"path":"note/project/session.md","ref":"note/project/session.md","articles":[]}]},"previous":{"title":"11. debug","level":"1.12","depth":1,"ref":"","articles":[{"title":"11.1 开发debug","level":"1.12.1","depth":2,"path":"note/debug/info.md","ref":"note/debug/info.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/debug/info.md","mtime":"2017-09-10T03:43:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-10T03:42:16.756Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
