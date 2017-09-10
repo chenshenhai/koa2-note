@@ -3,32 +3,49 @@
 ## 快速开始
 
 ### 环境
-- node环境 7.x +
+- node环境 8.x +
+- chrome 60+
 
 ### 启动脚本
 
-####调试demo 
+#### 调试demo 
 
 [https://github.com/ChenShenhai/koa2-note/blob/master/demo/start-quick/](https://github.com/ChenShenhai/koa2-note/blob/master/demo/start-quick/index.js)
 
+
 ```
-node --debug-brk --inspect index.js
+node --inspect index.js
 ```
 
-####指令框就会出现
-![debug-result](./../images/debug-result-01.png)
+#### 指令框显示
 
-####指令框中显示的
+> 指令框就会出现以下字样
 
-`chrome-devtools://devtools/bundled/inspector.html?experiments=true&v8only=true&ws=127.0.0.1:9229/c3f33c44-9f12-4065-b3c3-4f392983a6c0`
+``` sh
+Debugger listening on ws://127.0.0.1:9229/4c23c723-5197-4d23-9b90-d473f1164abe
+For help see https://nodejs.org/en/docs/inspector
+```
+![debug-result](./../images/debug-result-001.png)
 
-就是node.js连接chrome调试的连接，让node.js代码的调试和前端js代码一样
+#### 访问chrome浏览器调试server
 
-> 注意：chrome的debug链接是随机生成的
+![debug-result](./../images/debug-result-002.png)
 
-####访问指令框调试连接，就可以直接在chrome中像前端那样调试node.js代码了
-![debug-result](./../images/debug-result-02.png)
+>  打开浏览器调试窗口会看到一个node.js 的小logo
 
-####访问连接后把默认断点打开，就启动了node.js服务
-![debug-result](./../images/debug-result-03.png)
+![debug-result](./../images/debug-result-003.png)
 
+#### 打开chrome浏览器的node调试窗口
+![debug-result](./../images/debug-result-004.png)
+
+![debug-result](./../images/debug-result-006.png)
+
+> 注意打开了node的调试窗口后，原来绿色的node按钮会变灰色，同时调试框会显示debug状态
+
+![debug-result](./../images/debug-result-005.png)
+
+![debug-result](./../images/debug-result-008.png)
+
+#### 可以自定义打断点调试了
+
+![debug-result](./../images/debug-result-007.png)
