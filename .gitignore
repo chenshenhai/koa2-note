@@ -3,5 +3,6 @@ npm-debug.log
 _book/
 demo/*/node_modules
 demo/*/npm-debug.log
+demo/*/package-lock.json
 demo/*/upload-files/
 demo/upload-async/static/image/
