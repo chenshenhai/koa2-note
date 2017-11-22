@@ -54,7 +54,8 @@
     * [12.7 使用react.js](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/react.md)
     * [12.8 登录注册功能实现](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/sign.md)
     * [12.9 session登录态判断处理](https://github.com/ChenShenhai/koa2-note/blob/master/note/project/session.md) 
-
+* [13. 其他进阶]()
+    * [13.1 import/export使用](https://github.com/ChenShenhai/koa2-note/blob/master/note/other/esm.md) 
 
 ## 前言
 - ES6/7 带来的变革
