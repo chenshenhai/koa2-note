@@ -10,7 +10,7 @@ let sqlContentMap = {}
  * @return {string}          脚本文件内容
  */
 function getSqlContent( fileName,  path ) {
-  let content = fs.readFileSync( path, 'binary' )
+  let content = fs.readFileSync( path, 'utf8' )
   sqlContentMap[ fileName ] = content
 }
 
