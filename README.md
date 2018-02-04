@@ -1,6 +1,6 @@
 # 《Koa2进阶学习笔记》
 
-<img src="https://user-images.githubusercontent.com/8216630/35775552-970a79cc-09c5-11e8-932b-9ad5a14c0bb5.png"  width="320"/>
+<img src="https://user-images.githubusercontent.com/8216630/35775552-970a79cc-09c5-11e8-932b-9ad5a14c0bb5.png"  width="640"/>
 
 ## 持续更新中...
 
