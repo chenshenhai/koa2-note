@@ -1,8 +1,13 @@
 # 《Koa2进阶学习笔记》
 
+
+
 <img src="https://user-images.githubusercontent.com/8216630/35775552-970a79cc-09c5-11e8-932b-9ad5a14c0bb5.png"  width="360"/>
 
-## 持续更新中...
+> 持续更新中...
+
+## 关于作者
+- [关于作者(我)](https://chenshenhai.github.io)
 
 ## 附加gitbook快速阅读地址
 [https://chenshenhai.github.io/koa2-note/](https://chenshenhai.github.io/koa2-note/)
