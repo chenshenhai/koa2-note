@@ -1,10 +1,18 @@
-# 《Koa2进阶学习笔记》
+# 《Koa2进阶学习笔记》已完结
+
+## 序言
+
+从2017年2月份开始写这本开源电子书，是为了记录自己的学习轨迹和分享技术心得，本开源书的Koa2的基础进程教程已经完结，更多的Koa.js的高阶学习会在后续新开几本书进行探索。感谢这一年来所有读者的关注！O(∩_∩)O
+
+更多前端技术学习可关注公众号 `大海码` `DeepSeaCode` 
 
 
+
+![qrcode_for_gh_959d1c4d729a_258](https://user-images.githubusercontent.com/8216630/43264303-495bf52c-9118-11e8-85cd-4ec6fcc6d066.jpg)
+<br/>
 
 <img src="https://user-images.githubusercontent.com/8216630/35775552-970a79cc-09c5-11e8-932b-9ad5a14c0bb5.png"  width="360"/>
 
-> 持续更新中...
 
 ## 关于作者
 - [关于作者(我)](https://chenshenhai.github.io)
