@@ -1,0 +1,804 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.2 Promise 使用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03.html" />
+    
+    
+    <link rel="prev" href="01.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Koa.js 设计模式-学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    [1. Koa.js 原理]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    1.1 学习准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    1.2 Promise 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    1.3 async/await 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    1.4 Node.js原生http模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    1.5 中间件引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    1.6 普通中间件式HTTP服务实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    1.7 最简Koa.js实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    [2. Koa.js 的AOP设计]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter02/01.html">
+            
+                <a href="../chapter02/01.html">
+            
+                    
+                    2.1 AOP面向切面编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter02/02.html">
+            
+                <a href="../chapter02/02.html">
+            
+                    
+                    2.2 洋葱模型切面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter02/03.html">
+            
+                <a href="../chapter02/03.html">
+            
+                    
+                    2.3 HTTP切面流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    [3. Koa.js 中间件]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter03/01.html">
+            
+                <a href="../chapter03/01.html">
+            
+                    
+                    3.1 中间件分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter03/02.html">
+            
+                <a href="../chapter03/02.html">
+            
+                    
+                    3.2 狭义中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter03/03.html">
+            
+                <a href="../chapter03/03.html">
+            
+                    
+                    3.3 广义中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    [4. 狭义中间件-请求/响应拦截]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter04/01.html">
+            
+                <a href="../chapter04/01.html">
+            
+                    
+                    4.1 koa-logger 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter04/02.html">
+            
+                <a href="../chapter04/02.html">
+            
+                    
+                    4.2 koa-send 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter04/03.html">
+            
+                <a href="../chapter04/03.html">
+            
+                    
+                    4.3 koa-static 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    [5. 狭义中间件-context代理]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter05/01.html">
+            
+                <a href="../chapter05/01.html">
+            
+                    
+                    5.1 koa-view 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter05/02.html">
+            
+                <a href="../chapter05/02.html">
+            
+                    
+                    5.2 koa-jsonp 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter05/03.html">
+            
+                <a href="../chapter05/03.html">
+            
+                    
+                    5.3 koa-bodyparser 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    [6. 广义中间件-间接中间件处理]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter06/01.html">
+            
+                <a href="../chapter06/01.html">
+            
+                    
+                    6.1 koa-router 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter06/02.html">
+            
+                <a href="../chapter06/02.html">
+            
+                    
+                    6.2 koa-mount 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >1.2 Promise 使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="promise-&#x7684;&#x4E3B;&#x8981;&#x4F7F;&#x7528;">Promise &#x7684;&#x4E3B;&#x8981;&#x4F7F;&#x7528;</h1>
+<h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p><code>&#x56DE;&#x8C03;</code> &#x4E00;&#x76F4;&#x662F;JavaScript&#x7F16;&#x7A0B;&#x4E2D;&#x6BD4;&#x8F83;&#x4EE4;&#x4EBA;&#x7EA0;&#x7ED3;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x4E3B;&#x8981;&#x573A;&#x666F;&#x662F;&#x7528;&#x4E8E;&#x5904;&#x7406; &#x201C;&#x5E76;&#x5217;&#x201D;&#x6216;&#x8005;&#x201C;&#x5E76;&#x884C;&#x201D;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x5904;&#x7406;&#x64CD;&#x4F5C;&#x7ED3;&#x679C;&#x3002;&#x8FD9;&#x6837;&#x5B50;&#x539F;&#x751F;&#x7684;&#x56DE;&#x8C03;&#x5199;&#x6CD5;&#x5C31;&#x4F1A;&#x5E26;&#x6765;&#x4E00;&#x4E0B;&#x7684;&#x4E0D;&#x4FBF;&#x3002;</p>
+<ul>
+<li>&#x56DE;&#x8C03;&#x7ED3;&#x679C;&#x72B6;&#x6001;&#x4E0D;&#x4FBF;&#x7BA1;&#x7406;</li>
+<li>&#x56DE;&#x8C03;&#x65B9;&#x5F0F;&#x81EA;&#x7531;&#x677E;&#x6563;&#xFF0C;&#x6CA1;&#x6709;&#x89C4;&#x8303;&#x7EA6;&#x675F;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x56DE;&#x8C03;&#x7684;&#x5199;&#x6CD5;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func</span>(<span class="hljs-params">num, callback</span>) </span>{
+    setTimeout(() =&gt; {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">let</span> result =  <span class="hljs-number">1</span>/num;
+            callback(result, <span class="hljs-literal">null</span>);
+        } <span class="hljs-keyword">catch</span>(err) {
+          callback(<span class="hljs-literal">null</span>, err);
+        }
+    }, <span class="hljs-number">10</span>)
+}
+
+
+func(<span class="hljs-number">1</span>, (result, err) =&gt; {
+    <span class="hljs-keyword">if</span>( err ) {
+      <span class="hljs-built_in">console</span>.log(err)
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-built_in">console</span>.log(result)
+    }   
+})
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x53D1;&#x73B0;&#x5982;&#x679C;&#x8981;&#x5904;&#x7406;&#x56DE;&#x8C03;&#x7ED3;&#x679C; <code>result</code>&#x548C;&#x9519;&#x8BEF;<code>err</code> &#xFF0C;&#x540E;&#x7EED;&#x7684;&#x6240;&#x6709;&#x5C31;&#x5FC5;&#x987B;&#x5728;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x4E14;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x8FD8;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5904;&#x7406;&#x5F02;&#x5E38;&#x5224;&#x65AD;&#x3002;
+&#x90A3;&#x5982;&#x679C;&#x662F;&#x4F7F;&#x7528;&#x4E86;<code>Promise</code>&#x6765;&#x5904;&#x7406;&#x56DE;&#x8C03;&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x4EE5;&#x4E0B;&#x5199;&#x6CD5;&#x5904;&#x7406;&#x3002;</p>
+<pre><code class="lang-js">
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func</span>(<span class="hljs-params">num, callback</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
+        setTimeout(() =&gt; { 
+            <span class="hljs-keyword">let</span> result = <span class="hljs-number">1</span>/num;
+            resolve(result); 
+        }, <span class="hljs-number">1000</span>)
+    })
+}
+
+func(<span class="hljs-number">1</span>).then((result) =&gt; { 
+        <span class="hljs-built_in">console</span>.log(result)
+    }).catch((err) =&gt; { 
+        <span class="hljs-built_in">console</span>.log(err)
+    })
+</code></pre>
+<h2 id="promise&#x80FD;&#x529B;">Promise&#x80FD;&#x529B;</h2>
+<p>Promise &#x5E26;&#x6765;&#x7684;&#x80FD;&#x529B;&#x662F;<code>&#x4EFB;&#x52A1;&#x7BA1;&#x7406;</code>&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x6709;</p>
+<p><code>new Promise(...).then(onResolved, onRejected)</code></p>
+<ul>
+<li>&#x4EFB;&#x52A1;&#x72B6;&#x6001;&#x7BA1;&#x7406;<ul>
+<li><code>resolve</code> &#x6210;&#x529F;&#x72B6;&#x6001;&#xFF0C;&#x5BF9;&#x5E94; <code>Promise.resolve</code></li>
+<li><code>reject</code> &#x5931;&#x8D25;&#x72B6;&#x6001;&#xFF0C;&#x5BF9;&#x5E94; <code>Promise.reject</code></li>
+<li><code>error</code> &#x5F02;&#x5E38;&#x72B6;&#x6001;&#xFF0C; &#x5BF9;&#x5E94; <code>Promise.reject</code> &#x6216; <code>new Promise().catch(onRejected)</code></li>
+</ul>
+</li>
+<li><code>Thenabled</code>&#x673A;&#x5236;&#x63D0;&#x4F9B;&#x4EFB;&#x52A1;&#x65B9;&#x6CD5;&#x94FE; <ul>
+<li><code>new Promise().then().then().catch()</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="resolve">resolve</h3>
+<p>&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x7684;&#x6210;&#x529F;&#x72B6;&#x6001;</p>
+<ul>
+<li>&#x666E;&#x901A;&#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
+        setTimeout(() =&gt; { 
+            <span class="hljs-keyword">let</span> result = <span class="hljs-number">1</span>;
+            resolve(result); 
+        }, <span class="hljs-number">1000</span>)
+    })
+
+p.then((result)=&gt;{ <span class="hljs-built_in">console</span>.log(result) })
+</code></pre>
+<ul>
+<li>&#x5FEB;&#x6377;&#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> p = <span class="hljs-built_in">Promise</span>.resolve(<span class="hljs-number">1</span>)
+
+p.then((result)=&gt;{ <span class="hljs-built_in">console</span>.log(result) })
+</code></pre>
+<h3 id="reject">reject</h3>
+<p>&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x7684;&#x5931;&#x8D25;&#x72B6;&#x6001;</p>
+<ul>
+<li>&#x666E;&#x901A;&#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+      setTimeout(() =&gt; {
+        <span class="hljs-keyword">let</span> result = <span class="hljs-number">2</span>;
+         reject(result);
+      }, <span class="hljs-number">100</span>)
+    })
+<span class="hljs-comment">// &#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x5931;&#x8D25;&#x72B6;&#x6001;</span>
+<span class="hljs-comment">// &#x7B2C;&#x4E00;&#x79CD;&#xFF0C;&#x901A;&#x8FC7;then &#x7B2C;&#x4E8C;&#x4E2A;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x5904;&#x7406;&#x5931;&#x8D25;&#x72B6;&#x6001;</span>
+p.then((result)=&gt;{ 
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;success:&apos;</span>,result);
+}, (result)=&gt;{ 
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;fail:&apos;</span>,result);
+})
+<span class="hljs-comment">// &quot;fail: 2&quot;</span>
+
+<span class="hljs-comment">// &#x7B2C;&#x4E8C;&#x79CD;&#xFF0C;&#x6216;&#x8005;&#x901A;&#x8FC7;&#xFF0C;catch &#x83B7;&#x53D6;&#x5931;&#x8D25;&#x72B6;&#x6001;</span>
+p.then((result)=&gt;{ 
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;success:&apos;</span>,result);
+}).catch((result)=&gt;{ 
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;error:&apos;</span>,result);
+})
+<span class="hljs-comment">// &quot;error: 2&quot;</span>
+
+
+<span class="hljs-comment">// &#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x8BDD;</span>
+<span class="hljs-comment">// &#x53EA;&#x4F1A;&#x88AB;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;reject&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#x7684;&#x7ED3;&#x679C;</span>
+p.then((result)=&gt;{ 
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;success:&apos;</span>,result);
+}, (result)=&gt;{ 
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;fail:&apos;</span>,result);
+}).catch((result)=&gt;{ 
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;error:&apos;</span>,result);
+})
+<span class="hljs-comment">// &quot;fail: 2&quot;</span>
+</code></pre>
+<ul>
+<li>&#x5FEB;&#x6377;&#x65B9;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> p = <span class="hljs-built_in">Promise</span>.reject(<span class="hljs-number">2</span>)
+
+p.then(<span class="hljs-literal">null</span>, result =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;fail:&apos;</span>, result))
+
+<span class="hljs-comment">// &#x6216;</span>
+p.then().catch( result =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;error:&apos;</span>, result))
+</code></pre>
+<h3 id="catch">catch</h3>
+<p>&#x4ECE;&#x4E0A;&#x8FF0; <code>reject</code> &#x7684;&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;, <code>catch</code>&#x64CD;&#x4F5C;&#x5728;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E; onRejected &#x5904;&#x7406;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x88AB;<code>catch</code> &#x6355;&#x83B7;&#x5931;&#x8D25;&#x5904;&#x7406;&#x3002;&#x540C;&#x65F6;<code>catch</code> &#x4E5F;&#x4F1A;&#x6355;&#x83B7; onResolved &#x548C; onRejected&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<ul>
+<li>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x76F4;&#x63A5;&#x6355;&#x83B7;<code>reject</code>&#x7ED3;&#x679C;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+    reject(<span class="hljs-number">3</span>)
+});
+
+p.then((result) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;success:&apos;</span>, result)
+}).catch((result) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;error:&apos;</span>, result)
+})
+
+<span class="hljs-comment">// &quot;error: 3&quot;</span>
+</code></pre>
+<ul>
+<li>&#x6355;&#x83B7; onResolved &#x4E2D;&#x9519;&#x8BEF;&#x5F02;&#x5E38;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
+    resolve(<span class="hljs-number">3</span>)
+});
+
+p.then((result) =&gt; {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;custom resolve error!&apos;</span>)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;success:&apos;</span>, result)
+}).catch((err) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Custom error:&apos;</span>, err)
+})
+
+<span class="hljs-comment">// &quot;Custom error: Error: custom resolve error!&quot;</span>
+</code></pre>
+<ul>
+<li>&#x6355;&#x83B7; onRejected &#x4E2D;&#x9519;&#x8BEF;&#x5F02;&#x5E38;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
+    reject(<span class="hljs-number">3</span>)
+});
+
+p.then(<span class="hljs-literal">null</span>, (result) =&gt; {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;custom reject error!&apos;</span>)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;fail:&apos;</span>, result)
+}).catch((err) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Custom error:&apos;</span>, err)
+})
+<span class="hljs-comment">// &quot;Custom error: Error: custom reject error!&quot;</span>
+</code></pre>
+<h2 id="&#x540E;&#x8BB0;">&#x540E;&#x8BB0;</h2>
+<p>&#x7531;&#x4E8E;&#x672C;&#x4E66;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD; <code>Koa.js</code>&#x7684;&#x539F;&#x7406;&#xFF0C;&#x4E3B;&#x8981;&#x6D89;&#x53CA;&#x5230;<code>Promise</code>&#x7684;<code>resolve</code>&#x3001;<code>reject</code>&#x548C;<code>catch</code> &#x66F4;&#x591A; &#x5173;&#x4E8E; <code>Promise</code> &#x7684;&#x539F;&#x7406;&#x548C;&#x4F7F;&#x7528;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x6587;&#x6863;&#xFF1A;</p>
+<p><a href="https://docs.microsoft.com/zh-cn/scripting/javascript/reference/promise-object-javascript" target="_blank">https://docs.microsoft.com/zh-cn/scripting/javascript/reference/promise-object-javascript</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01.html" class="navigation navigation-prev " aria-label="Previous page: 1.1 学习准备">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03.html" class="navigation navigation-next " aria-label="Next page: 1.3 async/await 使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.2 Promise 使用","level":"1.2.2","depth":2,"next":{"title":"1.3 async/await 使用","level":"1.2.3","depth":2,"path":"note/chapter01/03.md","ref":"note/chapter01/03.md","articles":[]},"previous":{"title":"1.1 学习准备","level":"1.2.1","depth":2,"path":"note/chapter01/01.md","ref":"note/chapter01/01.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/chapter01/02.md","mtime":"2018-07-10T17:12:41.834Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-07-11T16:20:41.439Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,764 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.7 最简Koa.js实现 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="06.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Koa.js 设计模式-学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    [1. Koa.js 原理]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    1.1 学习准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    1.2 Promise 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    1.3 async/await 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    1.4 Node.js原生http模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    1.5 中间件引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    1.6 普通中间件式HTTP服务实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    1.7 最简Koa.js实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    [2. Koa.js 的AOP设计]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter02/01.html">
+            
+                <a href="../chapter02/01.html">
+            
+                    
+                    2.1 AOP面向切面编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter02/02.html">
+            
+                <a href="../chapter02/02.html">
+            
+                    
+                    2.2 洋葱模型切面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter02/03.html">
+            
+                <a href="../chapter02/03.html">
+            
+                    
+                    2.3 HTTP切面流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    [3. Koa.js 中间件]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter03/01.html">
+            
+                <a href="../chapter03/01.html">
+            
+                    
+                    3.1 中间件分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter03/02.html">
+            
+                <a href="../chapter03/02.html">
+            
+                    
+                    3.2 狭义中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter03/03.html">
+            
+                <a href="../chapter03/03.html">
+            
+                    
+                    3.3 广义中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    [4. 狭义中间件-请求/响应拦截]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter04/01.html">
+            
+                <a href="../chapter04/01.html">
+            
+                    
+                    4.1 koa-logger 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter04/02.html">
+            
+                <a href="../chapter04/02.html">
+            
+                    
+                    4.2 koa-send 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter04/03.html">
+            
+                <a href="../chapter04/03.html">
+            
+                    
+                    4.3 koa-static 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    [5. 狭义中间件-context代理]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter05/01.html">
+            
+                <a href="../chapter05/01.html">
+            
+                    
+                    5.1 koa-view 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter05/02.html">
+            
+                <a href="../chapter05/02.html">
+            
+                    
+                    5.2 koa-jsonp 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter05/03.html">
+            
+                <a href="../chapter05/03.html">
+            
+                    
+                    5.3 koa-bodyparser 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    [6. 广义中间件-间接中间件处理]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter06/01.html">
+            
+                <a href="../chapter06/01.html">
+            
+                    
+                    6.1 koa-router 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter06/02.html">
+            
+                <a href="../chapter06/02.html">
+            
+                    
+                    6.2 koa-mount 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >1.7 最简Koa.js实现</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6700;&#x7B80;koajs&#x5B9E;&#x73B0;">&#x6700;&#x7B80;Koa.js&#x5B9E;&#x73B0;</h1>
+<h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p>&#x4ECE;&#x4E0A;&#x4E00;&#x7AE0;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x5F0F;HTTP&#x670D;&#x52A1;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5E95;&#x5C42;&#x662F;&#x57FA;&#x4E8E;&#x56DE;&#x8C03;&#x5D4C;&#x5957;&#x53BB;&#x5904;&#x7406;&#x4E2D;&#x95F4;&#x4EF6;&#x961F;&#x5217;&#x3002;</p>
+<pre><code class="lang-js">  <span class="hljs-comment">/**
+   * &#x4E2D;&#x95F4;&#x4EF6;&#x603B;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;
+   */</span>
+  callback() {
+    <span class="hljs-keyword">let</span> that = <span class="hljs-keyword">this</span>;
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.listeners(<span class="hljs-string">&apos;error&apos;</span>).length === <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">this</span>.on(<span class="hljs-string">&apos;error&apos;</span>, <span class="hljs-keyword">this</span>.onerror);
+    }
+
+    <span class="hljs-keyword">const</span> handleRequest = (req, res) =&gt; {
+      <span class="hljs-keyword">let</span> context = that.createContext(req, res);
+      <span class="hljs-keyword">this</span>.middleware.forEach((cb, idx) =&gt; {
+        <span class="hljs-keyword">try</span> {
+          cb(context);
+        } <span class="hljs-keyword">catch</span> (err) {
+          that.onerror(err);
+        }
+
+        <span class="hljs-keyword">if</span> (idx + <span class="hljs-number">1</span> &gt;= <span class="hljs-keyword">this</span>.middleware.length) {
+          <span class="hljs-keyword">if</span> (res &amp;&amp; <span class="hljs-keyword">typeof</span> res.end === <span class="hljs-string">&apos;function&apos;</span>) {
+            res.end();
+          }
+        }
+      });
+    };
+    <span class="hljs-keyword">return</span> handleRequest;
+  }
+</code></pre>
+<p>&#x4F46;&#x662F;&#x4E2D;&#x95F4;&#x4EF6;&#x8D8A;&#x591A;&#xFF0C;&#x56DE;&#x8C03;&#x5D4C;&#x5957;&#x8D8A;&#x6DF1;&#xFF0C;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x548C;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x5C31;&#x5F88;&#x5DEE;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x65F6;&#x5019;&#x628A;&#x56DE;&#x8C03;&#x5D4C;&#x5957;&#x8F6C;&#x5316;&#x6210; <code>Promise</code> + <code>async/await</code> &#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x8F6C;&#x53D8;&#x6210;&#x6700;&#x7B80;&#x5355;&#x7684;<code>Koa.js</code>&#x5B9E;&#x73B0;&#x3002;</p>
+<h2 id="&#x5FC5;&#x8981;&#x6761;&#x4EF6;">&#x5FC5;&#x8981;&#x6761;&#x4EF6;</h2>
+<ul>
+<li>&#x901A;&#x8FC7;&#x4E0A;&#x4E0B;&#x6587;&#x8D4B;&#x503C;&#x53EF;&#x4EE3;&#x66FF; <code>res.end()</code></li>
+<li>&#x6D0B;&#x8471;&#x6A21;&#x578B;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x673A;&#x5236;</li>
+</ul>
+<h2 id="&#x6E90;&#x7801;&#x5B9E;&#x73B0;">&#x6E90;&#x7801;&#x5B9E;&#x73B0;</h2>
+<ul>
+<li>demo&#x6E90;&#x7801;</li>
+</ul>
+<p><a href="https://github.com/chenshenhai/koajs-design-note/tree/master/demo/chapter-01-07" target="_blank">https://github.com/chenshenhai/koajs-design-note/tree/master/demo/chapter-01-07</a></p>
+<ul>
+<li>&#x6700;&#x7B80;Koa.js &#x5B9E;&#x73B0;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">const</span> Emitter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;events&apos;</span>);
+<span class="hljs-comment">// &#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x91CC;&#x7684;compose&#x662F;&#x524D;&#x51E0;&#x7AE0;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x5F15;&#x64CE;&#x6E90;&#x7801;</span>
+<span class="hljs-keyword">const</span> compose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./../compose&apos;</span>);
+
+<span class="hljs-comment">/**
+ * &#x901A;&#x7528;&#x4E0A;&#x4E0B;&#x6587;
+ */</span>
+<span class="hljs-keyword">const</span> context = {
+  _body: <span class="hljs-literal">null</span>,
+
+  get body() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._body;
+  },
+
+  set body(val) {
+    <span class="hljs-keyword">this</span>._body = val;
+    <span class="hljs-keyword">this</span>.res.end(<span class="hljs-keyword">this</span>._body);
+  }
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SimpleKoa</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Emitter</span> </span>{
+  <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">super</span>();
+    <span class="hljs-keyword">this</span>.middleware = [];
+    <span class="hljs-keyword">this</span>.context = <span class="hljs-built_in">Object</span>.create(context);
+  }
+
+  <span class="hljs-comment">/**
+   * &#x670D;&#x52A1;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;
+   * @param {*} args
+   */</span>
+  listen(...args) {
+    <span class="hljs-keyword">const</span> server = http.createServer(<span class="hljs-keyword">this</span>.callback());
+    <span class="hljs-keyword">return</span> server.listen(...args);
+  }
+
+  <span class="hljs-comment">/**
+   * &#x6CE8;&#x518C;&#x4F7F;&#x7528;&#x4E2D;&#x95F4;&#x4EF6;
+   * @param {Function} fn
+   */</span>
+  use(fn) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> fn === <span class="hljs-string">&apos;function&apos;</span>) {
+      <span class="hljs-keyword">this</span>.middleware.push(fn);
+    }
+  }
+
+  <span class="hljs-comment">/**
+   * &#x4E2D;&#x95F4;&#x4EF6;&#x603B;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;
+   */</span>
+  callback() {
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.listeners(<span class="hljs-string">&apos;error&apos;</span>).length === <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">this</span>.on(<span class="hljs-string">&apos;error&apos;</span>, <span class="hljs-keyword">this</span>.onerror);
+    }
+
+    <span class="hljs-keyword">const</span> handleRequest = (req, res) =&gt; {
+      <span class="hljs-keyword">let</span> context = <span class="hljs-keyword">this</span>.createContext(req, res);
+      <span class="hljs-keyword">let</span> middleware = <span class="hljs-keyword">this</span>.middleware;
+      <span class="hljs-comment">// &#x6267;&#x884C;&#x4E2D;&#x95F4;&#x4EF6;</span>
+      compose(middleware)(context).catch(err =&gt; <span class="hljs-keyword">this</span>.onerror(err))
+    };
+    <span class="hljs-keyword">return</span> handleRequest;
+  }
+
+  <span class="hljs-comment">/**
+   * &#x5F02;&#x5E38;&#x5904;&#x7406;&#x76D1;&#x542C;
+   * @param {EndOfStreamError} err
+   */</span>
+  onerror(err) {
+    <span class="hljs-built_in">console</span>.log(err);
+  }
+
+  <span class="hljs-comment">/**
+   * &#x521B;&#x5EFA;&#x901A;&#x7528;&#x4E0A;&#x4E0B;&#x6587;
+   * @param {Object} req
+   * @param {Object} res
+   */</span>
+  createContext(req, res) {
+    <span class="hljs-keyword">let</span> context = <span class="hljs-built_in">Object</span>.create(<span class="hljs-keyword">this</span>.context);
+    context.req = req;
+    context.res = res;
+    <span class="hljs-keyword">return</span> context;
+  }
+}
+
+<span class="hljs-built_in">module</span>.exports = SimpleKoa;
+</code></pre>
+<ul>
+<li>&#x6267;&#x884C;&#x4F8B;&#x5B50;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> SimpleKoa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./index&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> SimpleKoa();
+<span class="hljs-keyword">const</span> PORT = <span class="hljs-number">3001</span>;
+
+app.use(<span class="hljs-keyword">async</span> ctx =&gt; {
+  ctx.body = <span class="hljs-string">&apos;&lt;p&gt;this is a body&lt;/p&gt;&apos;</span>;
+});
+
+app.listen(PORT, () =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`the web server is starting at port <span class="hljs-subst">${PORT}</span>`</span>);
+});
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 1.6 普通中间件式HTTP服务实现">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.7 最简Koa.js实现","level":"1.2.7","depth":2,"next":{"title":"[2. Koa.js 的AOP设计]","level":"1.3","depth":1,"ref":"","articles":[{"title":"2.1 AOP面向切面编程","level":"1.3.1","depth":2,"path":"note/chapter02/01.md","ref":"note/chapter02/01.md","articles":[]},{"title":"2.2 洋葱模型切面","level":"1.3.2","depth":2,"path":"note/chapter02/02.md","ref":"note/chapter02/02.md","articles":[]},{"title":"2.3 HTTP切面流程","level":"1.3.3","depth":2,"path":"note/chapter02/03.md","ref":"note/chapter02/03.md","articles":[]}]},"previous":{"title":"1.6 普通中间件式HTTP服务实现","level":"1.2.6","depth":2,"path":"note/chapter01/06.md","ref":"note/chapter01/06.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/chapter01/07.md","mtime":"2018-07-10T17:05:22.978Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-07-11T16:20:41.439Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,29 @@
+{
+  "name": "chapter-03-03-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "./node_modules/.bin/nodemon index.js",
+    "fix": "./node_modules/.bin/eslint --fix --ext .js ./",
+    "precommit": "./node_modules/.bin/eslint --ext .jsx,.js ./",
+    "prepush": "./node_modules/.bin/eslint --ext .jsx,.js ./"
+  },
+  "author": "chenshenhai",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-koa": "^2.0.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "nodemon": "^1.17.3"
+  }
+}

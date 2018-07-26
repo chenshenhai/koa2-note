@@ -1,0 +1,759 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.3 async/await 使用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04.html" />
+    
+    
+    <link rel="prev" href="02.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Koa.js 设计模式-学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    [1. Koa.js 原理]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    1.1 学习准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    1.2 Promise 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    1.3 async/await 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    1.4 Node.js原生http模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    1.5 中间件引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    1.6 普通中间件式HTTP服务实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    1.7 最简Koa.js实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    [2. Koa.js 的AOP设计]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter02/01.html">
+            
+                <a href="../chapter02/01.html">
+            
+                    
+                    2.1 AOP面向切面编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter02/02.html">
+            
+                <a href="../chapter02/02.html">
+            
+                    
+                    2.2 洋葱模型切面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter02/03.html">
+            
+                <a href="../chapter02/03.html">
+            
+                    
+                    2.3 HTTP切面流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    [3. Koa.js 中间件]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter03/01.html">
+            
+                <a href="../chapter03/01.html">
+            
+                    
+                    3.1 中间件分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter03/02.html">
+            
+                <a href="../chapter03/02.html">
+            
+                    
+                    3.2 狭义中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter03/03.html">
+            
+                <a href="../chapter03/03.html">
+            
+                    
+                    3.3 广义中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    [4. 狭义中间件-请求/响应拦截]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter04/01.html">
+            
+                <a href="../chapter04/01.html">
+            
+                    
+                    4.1 koa-logger 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter04/02.html">
+            
+                <a href="../chapter04/02.html">
+            
+                    
+                    4.2 koa-send 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter04/03.html">
+            
+                <a href="../chapter04/03.html">
+            
+                    
+                    4.3 koa-static 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    [5. 狭义中间件-context代理]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter05/01.html">
+            
+                <a href="../chapter05/01.html">
+            
+                    
+                    5.1 koa-view 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter05/02.html">
+            
+                <a href="../chapter05/02.html">
+            
+                    
+                    5.2 koa-jsonp 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter05/03.html">
+            
+                <a href="../chapter05/03.html">
+            
+                    
+                    5.3 koa-bodyparser 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    [6. 广义中间件-间接中间件处理]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter06/01.html">
+            
+                <a href="../chapter06/01.html">
+            
+                    
+                    6.1 koa-router 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter06/02.html">
+            
+                <a href="../chapter06/02.html">
+            
+                    
+                    6.2 koa-mount 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >1.3 async/await 使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="asyncawait-&#x7684;&#x4E3B;&#x8981;&#x4F7F;&#x7528;">async/await &#x7684;&#x4E3B;&#x8981;&#x4F7F;&#x7528;</h1>
+<h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p>&#x5BF9;&#x4E8E;&#x56DE;&#x8C03;&#x6765;&#x8BB2;&#xFF0C;<code>Promise</code> &#x7684;&#x5230;&#x6765;&#x770B;&#x4F3C;&#x53EA;&#x89E3;&#x51B3;&#x4E86;&#x56DE;&#x8C03;&#x573A;&#x666F;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#x5904;&#x7406;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;<code>JavaScript</code>&#x4E2D;&#x4EE4;&#x4EBA;&#x5934;&#x75BC;&#x4E0D;&#x662F;<code>&#x56DE;&#x8C03;</code>&#xFF0C;&#x800C;&#x662F; <code>&#x56DE;&#x8C03;&#x5D4C;&#x5957;</code>&#x3002;&#x540C;&#x65F6;&#xFF0C;<code>Promise</code>&#x7684;&#x51FA;&#x73B0;&#xFF0C;&#x4E5F;&#x4E0D;&#x80FD;&#x5F7B;&#x5E95;&#x89E3;&#x51B3;&#x56DE;&#x8C03;&#x5D4C;&#x5957;&#x7684;&#x5E26;&#x6765;&#x7684;&#x4EE3;&#x7801;&#x7EF4;&#x62A4;&#x548C;&#x53EF;&#x8BFB;&#x6027;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<ul>
+<li>&#x539F;&#x751F;&#x56DE;&#x8C03;&#x5D4C;&#x5957;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">increase</span>(<span class="hljs-params">num, callback</span>) </span>{
+   setTimeout(() =&gt; {
+     <span class="hljs-keyword">if</span>( !(num &gt;= <span class="hljs-number">0</span>) ) {
+       callback(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;The parameters must be greater than zero&apos;</span>), <span class="hljs-literal">null</span>)
+     } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">let</span> result = num + <span class="hljs-number">1</span>;
+      callback(<span class="hljs-literal">null</span>, result);
+     }
+   }, <span class="hljs-number">100</span>)
+}
+
+increase(<span class="hljs-number">1</span>, (err, result1) =&gt; {
+  <span class="hljs-keyword">if</span>(!err) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result1 = <span class="hljs-subst">${result1}</span>`</span>)
+
+    increase(result1, (err, result2) =&gt; {
+      <span class="hljs-keyword">if</span>(!err) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result2 = <span class="hljs-subst">${result2}</span>`</span>)
+
+        increase(result2, (err, result3) =&gt; {
+          <span class="hljs-keyword">if</span>(!err) {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result3 = <span class="hljs-subst">${result3}</span>`</span>)
+          } <span class="hljs-keyword">else</span> {
+            <span class="hljs-built_in">console</span>.log(err)
+          }
+        })
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(err)
+      }
+    })
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(err)
+  }
+})
+<span class="hljs-comment">// &#x8FD0;&#x884C;&#x7ED3;&#x679C;</span>
+<span class="hljs-comment">// &quot;result1 = 2&quot;</span>
+<span class="hljs-comment">// &quot;result1 = 3&quot;</span>
+<span class="hljs-comment">// &quot;result1 = 4&quot;</span>
+</code></pre>
+<ul>
+<li>Promise &#x5904;&#x7406;&#x56DE;&#x8C03;&#x5D4C;&#x5957;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">increase</span>(<span class="hljs-params">num</span>) </span>{
+   <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+      setTimeout(() =&gt; {
+       <span class="hljs-keyword">if</span>( !(num &gt;= <span class="hljs-number">0</span>) ) {
+         reject(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;The parameters must be greater than zero&apos;</span>))
+       } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">let</span> result = num + <span class="hljs-number">1</span>;
+        resolve(result);
+       }
+     }, <span class="hljs-number">100</span>)
+   })
+}
+
+
+increase(<span class="hljs-number">1</span>).then((result1) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result1 = <span class="hljs-subst">${result1}</span>`</span>)
+
+  increase(result1).then((result2) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result2 = <span class="hljs-subst">${result2}</span>`</span>)
+
+    increase(result2).then((result3) =&gt; {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result3 = <span class="hljs-subst">${result3}</span>`</span>)
+    }).catch(err =&gt; <span class="hljs-built_in">console</span>.log(err));
+
+  }).catch(err =&gt; <span class="hljs-built_in">console</span>.log(err));
+
+}).catch(err =&gt; <span class="hljs-built_in">console</span>.log(err));
+<span class="hljs-comment">// &#x8FD0;&#x884C;&#x7ED3;&#x679C;</span>
+<span class="hljs-comment">// &quot;result1 = 2&quot;</span>
+<span class="hljs-comment">// &quot;result1 = 3&quot;</span>
+<span class="hljs-comment">// &quot;result1 = 4&quot;</span>
+</code></pre>
+<p>&#x6240;&#x4EE5;&#x8FD9;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x66F4;&#x4F18;&#x96C5;&#x5904;&#x7406;<code>Promise &#x5D4C;&#x5957;&#x4EFB;&#x52A1;</code> &#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;<code>async/await</code> &#x5C31;&#x6A2A;&#x7A7A;&#x51FA;&#x4E16;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x6216;&#x95F4;&#x63A5;&#x89E3;&#x51B3;&#x4E86; <code>&#x56DE;&#x8C03;&#x5D4C;&#x5957;</code> &#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x4E00;&#x53E5;&#x8BDD;&#xFF0C;<code>async/await</code> &#x7684;&#x51FA;&#x73B0;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;<code>&#x56DE;&#x8C03;&#x5D4C;&#x5957;</code>&#x7684;&#x64CD;&#x4F5C;&#x7E41;&#x7410;&#x548C;&#x53EF;&#x8BFB;&#x6027;&#x5DEE;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="aysncawait&#x7684;&#x4F7F;&#x7528;">aysnc/await&#x7684;&#x4F7F;&#x7528;</h2>
+<ul>
+<li>async &#x662F; <code>&#x58F0;&#x660E;</code> &#x5728;&#x56DE;&#x8C03;&#x73AF;&#x5883;&#x51FD;&#x6570;</li>
+<li>await &#x662F; <code>&#x8FD0;&#x884C;</code> &#x5728;&#x7B49;&#x5F85;&#x56DE;&#x8C03;&#x7ED3;&#x679C;&#x8FC7;&#x7A0B;&#x4E2D;</li>
+<li>Promise &#x662F;&#x5C01;&#x88C5;&#x4E86;&#x56DE;&#x8C03;&#x64CD;&#x4F5C;&#x7684; <code>&#x539F;&#x5B50;&#x4EFB;&#x52A1;</code></li>
+</ul>
+<p>&#x4E3E;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x5C01;&#x88C5;&#x539F;&#x5B50;&#x4EFB;&#x52A1;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">increase</span>(<span class="hljs-params">num</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+      <span class="hljs-keyword">if</span>( !(num &gt;= <span class="hljs-number">0</span>) ) {
+        reject(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;The parameters must be greater than zero&apos;</span>))
+      } <span class="hljs-keyword">else</span> {
+        resolve(num + <span class="hljs-number">1</span>)
+      }
+
+    }, <span class="hljs-number">100</span>);
+  }).catch(err =&gt; <span class="hljs-built_in">console</span>.log(err))
+
+}
+
+<span class="hljs-comment">// &#x58F0;&#x660E;&#x4EFB;&#x52A1;&#x73AF;&#x5883;</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">envIncrease</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> num = <span class="hljs-number">1</span>;
+  <span class="hljs-comment">// &#x7B49;&#x5F85;&#x56DE;&#x8C03;&#x4EFB;&#x52A1;&#x7ED3;&#x679C;1&#x8FD4;&#x56DE;</span>
+  <span class="hljs-keyword">let</span> result1 = <span class="hljs-keyword">await</span> increase(num);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result1 = <span class="hljs-subst">${result1}</span>`</span>);
+
+  <span class="hljs-comment">// &#x7B49;&#x5F85;&#x56DE;&#x8C03;&#x4EFB;&#x52A1;&#x7ED3;&#x679C;2&#x8FD4;&#x56DE;</span>
+  <span class="hljs-keyword">let</span> result2 = <span class="hljs-keyword">await</span> increase(result1);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result2 = <span class="hljs-subst">${result2}</span>`</span>);
+
+  <span class="hljs-comment">// &#x7B49;&#x5F85;&#x56DE;&#x8C03;&#x4EFB;&#x52A1;&#x7ED3;&#x679C;3&#x8FD4;&#x56DE;</span>
+  <span class="hljs-keyword">let</span> result3 = <span class="hljs-keyword">await</span> increase(result2);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result3 = <span class="hljs-subst">${result3}</span>`</span>);
+
+  <span class="hljs-keyword">return</span> result3
+}
+
+<span class="hljs-comment">// &#x58F0;&#x660E;&#x4EFB;&#x52A1;&#x73AF;&#x5883;</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">env</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// &#x7B49;&#x5F85; &#x73AF;&#x5883; Increase &#x7684;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;</span>
+  <span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> envIncrease()
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result = <span class="hljs-subst">${result}</span>`</span>);
+}
+
+<span class="hljs-comment">// &#x8FD0;&#x884C;&#x73AF;&#x5883;</span>
+env()
+
+
+
+<span class="hljs-comment">// &#x8FD0;&#x884C;&#x7ED3;&#x679C;</span>
+<span class="hljs-comment">// &quot;result1 = 2&quot;</span>
+<span class="hljs-comment">// &quot;result1 = 3&quot;</span>
+<span class="hljs-comment">// &quot;result1 = 4&quot;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02.html" class="navigation navigation-prev " aria-label="Previous page: 1.2 Promise 使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04.html" class="navigation navigation-next " aria-label="Next page: 1.4 Node.js原生http模块">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.3 async/await 使用","level":"1.2.3","depth":2,"next":{"title":"1.4 Node.js原生http模块","level":"1.2.4","depth":2,"path":"note/chapter01/04.md","ref":"note/chapter01/04.md","articles":[]},"previous":{"title":"1.2 Promise 使用","level":"1.2.2","depth":2,"path":"note/chapter01/02.md","ref":"note/chapter01/02.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/chapter01/03.md","mtime":"2018-07-10T15:14:29.388Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-07-11T16:20:41.439Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
