@@ -1,0 +1,27 @@
+{
+  "name": "test-mocha",
+  "version": "1.0.0",
+  "description": "koa test demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "./node_modules/.bin/mocha --harmony"
+  },
+  "keywords": [
+    "koajs"
+  ],
+  "author": "chenshenhai",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=7.6.0",
+    "npm": ">=3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
+  }
+}

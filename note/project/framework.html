@@ -1,0 +1,1027 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>12.2 框架设计 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="layer.html" />
+    
+    
+    <link rel="prev" href="start.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    koa2 进阶学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    1.koa2开始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../start/quick.html">
+            
+                <a href="../start/quick.html">
+            
+                    
+                    1.1 快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../start/async.html">
+            
+                <a href="../start/async.html">
+            
+                    
+                    1.2 async/await使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../start/info.html">
+            
+                <a href="../start/info.html">
+            
+                    
+                    1.3 koa2简析结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../start/middleware.html">
+            
+                <a href="../start/middleware.html">
+            
+                    
+                    1.4 koa中间件开发与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    2. 路由
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../route/simple.html">
+            
+                <a href="../route/simple.html">
+            
+                    
+                    2.1 原生koa2实现路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../route/koa-router.html">
+            
+                <a href="../route/koa-router.html">
+            
+                    
+                    2.2 koa-router中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3. 请求数据获取
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../request/get.html">
+            
+                <a href="../request/get.html">
+            
+                    
+                    3.1 GET请求数据获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../request/post.html">
+            
+                <a href="../request/post.html">
+            
+                    
+                    3.2 POST请求数据获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../request/post-use-middleware.html">
+            
+                <a href="../request/post-use-middleware.html">
+            
+                    
+                    3.3 koa-bodyparser中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4. 静态资源加载
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../static/server.html">
+            
+                <a href="../static/server.html">
+            
+                    
+                    4.1 原生koa2实现静态资源服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../static/middleware.html">
+            
+                <a href="../static/middleware.html">
+            
+                    
+                    4.2 koa-static中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    5. cookie/session
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../cookie/info.html">
+            
+                <a href="../cookie/info.html">
+            
+                    
+                    5.1 koa2使用cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../session/info.html">
+            
+                <a href="../session/info.html">
+            
+                    
+                    5.2 koa2实现session
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    6. 模板引擎
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../template/add.html">
+            
+                <a href="../template/add.html">
+            
+                    
+                    6.1 koa2加载模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../template/ejs.html">
+            
+                <a href="../template/ejs.html">
+            
+                    
+                    6.2 ejs模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    7. 文件上传
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../upload/busboy.html">
+            
+                <a href="../upload/busboy.html">
+            
+                    
+                    7.1 busboy模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../upload/simple.html">
+            
+                <a href="../upload/simple.html">
+            
+                    
+                    7.2 上传文件简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../upload/pic-async.html">
+            
+                <a href="../upload/pic-async.html">
+            
+                    
+                    7.3 异步上传图片实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    8. 数据库mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../mysql/info.html">
+            
+                <a href="../mysql/info.html">
+            
+                    
+                    8.1 mysql模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../mysql/async.html">
+            
+                <a href="../mysql/async.html">
+            
+                    
+                    8.2 async/await封装使用mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../mysql/init.html">
+            
+                <a href="../mysql/init.html">
+            
+                    
+                    8.3 项目建表初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    9. JSONP实现
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../jsonp/info.html">
+            
+                <a href="../jsonp/info.html">
+            
+                    
+                    9.1 原生koa2实现JSONP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../jsonp/koa-jsonp.html">
+            
+                <a href="../jsonp/koa-jsonp.html">
+            
+                    
+                    9.2 koa-jsonp中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    10. 测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../test/unit.html">
+            
+                <a href="../test/unit.html">
+            
+                    
+                    10.1 单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    11. debug
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../debug/info.html">
+            
+                <a href="../debug/info.html">
+            
+                    
+                    11.1 开发debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    12. 项目框架搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="start.html">
+            
+                <a href="start.html">
+            
+                    
+                    12.1 快速启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13.2" data-path="framework.html">
+            
+                <a href="framework.html">
+            
+                    
+                    12.2 框架设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="layer.html">
+            
+                <a href="layer.html">
+            
+                    
+                    12.3 分层操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="sql.html">
+            
+                <a href="sql.html">
+            
+                    
+                    12.4 数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="route.html">
+            
+                <a href="route.html">
+            
+                    
+                    12.5 路由设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="webpack2.html">
+            
+                <a href="webpack2.html">
+            
+                    
+                    12.6 webpack2环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="react.html">
+            
+                <a href="react.html">
+            
+                    
+                    12.7 使用react.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="sign.html">
+            
+                <a href="sign.html">
+            
+                    
+                    12.8 登录注册功能实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="session.html">
+            
+                <a href="session.html">
+            
+                    
+                    12.9 session登录态判断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    13. 其他进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../other/esm.html">
+            
+                <a href="../other/esm.html">
+            
+                    
+                    13.1 import/export使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >12.2 框架设计</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6846;&#x67B6;&#x8BBE;&#x8BA1;">&#x6846;&#x67B6;&#x8BBE;&#x8BA1;</h1>
+<h2 id="&#x5B9E;&#x73B0;&#x6982;&#x8981;">&#x5B9E;&#x73B0;&#x6982;&#x8981;</h2>
+<ul>
+<li>koa2 &#x642D;&#x5EFA;&#x670D;&#x52A1;</li>
+<li>MySQL&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x5E93;<ul>
+<li>mysql 5.7 &#x7248;&#x672C;</li>
+<li>&#x50A8;&#x5B58;&#x666E;&#x901A;&#x6570;&#x636E;</li>
+<li>&#x5B58;&#x50A8;session&#x767B;&#x5F55;&#x6001;&#x6570;&#x636E; </li>
+</ul>
+</li>
+<li>&#x6E32;&#x67D3;<ul>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF1A;ejs&#x4F5C;&#x4E3A;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x7684;&#x6A21;&#x677F;&#x5F15;&#x64CE;</li>
+<li>&#x524D;&#x7AEF;&#x6E32;&#x67D3;&#xFF1A;&#x7528;webpack2&#x73AF;&#x5883;&#x7F16;&#x8BD1;react.js&#x52A8;&#x6001;&#x6E32;&#x67D3;&#x9875;&#x9762;&#xFF0C;&#x4F7F;&#x7528;ant-design&#x6846;&#x67B6;</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x8BBE;&#x8BA1;">&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x8BBE;&#x8BA1;</h2>
+<p>demo&#x6E90;&#x7801;</p>
+<p><a href="https://github.com/ChenShenhai/koa2-note/blob/master/demo/project/config.js" target="_blank">https://github.com/ChenShenhai/koa2-note/blob/master/demo/project/</a></p>
+<pre><code class="lang-sh">&#x251C;&#x2500;&#x2500; init <span class="hljs-comment"># &#x6570;&#x636E;&#x5E93;&#x521D;&#x59CB;&#x5316;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; index.js <span class="hljs-comment"># &#x521D;&#x59CB;&#x5316;&#x5165;&#x53E3;&#x6587;&#x4EF6;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; sql/    <span class="hljs-comment"># sql&#x811A;&#x672C;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x2514;&#x2500;&#x2500; util/   <span class="hljs-comment"># &#x5DE5;&#x5177;&#x64CD;&#x4F5C;&#x76EE;&#x5F55;</span>
+&#x251C;&#x2500;&#x2500; package.json 
+&#x251C;&#x2500;&#x2500; config.js <span class="hljs-comment"># &#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+&#x251C;&#x2500;&#x2500; server  <span class="hljs-comment"># &#x540E;&#x7AEF;&#x4EE3;&#x7801;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; app.js <span class="hljs-comment"># &#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5165;&#x53E3;&#x6587;&#x4EF6;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; codes/ <span class="hljs-comment"># &#x63D0;&#x793A;&#x8BED;&#x4EE3;&#x7801;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; controllers/    <span class="hljs-comment"># &#x64CD;&#x4F5C;&#x5C42;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; models/ <span class="hljs-comment"># &#x6570;&#x636E;&#x6A21;&#x578B;model&#x5C42;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; routers/ <span class="hljs-comment"># &#x8DEF;&#x7531;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; services/   <span class="hljs-comment"># &#x4E1A;&#x52A1;&#x5C42;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; utils/  <span class="hljs-comment"># &#x5DE5;&#x5177;&#x7C7B;&#x76EE;&#x5F55;</span>
+&#x2502;   &#x2514;&#x2500;&#x2500; views/  <span class="hljs-comment"># &#x6A21;&#x677F;&#x76EE;&#x5F55;</span>
+&#x2514;&#x2500;&#x2500; static <span class="hljs-comment"># &#x524D;&#x7AEF;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x76EE;&#x5F55;</span>
+    &#x251C;&#x2500;&#x2500; build/   <span class="hljs-comment"># webpack&#x7F16;&#x8BD1;&#x914D;&#x7F6E;&#x76EE;&#x5F55;</span>
+    &#x251C;&#x2500;&#x2500; output/  <span class="hljs-comment"># &#x7F16;&#x8BD1;&#x540E;&#x524D;&#x7AEF;&#x4EE3;&#x7801;&#x76EE;&#x5F55;&amp;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x524D;&#x7AEF;&#x8BBF;&#x95EE;&#x76EE;&#x5F55;</span>
+    &#x2514;&#x2500;&#x2500; src/ <span class="hljs-comment"># &#x524D;&#x7AEF;&#x6E90;&#x4EE3;&#x7801;&#x76EE;&#x5F55;</span>
+</code></pre>
+<h2 id="&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x9884;&#x89C8;">&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x9884;&#x89C8;</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
+<span class="hljs-keyword">const</span> convert = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-convert&apos;</span>)
+<span class="hljs-keyword">const</span> views = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-views&apos;</span>)
+<span class="hljs-keyword">const</span> koaStatic = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-static&apos;</span>)
+<span class="hljs-keyword">const</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-bodyparser&apos;</span>)
+<span class="hljs-keyword">const</span> koaLogger = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-logger&apos;</span>)
+<span class="hljs-keyword">const</span> session = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-session-minimal&apos;</span>)
+<span class="hljs-keyword">const</span> MysqlStore = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-mysql-session&apos;</span>)
+
+<span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./../config&apos;</span>)
+<span class="hljs-keyword">const</span> routers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routers/index&apos;</span>)
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Koa()
+
+<span class="hljs-comment">// session&#x5B58;&#x50A8;&#x914D;&#x7F6E;</span>
+<span class="hljs-keyword">const</span> sessionMysqlConfig= {
+  user: config.database.USERNAME,
+  password: config.database.PASSWORD,
+  database: config.database.DATABASE,
+  host: config.database.HOST,
+}
+
+<span class="hljs-comment">// &#x914D;&#x7F6E;session&#x4E2D;&#x95F4;&#x4EF6;</span>
+app.use(session({
+  key: <span class="hljs-string">&apos;USER_SID&apos;</span>,
+  store: <span class="hljs-keyword">new</span> MysqlStore(sessionMysqlConfig)
+}))
+
+<span class="hljs-comment">// &#x914D;&#x7F6E;&#x63A7;&#x5236;&#x53F0;&#x65E5;&#x5FD7;&#x4E2D;&#x95F4;&#x4EF6;</span>
+app.use(convert(koaLogger()))
+
+<span class="hljs-comment">// &#x914D;&#x7F6E;ctx.body&#x89E3;&#x6790;&#x4E2D;&#x95F4;&#x4EF6;</span>
+app.use(bodyParser())
+
+<span class="hljs-comment">// &#x914D;&#x7F6E;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x4E2D;&#x95F4;&#x4EF6;</span>
+app.use(convert(koaStatic(
+  path.join(__dirname , <span class="hljs-string">&apos;./../static&apos;</span>)
+)))
+
+<span class="hljs-comment">// &#x914D;&#x7F6E;&#x670D;&#x52A1;&#x7AEF;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x4E2D;&#x95F4;&#x4EF6;</span>
+app.use(views(path.join(__dirname, <span class="hljs-string">&apos;./views&apos;</span>), {
+  extension: <span class="hljs-string">&apos;ejs&apos;</span>
+}))
+
+<span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;&#x8DEF;&#x7531;&#x4E2D;&#x95F4;&#x4EF6;</span>
+app.use(routers.routes()).use(routers.allowedMethods())
+
+<span class="hljs-comment">// &#x76D1;&#x542C;&#x542F;&#x52A8;&#x7AEF;&#x53E3;</span>
+app.listen( config.port )
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`the server is start at port <span class="hljs-subst">${config.port}</span>`</span>)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="start.html" class="navigation navigation-prev " aria-label="Previous page: 12.1 快速启动">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="layer.html" class="navigation navigation-next " aria-label="Next page: 12.3 分层操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"12.2 框架设计","level":"1.13.2","depth":2,"next":{"title":"12.3 分层操作","level":"1.13.3","depth":2,"path":"note/project/layer.md","ref":"note/project/layer.md","articles":[]},"previous":{"title":"12.1 快速启动","level":"1.13.1","depth":2,"path":"note/project/start.md","ref":"note/project/start.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/project/framework.md","mtime":"2018-04-13T17:38:48.049Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-08-01T15:04:39.484Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

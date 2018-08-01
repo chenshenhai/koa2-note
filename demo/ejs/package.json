@@ -1,0 +1,23 @@
+{
+  "name": "ejs",
+  "version": "1.0.0",
+  "description": "koa ejs demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "koajs"
+  ],
+  "author": "chenshenhai",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "koa": "^2.3.0",
+    "koa-views": "^5.2.1"
+  },
+  "engines": {
+    "node": ">=7.6.0",
+    "npm": ">=3.0.0"
+  }
+}

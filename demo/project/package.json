@@ -1,0 +1,63 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "description": "a koa2 project",
+  "main": "index.js",
+  "scripts": {
+    "init_sql": "node ./init/index.js",
+    "dev": "npm run dev_server & npm run dev_static",
+    "dev_server": "nodemon --harmony ./server/app",
+    "dev_static": "webpack --watch --config ./static/build/webpack.dev.config.js",
+    "start_static": "webpack --config ./static/build/webpack.prod.config.js",
+    "start_server": "node ./server/app.js",
+    "start": "npm run start_static & npm run start_server"
+  },
+  "author": "chenshenhai",
+  "license": "MIT",
+  "dependencies": {
+    "antd": "^2.7.2",
+    "busboy": "^0.2.14",
+    "co": "^4.6.0",
+    "debug": "^2.6.0",
+    "ejs": "^2.5.5",
+    "koa": "^2.0.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-logger": "^3.0.0",
+    "koa-mysql-session": "0.0.2",
+    "koa-router": "^7.0.1",
+    "koa-send": "^3.2.0",
+    "koa-session-minimal": "^3.0.3",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.0",
+    "mysql": "^2.12.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "validator": "^6.2.0",
+    "whatwg-fetch": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-import": "^1.1.1",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "babel-runtime": "^6.20.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "jsx-loader": "^0.13.2",
+    "less": "^2.7.1",
+    "less-loader": "^4.0.3",
+    "node-sass": "^4.1.1",
+    "nodemon": "^1.11.0",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.0-rc.3",
+    "webpack-merge": "^2.0.0"
+  },
+  "engines": {
+    "node": ">= 7.0.0",
+    "npm": ">= 3.0.0"
+  }
+}

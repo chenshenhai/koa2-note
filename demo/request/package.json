@@ -1,0 +1,23 @@
+{
+  "name": "request-get",
+  "version": "1.0.0",
+  "description": "koa request get",
+  "main": "index.js",
+  "scripts": {
+    "get": "node get.js",
+    "post": "node post.js"
+  },
+  "keywords": [
+    "koajs"
+  ],
+  "author": "chenshenhai",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=7.6.0",
+    "npm": ">=3.0.0"
+  }
+}

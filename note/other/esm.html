@@ -1,0 +1,1147 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>13.1 import/export使用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    koa2 进阶学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    1.koa2开始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../start/quick.html">
+            
+                <a href="../start/quick.html">
+            
+                    
+                    1.1 快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../start/async.html">
+            
+                <a href="../start/async.html">
+            
+                    
+                    1.2 async/await使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../start/info.html">
+            
+                <a href="../start/info.html">
+            
+                    
+                    1.3 koa2简析结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../start/middleware.html">
+            
+                <a href="../start/middleware.html">
+            
+                    
+                    1.4 koa中间件开发与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    2. 路由
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../route/simple.html">
+            
+                <a href="../route/simple.html">
+            
+                    
+                    2.1 原生koa2实现路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../route/koa-router.html">
+            
+                <a href="../route/koa-router.html">
+            
+                    
+                    2.2 koa-router中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3. 请求数据获取
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../request/get.html">
+            
+                <a href="../request/get.html">
+            
+                    
+                    3.1 GET请求数据获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../request/post.html">
+            
+                <a href="../request/post.html">
+            
+                    
+                    3.2 POST请求数据获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../request/post-use-middleware.html">
+            
+                <a href="../request/post-use-middleware.html">
+            
+                    
+                    3.3 koa-bodyparser中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4. 静态资源加载
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../static/server.html">
+            
+                <a href="../static/server.html">
+            
+                    
+                    4.1 原生koa2实现静态资源服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../static/middleware.html">
+            
+                <a href="../static/middleware.html">
+            
+                    
+                    4.2 koa-static中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    5. cookie/session
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../cookie/info.html">
+            
+                <a href="../cookie/info.html">
+            
+                    
+                    5.1 koa2使用cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../session/info.html">
+            
+                <a href="../session/info.html">
+            
+                    
+                    5.2 koa2实现session
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    6. 模板引擎
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../template/add.html">
+            
+                <a href="../template/add.html">
+            
+                    
+                    6.1 koa2加载模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../template/ejs.html">
+            
+                <a href="../template/ejs.html">
+            
+                    
+                    6.2 ejs模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    7. 文件上传
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../upload/busboy.html">
+            
+                <a href="../upload/busboy.html">
+            
+                    
+                    7.1 busboy模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../upload/simple.html">
+            
+                <a href="../upload/simple.html">
+            
+                    
+                    7.2 上传文件简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../upload/pic-async.html">
+            
+                <a href="../upload/pic-async.html">
+            
+                    
+                    7.3 异步上传图片实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    8. 数据库mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../mysql/info.html">
+            
+                <a href="../mysql/info.html">
+            
+                    
+                    8.1 mysql模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../mysql/async.html">
+            
+                <a href="../mysql/async.html">
+            
+                    
+                    8.2 async/await封装使用mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../mysql/init.html">
+            
+                <a href="../mysql/init.html">
+            
+                    
+                    8.3 项目建表初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    9. JSONP实现
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../jsonp/info.html">
+            
+                <a href="../jsonp/info.html">
+            
+                    
+                    9.1 原生koa2实现JSONP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../jsonp/koa-jsonp.html">
+            
+                <a href="../jsonp/koa-jsonp.html">
+            
+                    
+                    9.2 koa-jsonp中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    10. 测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../test/unit.html">
+            
+                <a href="../test/unit.html">
+            
+                    
+                    10.1 单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    11. debug
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../debug/info.html">
+            
+                <a href="../debug/info.html">
+            
+                    
+                    11.1 开发debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    12. 项目框架搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../project/start.html">
+            
+                <a href="../project/start.html">
+            
+                    
+                    12.1 快速启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../project/framework.html">
+            
+                <a href="../project/framework.html">
+            
+                    
+                    12.2 框架设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../project/layer.html">
+            
+                <a href="../project/layer.html">
+            
+                    
+                    12.3 分层操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../project/sql.html">
+            
+                <a href="../project/sql.html">
+            
+                    
+                    12.4 数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../project/route.html">
+            
+                <a href="../project/route.html">
+            
+                    
+                    12.5 路由设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../project/webpack2.html">
+            
+                <a href="../project/webpack2.html">
+            
+                    
+                    12.6 webpack2环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../project/react.html">
+            
+                <a href="../project/react.html">
+            
+                    
+                    12.7 使用react.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../project/sign.html">
+            
+                <a href="../project/sign.html">
+            
+                    
+                    12.8 登录注册功能实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../project/session.html">
+            
+                <a href="../project/session.html">
+            
+                    
+                    12.9 session登录态判断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    13. 其他进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.14.1" data-path="esm.html">
+            
+                <a href="esm.html">
+            
+                    
+                    13.1 import/export使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >13.1 import/export使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p> Node 9&#x6700;&#x6FC0;&#x52A8;&#x4EBA;&#x5FC3;&#x7684;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x5728;flag&#x6A21;&#x5F0F;&#x4E0B;&#x4F7F;&#x7528;<code>ECMAScript Modules</code>&#xFF0C;&#x867D;&#x7136;&#x73B0;&#x5728;&#x8FD8;&#x662F;<code>Stability: 1 - Experimental</code>&#x9636;&#x6BB5;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x8BA9;Noder&#x629B;&#x6389;babel&#x7B49;&#x5DE5;&#x5177;&#x7684;&#x675F;&#x7F1A;&#xFF0C;&#x76F4;&#x63A5;&#x5728;Node&#x73AF;&#x5883;&#x4E0B;&#x6109;&#x5FEB;&#x5730;&#x53BB;&#x73A9;&#x800D;<code>import/export</code></p>
+<p>&#x5982;&#x679C;&#x89C9;&#x5F97;&#x6587;&#x5B57;&#x592A;&#x591A;&#xFF0C;&#x770B;&#x4E0D;&#x4E0B;&#x53BB;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x53BB;&#x73A9;&#x73A9;demo&#xFF0C;&#x5730;&#x5740;&#x662F;<a href="https://github.com/chenshenhai/node-modules-demo" target="_blank">https://github.com/chenshenhai/node-modules-demo</a></p>
+<h2 id="node-9&#x4E0B;importexport&#x4F7F;&#x7528;&#x7B80;&#x5355;&#x987B;&#x77E5;">Node 9&#x4E0B;import/export&#x4F7F;&#x7528;&#x7B80;&#x5355;&#x987B;&#x77E5;</h2>
+<ul>
+<li>Node &#x73AF;&#x5883;&#x5FC5;&#x987B;&#x5728; 9.0&#x4EE5;&#x4E0A;</li>
+<li>&#x4E0D;&#x52A0;loader&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528;<code>import/export</code>&#x7684;&#x6587;&#x4EF6;&#x540E;&#x7F00;&#x540D;&#x5FC5;&#x987B;&#x4E3A;<code>*.mjs</code>&#xFF08;&#x4E0B;&#x9762;&#x4F1A;&#x8BB2;&#x5229;&#x7528;Loader Hooks&#x517C;&#x5BB9;<code>*.js</code>&#x540E;&#x7F00;&#x6587;&#x4EF6;&#xFF09; </li>
+<li>&#x542F;&#x52A8;&#x5FC5;&#x987B;&#x52A0;&#x4E0A;flag <code>--experimental-modules</code></li>
+<li>&#x6587;&#x4EF6;&#x7684;<code>import</code>&#x548C;<code>export</code>&#x5FC5;&#x987B;&#x4E25;&#x683C;&#x6309;&#x7167;<code>ECMAScript Modules</code>&#x8BED;&#x6CD5;</li>
+<li><code>ECMAScript Modules</code>&#x548C;<code>require()</code>&#x7684;cache&#x673A;&#x5236;&#x4E0D;&#x4E00;&#x6837;</li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;&#x7B80;&#x8FF0;">&#x4F7F;&#x7528;&#x7B80;&#x8FF0;</h2>
+<p>Node 9.x&#x5B98;&#x65B9;&#x6587;&#x6863; <a href="https://nodejs.org/dist/latest-v9.x/docs/api/esm.html" target="_blank">https://nodejs.org/dist/latest-v9.x/docs/api/esm.html</a></p>
+<h3 id="&#x4E0E;require&#x533A;&#x522B;">&#x4E0E;require()&#x533A;&#x522B;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x80FD;&#x529B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+<th>require()</th>
+<th>import</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NODE_PATH</td>
+<td>&#x4ECE;NODE_PATH&#x52A0;&#x8F7D;&#x4F9D;&#x8D56;&#x6A21;&#x5757;</td>
+<td>Y</td>
+<td>N</td>
+</tr>
+<tr>
+<td>cache</td>
+<td>&#x7F13;&#x5B58;&#x673A;&#x5236;</td>
+<td>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;require&#x7684;API&#x64CD;&#x4F5C;&#x7F13;&#x5B58;</td>
+<td>&#x81EA;&#x5DF1;&#x72EC;&#x7ACB;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#xFF0C;&#x76EE;&#x524D;&#x4E0D;&#x53EF;&#x8BBF;&#x95EE;</td>
+</tr>
+<tr>
+<td>path</td>
+<td>&#x5F15;&#x7528;&#x8DEF;&#x5F84;</td>
+<td>&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td>URL&#x683C;&#x5F0F;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x4F8B;&#x5982;<code>import A from &apos;./a?v=2017&apos;</code></td>
+</tr>
+<tr>
+<td>extensions</td>
+<td>&#x6269;&#x5C55;&#x540D;&#x673A;&#x5236;</td>
+<td>require.extensions</td>
+<td>Loader Hooks</td>
+</tr>
+<tr>
+<td>natives</td>
+<td>&#x539F;&#x751F;&#x6A21;&#x5757;&#x5F15;&#x7528;</td>
+<td>&#x76F4;&#x63A5;&#x652F;&#x6301;</td>
+<td>&#x76F4;&#x63A5;&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>npm</td>
+<td>npm&#x6A21;&#x5757;&#x5F15;&#x7528;</td>
+<td>&#x76F4;&#x63A5;&#x652F;&#x6301;</td>
+<td>&#x9700;&#x8981;Loader Hooks</td>
+</tr>
+<tr>
+<td>file</td>
+<td>&#x6587;&#x4EF6;(&#x5F15;&#x7528;)</td>
+<td><code>*.js</code>,<code>*.json</code>&#x7B49;&#x76F4;&#x63A5;&#x652F;&#x6301;</td>
+<td>&#x9ED8;&#x8BA4;&#x53EA;&#x80FD;&#x662F;<code>*.mjs</code>&#xFF0C;&#x901A;&#x8FC7;<code>Loader Hooks</code>&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x89C4;&#x5219;&#x652F;&#x6301;<code>*.js</code>,<code>*.json</code>&#x7B49;Node&#x539F;&#x6709;&#x652F;&#x6301;&#x6587;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="loader-hooks&#x6A21;&#x5F0F;&#x4F7F;&#x7528;">Loader Hooks&#x6A21;&#x5F0F;&#x4F7F;&#x7528;</h2>
+<blockquote>
+<p>&#x7531;&#x4E8E;&#x5386;&#x53F2;&#x539F;&#x56E0;&#xFF0C;&#x5728;ES6&#x7684;Modules&#x8FD8;&#x6CA1;&#x786E;&#x5B9A;&#x4E4B;&#x524D;&#xFF0C;JavaScript&#x7684;&#x6A21;&#x5757;&#x5316;&#x5904;&#x7406;&#x65B9;&#x6848;&#x90FD;&#x662F;&#x516B;&#x4ED9;&#x8FC7;&#x6D77;&#xFF0C;&#x5404;&#x663E;&#x795E;&#x901A;&#xFF0C;&#x4F8B;&#x5982;&#x524D;&#x7AEF;&#x7684;AMD&#x3001;CMD&#x6A21;&#x5757;&#x65B9;&#x6848;&#xFF0C;Node&#x7684;CommonJS&#x65B9;&#x6848;&#x4E5F;&#x5728;&#x8FD9;&#x4E2A;&#x201C;&#x4E71;&#x4E16;&#x201D;&#x8BDE;&#x751F;&#x3002;
+&#x5F53;&#x5230;&#x4E86;ES6&#x89C4;&#x8303;&#x786E;&#x5B9A;&#x540E;&#xFF0C;Node&#x7684;CommonJS&#x65B9;&#x6848;&#x5DF2;&#x7ECF;&#x662F;JavaScript&#x4E2D;&#x6BD4;&#x8F83;&#x6210;&#x719F;&#x7684;&#x6A21;&#x5757;&#x5316;&#x65B9;&#x6848;&#xFF0C;&#x4F46;ES6&#x600E;&#x4E48;&#x8BF4;&#x90FD;&#x662F;&#x6B63;&#x7EDF;&#x7684;&#x89C4;&#x8303;&#xFF0C;&#x201C;&#x6CD5;&#x7406;&#x201D;&#x4E0A;&#x662F;&#x9700;&#x8981;&#x517C;&#x5BB9;&#x7684;&#xFF0C;&#x6240;&#x4EE5;<code>*.mjs</code>&#x8FD9;&#x4E2A;&#x9488;&#x5BF9;<code>ECMAScript Modules</code>&#x89C4;&#x8303;&#x7684;Node&#x6587;&#x4EF6;&#x65B9;&#x6848;&#x5728;&#x4E00;&#x7247;&#x8BA8;&#x8BBA;&#x58F0;&#x4E2D;&#x5E94;&#x8FD0;&#x800C;&#x751F;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#x5982;&#x679C;<code>import/export</code>&#x53EA;&#x80FD;&#x5BF9;<code>*.mjs</code>&#x6587;&#x4EF6;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x610F;&#x5473;&#x7740;Node&#x539F;&#x751F;&#x6A21;&#x5757;&#x548C;npm&#x6240;&#x6709;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x90FD;&#x4E0D;&#x80FD;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x65F6;&#x5019;Node 9&#x5C31;&#x63D0;&#x4F9B;&#x4E86; <code>Loader Hooks</code>&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;<code>Resolve Hook</code>&#x89C4;&#x5219;&#x53BB;&#x5229;&#x7528;<code>import/export</code>&#x52A0;&#x8F7D;&#x4F7F;&#x7528;Node&#x539F;&#x751F;&#x6A21;&#x5757;&#xFF0C;<code>*.js</code>&#x6587;&#x4EF6;&#xFF0C;npm&#x6A21;&#x5757;&#xFF0C;C/C++&#x7684;Node&#x7F16;&#x8BD1;&#x6A21;&#x5757;&#x7B49;Node&#x751F;&#x6001;&#x5708;&#x7684;&#x6A21;&#x5757;&#x3002;</p>
+</blockquote>
+<h3 id="loader-hooks-&#x4F7F;&#x7528;&#x6B65;&#x9AA4;">Loader Hooks &#x4F7F;&#x7528;&#x6B65;&#x9AA4;</h3>
+<ul>
+<li>&#x81EA;&#x5B9A;&#x4E49;loader&#x89C4;&#x5219;</li>
+<li>&#x542F;&#x52A8;&#x7684;flag&#x8981;&#x52A0;&#x8F7D;loader&#x89C4;&#x5219;&#x6587;&#x4EF6; <ul>
+<li>&#x4F8B;&#x5982;&#xFF1A;<code>node --experimental-modules  --loader ./custom-loader.mjs ./index.js</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="koa2-&#x76F4;&#x63A5;&#x4F7F;&#x7528;importexport">Koa2 &#x76F4;&#x63A5;&#x4F7F;&#x7528;import/export</h2>
+<p>&#x770B;&#x770B;demo4&#xFF0C;<a href="https://github.com/chenshenhai/node-modules-demo/tree/master/demo4" target="_blank">https://github.com/chenshenhai/node-modules-demo/tree/master/demo4</a></p>
+<ul>
+<li>&#x6587;&#x4EF6;&#x76EE;&#x5F55;</li>
+</ul>
+<pre><code class="lang-js">&#x251C;&#x2500;&#x2500; esm
+&#x2502;   &#x251C;&#x2500;&#x2500; README.md
+&#x2502;   &#x251C;&#x2500;&#x2500; custom-loader.mjs
+&#x2502;   &#x251C;&#x2500;&#x2500; index.js
+&#x2502;   &#x251C;&#x2500;&#x2500; lib
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; data.json
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; path.js
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; render.js
+&#x2502;   &#x251C;&#x2500;&#x2500; package.json
+&#x2502;   &#x2514;&#x2500;&#x2500; view
+&#x2502;       &#x251C;&#x2500;&#x2500; index.html
+&#x2502;       &#x251C;&#x2500;&#x2500; index.html
+&#x2502;       &#x2514;&#x2500;&#x2500; todo.html
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x592A;&#x591A;&#xFF0C;&#x4E0D;&#x4E00;&#x4E00;&#x8D34;&#x51FA;&#x6765;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x4E3B;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Koa <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;koa&apos;</span>;
+<span class="hljs-keyword">import</span> { render } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./lib/render.js&apos;</span>;
+<span class="hljs-keyword">import</span> data <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./lib/data.json&apos;</span>;
+
+<span class="hljs-keyword">let</span> app = <span class="hljs-keyword">new</span> Koa();
+app.use((ctx, next) =&gt; {
+    <span class="hljs-keyword">let</span> view = ctx.url.substr(<span class="hljs-number">1</span>);
+    <span class="hljs-keyword">let</span> content;
+    <span class="hljs-keyword">if</span> ( view === <span class="hljs-string">&apos;&apos;</span> ) {
+        content = render(<span class="hljs-string">&apos;index&apos;</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( view === <span class="hljs-string">&apos;data&apos;</span> ) {
+        content = data;
+    } <span class="hljs-keyword">else</span> {
+        content = render(view);
+    }
+    ctx.body = content;
+})
+app.listen(<span class="hljs-number">3000</span>, ()=&gt;{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;the modules test server is starting&apos;</span>);
+})
+</code></pre>
+<ul>
+<li><p>&#x6267;&#x884C;&#x4EE3;&#x7801;</p>
+<pre><code>node --experimental-modules  --loader ./custom-loader.mjs ./index.js
+</code></pre></li>
+<li><p>&#x8BBF;&#x95EE;</p>
+<ul>
+<li>&#x8BBF;&#x95EE; <a href="http://127.0.0.1:3000/index" target="_blank">http://127.0.0.1:3000/index</a></li>
+<li>&#x8BBF;&#x95EE; <a href="http://127.0.0.1:3000/data" target="_blank">http://127.0.0.1:3000/data</a></li>
+<li>&#x8BBF;&#x95EE; <a href="http://127.0.0.1:3000/todo" target="_blank">http://127.0.0.1:3000/todo</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;loader&#x89C4;&#x5219;&#x4F18;&#x5316;">&#x81EA;&#x5B9A;&#x4E49;loader&#x89C4;&#x5219;&#x4F18;&#x5316;</h3>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x81EA;&#x5B9A;&#x4E49;loader&#x4F8B;&#x5B50;&#x770B;&#x51FA;&#xFF0C;&#x53EA;&#x662F;&#x5BF9;<code>*.js</code>&#x6587;&#x4EF6;&#x505A;<code>import/export</code>&#x505A;loader&#x517C;&#x5BB9;&#xFF0C;&#x7136;&#x800C;&#x6211;&#x4EEC;&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#x9700;&#x8981;&#x5BF9;npm&#x6A21;&#x5757;&#xFF0C;<code>*.json</code>&#x6587;&#x4EF6;&#x4E5F;&#x4F7F;&#x7528;<code>import/export</code></p>
+<h3 id="loader&#x89C4;&#x5219;&#x4F18;&#x5316;&#x89E3;&#x6790;">loader&#x89C4;&#x5219;&#x4F18;&#x5316;&#x89E3;&#x6790;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> url <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;url&apos;</span>;
+<span class="hljs-keyword">import</span> path <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;path&apos;</span>;
+<span class="hljs-keyword">import</span> process <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;process&apos;</span>;
+<span class="hljs-keyword">import</span> fs <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;fs&apos;</span>;
+
+<span class="hljs-comment">// &#x4ECE;package.json&#x4E2D;</span>
+<span class="hljs-comment">// &#x7684;dependencies&#x3001;devDependencies&#x83B7;&#x53D6;&#x9879;&#x76EE;&#x6240;&#x9700;npm&#x6A21;&#x5757;&#x4FE1;&#x606F;</span>
+<span class="hljs-keyword">const</span> ROOT_PATH = process.cwd();
+<span class="hljs-keyword">const</span> PKG_JSON_PATH = path.join( ROOT_PATH, <span class="hljs-string">&apos;package.json&apos;</span> );
+<span class="hljs-keyword">const</span> PKG_JSON_STR = fs.readFileSync(PKG_JSON_PATH, <span class="hljs-string">&apos;binary&apos;</span>);
+<span class="hljs-keyword">const</span> PKG_JSON = <span class="hljs-built_in">JSON</span>.parse(PKG_JSON_STR);
+<span class="hljs-comment">// &#x9879;&#x76EE;&#x6240;&#x9700;npm&#x6A21;&#x5757;&#x4FE1;&#x606F;</span>
+<span class="hljs-keyword">const</span> allDependencies = {
+  ...PKG_JSON.dependencies || {},
+  ...PKG_JSON.devDependencies || {}
+}
+
+<span class="hljs-comment">//Node&#x539F;&#x751F;&#x6A21;&#x4FE1;&#x606F;</span>
+<span class="hljs-keyword">const</span> builtins = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(
+  <span class="hljs-built_in">Object</span>.keys(process.binding(<span class="hljs-string">&apos;natives&apos;</span>)).filter((str) =&gt;
+    <span class="hljs-regexp">/^(?!(?:internal|node|v8)\/)/</span>.test(str))
+);
+
+<span class="hljs-comment">// &#x6587;&#x4EF6;&#x5F15;&#x7528;&#x517C;&#x5BB9;&#x540E;&#x7F00;&#x540D;</span>
+<span class="hljs-keyword">const</span> JS_EXTENSIONS = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-string">&apos;.js&apos;</span>, <span class="hljs-string">&apos;.mjs&apos;</span>]);
+<span class="hljs-keyword">const</span> JSON_EXTENSIONS = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-string">&apos;.json&apos;</span>]);
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">resolve</span>(<span class="hljs-params">specifier, parentModuleURL, defaultResolve</span>) </span>{
+  <span class="hljs-comment">// &#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;Node&#x539F;&#x751F;&#x6A21;&#x5757;</span>
+  <span class="hljs-keyword">if</span> (builtins.has(specifier)) {
+    <span class="hljs-keyword">return</span> {
+      url: specifier,
+      format: <span class="hljs-string">&apos;builtin&apos;</span>
+    };
+  }
+
+  <span class="hljs-comment">// &#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;npm&#x6A21;&#x5757;</span>
+  <span class="hljs-keyword">if</span> ( allDependencies &amp;&amp; <span class="hljs-keyword">typeof</span> allDependencies[specifier] === <span class="hljs-string">&apos;string&apos;</span> ) {
+    <span class="hljs-keyword">return</span> defaultResolve(specifier, parentModuleURL);
+  }
+
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x6587;&#x4EF6;&#x5F15;&#x7528;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x8DEF;&#x5F84;&#x683C;&#x5F0F;&#x6B63;&#x786E;</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-regexp">/^\.{0,2}[/]/</span>.test(specifier) !== <span class="hljs-literal">true</span> &amp;&amp; !specifier.startsWith(<span class="hljs-string">&apos;file:&apos;</span>)) { 
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(
+      <span class="hljs-string">`imports must begin with &apos;/&apos;, &apos;./&apos;, or &apos;../&apos;; &apos;<span class="hljs-subst">${specifier}</span>&apos; does not`</span>);
+  }
+
+  <span class="hljs-comment">// &#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;*.js&#x3001;*.mjs&#x3001;*.json&#x6587;&#x4EF6;</span>
+  <span class="hljs-keyword">const</span> resolved = <span class="hljs-keyword">new</span> url.URL(specifier, parentModuleURL);
+  <span class="hljs-keyword">const</span> ext = path.extname(resolved.pathname);
+  <span class="hljs-keyword">if</span> (!JS_EXTENSIONS.has(ext) &amp;&amp; !JSON_EXTENSIONS.has(ext)) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(
+      <span class="hljs-string">`Cannot load file with non-JavaScript file extension <span class="hljs-subst">${ext}</span>.`</span>);
+  }
+
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;*.js&#x3001;*.mjs&#x6587;&#x4EF6;</span>
+  <span class="hljs-keyword">if</span> (JS_EXTENSIONS.has(ext)) {
+    <span class="hljs-keyword">return</span> {
+      url: resolved.href,
+      format: <span class="hljs-string">&apos;esm&apos;</span>
+    };
+  }
+
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;*.json&#x6587;&#x4EF6;</span>
+  <span class="hljs-keyword">if</span> (JSON_EXTENSIONS.has(ext)) {
+    <span class="hljs-keyword">return</span> {
+      url: resolved.href,
+      format: <span class="hljs-string">&apos;json&apos;</span>
+    };
+  }
+
+}
+</code></pre>
+<h3 id="&#x89C4;&#x5219;&#x603B;&#x7ED3;">&#x89C4;&#x5219;&#x603B;&#x7ED3;</h3>
+<p>&#x5728;&#x81EA;&#x5B9A;&#x4E49;loader&#x4E2D;&#xFF0C;export&#x7684;resolve&#x89C4;&#x5219;&#x6700;&#x6838;&#x5FC3;&#x7684;&#x4EE3;&#x7801;&#x662F;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">return</span> {
+  url: <span class="hljs-string">&apos;&apos;</span>,
+  format: <span class="hljs-string">&apos;&apos;</span>
+}
+</code></pre>
+<ul>
+<li>url &#x662F;&#x6A21;&#x5757;&#x540D;&#x79F0;&#x6216;&#x8005;&#x6587;&#x4EF6;URL&#x683C;&#x5F0F;&#x8DEF;&#x5F84;</li>
+<li>format &#x662F;&#x6A21;&#x5757;&#x683C;&#x5F0F;&#x6709;<code>esm</code>, <code>cjs</code>, <code>json</code>, <code>builtin</code>, <code>addon</code>&#x8FD9;&#x56DB;&#x79CD;&#x6A21;&#x5757;/&#x6587;&#x4EF6;&#x683C;&#x5F0F;.</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF1A;
+&#x76EE;&#x524D;Node&#x5BF9;<code>import/export</code>&#x7684;&#x652F;&#x6301;&#x73B0;&#x5728;&#x8FD8;&#x662F;<code>Stability: 1 - Experimental</code>&#x9636;&#x6BB5;&#xFF0C;&#x540E;&#x7EED;&#x7684;&#x53D1;&#x5C55;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x4E0D;&#x786E;&#x5B9A;&#x56E0;&#x7D20;&#xFF0C;&#x81EA;&#x5DF1;&#x7EC3;&#x624B;&#x73A9;&#x73A9;&#x8FD8;&#x53EF;&#x4EE5;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x8FD8;&#x6CA1;&#x53BB;flag&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#xFF0C;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;&#x3002;Node 9.x &#x66F4;&#x8BE6;&#x7EC6;<code>import/export</code>&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x53C2;&#x8003; <a href="https://github.com/ChenShenhai/blog/issues/24" target="_blank">https://github.com/ChenShenhai/blog/issues/24</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"13.1 import/export使用","level":"1.14.1","depth":2,"previous":{"title":"13. 其他进阶","level":"1.14","depth":1,"ref":"","articles":[{"title":"13.1 import/export使用","level":"1.14.1","depth":2,"path":"note/other/esm.md","ref":"note/other/esm.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/other/esm.md","mtime":"2018-04-13T17:38:48.049Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-08-01T15:04:39.484Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
