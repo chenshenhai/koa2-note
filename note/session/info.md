@@ -10,7 +10,7 @@ koa2原生功能只提供了cookie的操作，但是没有提供session操作。
 - 需要用到中间件
     - koa-session-minimal 适用于koa2 的session中间件，提供存储介质的读写接口 。
     - koa-mysql-session 为koa-session-minimal中间件提供MySQL数据库的session数据读写操作。
-    - 将sessionId和对于的数据存到数据库
+    - 将sessionId和对应的数据存到数据库
 - 将数据库的存储的sessionId存到页面的cookie中
 - 根据cookie的sessionId去获取对于的session信息
 
