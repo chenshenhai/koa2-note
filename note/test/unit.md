@@ -156,6 +156,6 @@ describe( '开始测试demo的GET请求', ( ) => {
 ```
 - supertest封装服务request，是用来请求接口
 - chai.expect使用来判断测试结果是否与预期一样
-    - chai 断言有很多中方法，这里只是用了数据类型断言  
+    - chai 断言有很多种方法，这里只是用了数据类型断言  
 
 
