@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>12.6 webpack2环境搭建 · GitBook</title>
+        <title>12.6 webpack4环境搭建 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -715,12 +715,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.13.6" data-path="webpack2.html">
+        <li class="chapter active" data-level="1.13.6" data-path="webpack4.html">
             
-                <a href="webpack2.html">
+                <a href="webpack4.html">
             
                     
-                    12.6 webpack2环境搭建
+                    12.6 webpack4环境搭建
             
                 </a>
             
@@ -834,7 +834,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >12.6 webpack2环境搭建</a>
+        <a href="../.." >12.6 webpack4环境搭建</a>
     </h1>
 </div>
 
@@ -849,13 +849,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="webpack2-&#x73AF;&#x5883;&#x642D;&#x5EFA;">webpack2 &#x73AF;&#x5883;&#x642D;&#x5EFA;</h1>
+                                <h1 id="webpack4-&#x73AF;&#x5883;&#x642D;&#x5EFA;">webpack4 &#x73AF;&#x5883;&#x642D;&#x5EFA;</h1>
 <h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
-<p>&#x7531;&#x4E8E;demos/project &#x524D;&#x7AEF;&#x6E32;&#x67D3;&#x662F;&#x901A;&#x8FC7;react.js&#x6E32;&#x67D3;&#x7684;&#xFF0C;&#x8FD9;&#x5C31;&#x9700;&#x8981;webpack2 &#x5BF9;react.js&#x53CA;&#x5176;&#x76F8;&#x5173;JSX&#xFF0C;ES6/7&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x548C;&#x6DF7;&#x6DC6;&#x538B;&#x7F29;&#x3002;</p>
+<p>&#x7531;&#x4E8E;demos/project &#x524D;&#x7AEF;&#x6E32;&#x67D3;&#x662F;&#x901A;&#x8FC7;react.js&#x6E32;&#x67D3;&#x7684;&#xFF0C;&#x8FD9;&#x5C31;&#x9700;&#x8981;webpack4 &#x5BF9;react.js&#x53CA;&#x5176;&#x76F8;&#x5173;JSX&#xFF0C;ES6/7&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x548C;&#x6DF7;&#x6DC6;&#x538B;&#x7F29;&#x3002;</p>
 <h2 id="webpack2">webpack2</h2>
 <h3 id="&#x5B89;&#x88C5;&#x548C;&#x6587;&#x6863;">&#x5B89;&#x88C5;&#x548C;&#x6587;&#x6863;</h3>
 <p>&#x53EF;&#x8BBF;&#x95EE;&#x7F51;<a href="https://webpack.js.org/" target="_blank">https://webpack.js.org/</a></p>
-<h2 id="&#x914D;&#x7F6E;webpack2&#x7F16;&#x8BD1;reactjs--less--sass--antd-&#x73AF;&#x5883;">&#x914D;&#x7F6E;webpack2&#x7F16;&#x8BD1;react.js + less + sass + antd &#x73AF;&#x5883;</h2>
+<h2 id="&#x914D;&#x7F6E;webpack4&#x7F16;&#x8BD1;reactjs--less--sass--antd-&#x73AF;&#x5883;">&#x914D;&#x7F6E;webpack4&#x7F16;&#x8BD1;react.js + less + sass + antd &#x73AF;&#x5883;</h2>
 <h3 id="&#x6587;&#x4EF6;&#x76EE;&#x5F55;">&#x6587;&#x4EF6;&#x76EE;&#x5F55;</h3>
 <pre><code class="lang-sh">&#x2514;&#x2500;&#x2500; static <span class="hljs-comment"># &#x9879;&#x76EE;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</span>
     &#x251C;&#x2500;&#x2500; build
@@ -875,85 +875,118 @@
         &#x2514;&#x2500;&#x2500; utils
 </code></pre>
 <h3 id="webpack2-&#x7F16;&#x8BD1;&#x57FA;&#x7840;&#x914D;&#x7F6E;">webpack2 &#x7F16;&#x8BD1;&#x57FA;&#x7840;&#x914D;&#x7F6E;</h3>
+<h4 id="babel7-&#x914D;&#x7F6E;">babel@7 &#x914D;&#x7F6E;</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> babelConfig = {
+  presets: [
+    <span class="hljs-string">&apos;@babel/env&apos;</span>,
+    <span class="hljs-comment">// [</span>
+    <span class="hljs-comment">//   &apos;@babel/env&apos;,</span>
+    <span class="hljs-comment">//   {</span>
+    <span class="hljs-comment">//     targets: {</span>
+    <span class="hljs-comment">//       edge: &apos;17&apos;,</span>
+    <span class="hljs-comment">//       firefox: &apos;60&apos;,</span>
+    <span class="hljs-comment">//       chrome: &apos;67&apos;,</span>
+    <span class="hljs-comment">//       safari: &apos;11.1&apos;</span>
+    <span class="hljs-comment">//     },</span>
+    <span class="hljs-comment">//     useBuiltIns: &apos;usage&apos;</span>
+    <span class="hljs-comment">//   }</span>
+    <span class="hljs-comment">// ],</span>
+    <span class="hljs-string">&apos;@babel/preset-react&apos;</span>
+  ],
+  <span class="hljs-string">&apos;plugins&apos;</span>: [
+    [
+      <span class="hljs-string">&apos;import&apos;</span>,
+      { <span class="hljs-string">&apos;libraryName&apos;</span>: <span class="hljs-string">&apos;antd&apos;</span>, <span class="hljs-string">&apos;libraryDirectory&apos;</span>: <span class="hljs-string">&apos;lib&apos;</span> },
+      <span class="hljs-string">&apos;ant&apos;</span>
+    ],
+    [
+      <span class="hljs-string">&apos;import&apos;</span>,
+      { <span class="hljs-string">&apos;libraryName&apos;</span>: <span class="hljs-string">&apos;antd-mobile&apos;</span>, <span class="hljs-string">&apos;libraryDirectory&apos;</span>: <span class="hljs-string">&apos;lib&apos;</span> },
+      <span class="hljs-string">&apos;antd-mobile&apos;</span>
+    ],
+    <span class="hljs-string">&apos;@babel/plugin-proposal-class-properties&apos;</span>
+  ]
+};
+
+<span class="hljs-built_in">module</span>.exports = babelConfig;
+</code></pre>
 <h4 id="webpackbaseconfigjs">webpack.base.config.js</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
-<span class="hljs-keyword">const</span> ExtractTextPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;extract-text-webpack-plugin&apos;</span>);
-<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
-<span class="hljs-keyword">const</span> sourcePath = path.join(__dirname, <span class="hljs-string">&apos;./static/src&apos;</span>);
-<span class="hljs-keyword">const</span> outputPath = path.join(__dirname, <span class="hljs-string">&apos;./../output/dist/&apos;</span>);
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
+<span class="hljs-keyword">const</span> MiniCssExtractPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mini-css-extract-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> babelConfig = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./babel.config&apos;</span>);
+
+<span class="hljs-comment">// const prodMode = process.env.NODE_ENV === &apos;production&apos;;</span>
+
+<span class="hljs-keyword">const</span> srcResolve = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">file</span>) </span>{
+  <span class="hljs-keyword">return</span> path.join(__dirname, <span class="hljs-string">&apos;..&apos;</span>, <span class="hljs-string">&apos;src&apos;</span>, file);
+};
+
+<span class="hljs-keyword">const</span> distResolve = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">file</span>) </span>{
+  <span class="hljs-keyword">return</span> path.join(__dirname, <span class="hljs-string">&apos;..&apos;</span>, <span class="hljs-string">&apos;output&apos;</span>, <span class="hljs-string">&apos;dist&apos;</span>, file);
+};
 
 <span class="hljs-built_in">module</span>.exports = {
-  <span class="hljs-comment">// &#x5165;&#x53E3;&#x6587;&#x4EF6;</span>
   entry: {
-    <span class="hljs-string">&apos;admin&apos;</span> : <span class="hljs-string">&apos;./static/src/pages/admin.js&apos;</span>,
-    <span class="hljs-string">&apos;work&apos;</span> : <span class="hljs-string">&apos;./static/src/pages/work.js&apos;</span>,
-    <span class="hljs-string">&apos;index&apos;</span> : <span class="hljs-string">&apos;./static/src/pages/index.js&apos;</span>,
-    <span class="hljs-string">&apos;error&apos;</span> : <span class="hljs-string">&apos;./static/src/pages/error.js&apos;</span>,
-    vendor: [<span class="hljs-string">&apos;react&apos;</span>, <span class="hljs-string">&apos;react-dom&apos;</span>, <span class="hljs-string">&apos;whatwg-fetch&apos;</span>],
+    <span class="hljs-string">&apos;index&apos;</span>: srcResolve(<span class="hljs-string">&apos;js/index&apos;</span>),
+    <span class="hljs-string">&apos;admin&apos;</span> : srcResolve(<span class="hljs-string">&apos;pages/admin.js&apos;</span>),
+    <span class="hljs-string">&apos;work&apos;</span> : srcResolve(<span class="hljs-string">&apos;pages/work.js&apos;</span>),
+    <span class="hljs-string">&apos;index&apos;</span> : srcResolve(<span class="hljs-string">&apos;pages/index.js&apos;</span>),
+    <span class="hljs-string">&apos;error&apos;</span> : srcResolve(<span class="hljs-string">&apos;pages/error.js&apos;</span>),
   },
-  <span class="hljs-comment">// &#x51FA;&#x53E3;&#x6587;&#x4EF6;</span>
   output: {
-    path: outputPath,
-    publicPath: <span class="hljs-string">&apos;/static/output/dist/&apos;</span>,
-    filename: <span class="hljs-string">&apos;js/[name].js&apos;</span>,
+    path: distResolve(<span class="hljs-string">&apos;&apos;</span>),
+    filename: <span class="hljs-string">&apos;vendorjs/[name].js&apos;</span>
   },
   <span class="hljs-built_in">module</span>: {
-    <span class="hljs-comment">// &#x914D;&#x7F6E;&#x7F16;&#x8BD1;&#x6253;&#x5305;&#x89C4;&#x5219;</span>
     rules: [
       {
         test: <span class="hljs-regexp">/\.(js|jsx)$/</span>,
-        exclude: <span class="hljs-regexp">/node_modules/</span>,
+        use: {
+          loader: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+          options: babelConfig
+        }
+      },
+      {
+        test: <span class="hljs-regexp">/\.(css|less)$/</span>,
         use: [
+          <span class="hljs-comment">// devMode ? &apos;style-loader&apos; : MiniCssExtractPlugin.loader,</span>
+          <span class="hljs-comment">// &apos;style-loader&apos;,</span>
+          MiniCssExtractPlugin.loader,
+          <span class="hljs-string">&apos;css-loader&apos;</span>,
+          <span class="hljs-comment">// &apos;postcss-loader&apos;,</span>
           {
-            loader: <span class="hljs-string">&apos;babel-loader&apos;</span>,
-            query: {
-              <span class="hljs-comment">// presets: [&apos;es2015&apos;, &apos;react&apos;],</span>
-              cacheDirectory: <span class="hljs-literal">true</span>
+            loader: <span class="hljs-string">&apos;postcss-loader&apos;</span>,
+            options: {
+              plugins: () =&gt; {
+                <span class="hljs-keyword">return</span> [];
+              }
             }
-          }
+          },
+          <span class="hljs-string">&apos;less-loader&apos;</span>
         ]
-      },
-      {
-        test: <span class="hljs-regexp">/\.css$/</span>,
-        use: ExtractTextPlugin.extract({
-          fallback: <span class="hljs-string">&quot;style-loader&quot;</span>,
-          use: [<span class="hljs-string">&apos;css-loader&apos;</span>]
-        }),
-      },
-      {
-        test: <span class="hljs-regexp">/\.scss$/</span>,
-        use: ExtractTextPlugin.extract({
-          fallback: <span class="hljs-string">&quot;style-loader&quot;</span>,
-          use: [<span class="hljs-string">&apos;css-loader&apos;</span>, <span class="hljs-string">&apos;sass-loader&apos;</span>]
-        })
-      },
-      {
-        test: <span class="hljs-regexp">/\.less$/</span>,
-        use: ExtractTextPlugin.extract({
-          fallback: <span class="hljs-string">&quot;style-loader&quot;</span>,
-          use: [<span class="hljs-string">&apos;css-loader&apos;</span>, <span class="hljs-string">&apos;less-loader&apos;</span>]
-        })
-      },
-    ]
-  },
-  resolve: {
-    extensions: [<span class="hljs-string">&apos;.js&apos;</span>, <span class="hljs-string">&apos;.jsx&apos;</span>],
-    modules: [
-      sourcePath,
-      <span class="hljs-string">&apos;node_modules&apos;</span>
+      }
     ]
   },
   plugins: [
-    <span class="hljs-keyword">new</span> ExtractTextPlugin(<span class="hljs-string">&apos;css/[name].css&apos;</span>),
-    <span class="hljs-keyword">new</span> webpack.optimize.CommonsChunkPlugin({
-      names: [<span class="hljs-string">&apos;vendor&apos;</span>],
-      minChunks: <span class="hljs-literal">Infinity</span>,
-      filename: <span class="hljs-string">&apos;js/[name].js&apos;</span>
-    }),
-  ]
+    <span class="hljs-keyword">new</span> MiniCssExtractPlugin({
+      filename: <span class="hljs-string">&apos;css/[name].css&apos;</span>
+    })
+  ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: <span class="hljs-regexp">/[\\/]node_modules[\\/]/</span>,
+          name: <span class="hljs-string">&apos;vendor&apos;</span>,
+          chunks: <span class="hljs-string">&apos;all&apos;</span>
+        }
+      }
+    }
+  }
 };
 </code></pre>
-<h3 id="&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x751F;&#x4EA7;&#x73AF;&#x5883;webpack2-&#x7F16;&#x8BD1;&#x8BBE;&#x7F6E;">&#x914D;&#x7F6E;&#x5F00;&#x53D1;&amp;&#x751F;&#x4EA7;&#x73AF;&#x5883;webpack2 &#x7F16;&#x8BD1;&#x8BBE;&#x7F6E;</h3>
+<h3 id="&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x751F;&#x4EA7;&#x73AF;&#x5883;webpack4-&#x7F16;&#x8BD1;&#x8BBE;&#x7F6E;">&#x914D;&#x7F6E;&#x5F00;&#x53D1;&amp;&#x751F;&#x4EA7;&#x73AF;&#x5883;webpack4 &#x7F16;&#x8BD1;&#x8BBE;&#x7F6E;</h3>
 <p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x7F16;&#x8BD1;&#x57FA;&#x672C;&#x914D;&#x7F6E;&#x4EE3;&#x7801;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#xFF0C;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF08;wepack.dev.config.js&#xFF09;&#x548C;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#xFF08;webpack.prod.config.js&#xFF09;&#x7684;&#x7F16;&#x8BD1;&#x914D;&#x7F6E;&#x90FD;&#x662F;&#x7EE7;&#x627F;&#x4E86;&#x57FA;&#x672C;&#x914D;&#x7F6E;&#xFF08;wepack.base.config.js&#xFF09;&#x7684;&#x4EE3;&#x7801;</p>
 <h4 id="&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x914D;&#x7F6E;-wepackdevconfigjs">&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x914D;&#x7F6E; wepack.dev.config.js</h4>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> merge = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack-merge&apos;</span>)
@@ -974,28 +1007,28 @@
 })
 </code></pre>
 <h4 id="&#x7F16;&#x8BD1;&#x73AF;&#x5883;&#x914D;&#x7F6E;-wepackprodconfigjs">&#x7F16;&#x8BD1;&#x73AF;&#x5883;&#x914D;&#x7F6E; wepack.prod.config.js</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
-<span class="hljs-keyword">var</span> merge = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack-merge&apos;</span>);
-<span class="hljs-keyword">var</span> baseWebpackConfig = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./webpack.base.config&apos;</span>);
+<pre><code class="lang-js">process.env.NODE_ENV = <span class="hljs-string">&apos;production&apos;</span>;
 
-<span class="hljs-built_in">module</span>.exports = merge(baseWebpackConfig, {
-  <span class="hljs-comment">// eval-source-map is faster for development</span>
+<span class="hljs-keyword">const</span> merge = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack-merge&apos;</span>);
+<span class="hljs-keyword">const</span> UglifyJsPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;uglifyjs-webpack-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> OptimizeCSSAssetsPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;optimize-css-assets-webpack-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./webpack.base.config&apos;</span>);
 
-  plugins: [
-
-    <span class="hljs-keyword">new</span> webpack.DefinePlugin({
-      <span class="hljs-string">&apos;process.env&apos;</span>: {
-        NODE_ENV: <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-string">&apos;production&apos;</span>)
-      }
-    }),
-    <span class="hljs-keyword">new</span> webpack.optimize.UglifyJsPlugin({
-      minimize: <span class="hljs-literal">true</span>,
-      compress: {
-        warnings: <span class="hljs-literal">false</span>,
-      }
-    })
-  ]
-})
+<span class="hljs-built_in">module</span>.exports = merge(config, {
+  mode: <span class="hljs-string">&apos;production&apos;</span>,
+  <span class="hljs-comment">// plugins: [</span>
+  <span class="hljs-comment">//   new UglifyJsPlugin()</span>
+  <span class="hljs-comment">// ]</span>
+  optimization: {
+    minimizer: [
+      <span class="hljs-keyword">new</span> UglifyJsPlugin({
+        cache: <span class="hljs-literal">true</span>,
+        parallel: <span class="hljs-literal">true</span>
+      }),
+      <span class="hljs-keyword">new</span> OptimizeCSSAssetsPlugin({})
+    ]
+  }
+});
 </code></pre>
 
                                 
@@ -1040,7 +1073,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"12.6 webpack2环境搭建","level":"1.13.6","depth":2,"next":{"title":"12.7 使用react.js","level":"1.13.7","depth":2,"path":"note/project/react.md","ref":"note/project/react.md","articles":[]},"previous":{"title":"12.5 路由设计","level":"1.13.5","depth":2,"path":"note/project/route.md","ref":"note/project/route.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/project/webpack2.md","mtime":"2018-04-13T17:38:48.052Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-08-01T15:04:39.484Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"12.6 webpack4环境搭建","level":"1.13.6","depth":2,"next":{"title":"12.7 使用react.js","level":"1.13.7","depth":2,"path":"note/project/react.md","ref":"note/project/react.md","articles":[]},"previous":{"title":"12.5 路由设计","level":"1.13.5","depth":2,"path":"note/project/route.md","ref":"note/project/route.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/project/webpack4.md","mtime":"2018-12-09T06:36:05.917Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-12-09T06:40:09.621Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

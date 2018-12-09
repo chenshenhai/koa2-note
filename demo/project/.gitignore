@@ -1,0 +1,7 @@
+node_modules/
+.idea/
+.DS_Store
+static/output/dist/
+static/output/upload/
+npm-debug.log
+npm-debug.log.*

@@ -1,0 +1,20 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-modules  --loader ./custom-loader.mjs ./index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 9.0.0"
+  },
+  "dependencies": {
+    "koa": "^2.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <style type="text/css">
+      .btn {
+        width: 100px;
+        height: 40px;
+      }
+      .preview-picture {
+        width: 300px; min-height: 300px; border: 1px #f0f0f0 solid
+      }
+    </style>
+</head>
+<body>
+    <button class="btn" id="J_UploadPictureBtn">上传图片</button>
+    <hr/>
+    <p>上传进度<span id="J_UploadProgress">0</span>%</p>
+    <p>上传结果图片</p>
+    <div id="J_PicturePreview" class="preview-picture">
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+</html>
