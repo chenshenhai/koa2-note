@@ -4,9 +4,7 @@ import Request from './../utils/request'
 import { signInApi, signInForm } from './../api/sign-in'
 
 const FormItem = Form.Item;
-
-const SignInForm = Form.create()(React.createClass({
-  
+class SignIn extends React.Component {
   async handleSubmit(e) {
     e.preventDefault()
 
@@ -22,8 +20,7 @@ const SignInForm = Form.create()(React.createClass({
     } else {
       message.error( '系统繁忙，稍后再试！' )
     }
-  },
-
+  }
 
   getFormValues() {
     let that = this
@@ -36,13 +33,13 @@ const SignInForm = Form.create()(React.createClass({
         }
       })
     })
-  },
+  }
 
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
       <div style={{ width: "280px", margin: "0 auto" }}>
-        <Form onSubmit={this.handleSubmit} className="login-form">
+        <Form onSubmit={this.handleSubmit.bind(this)} className="login-form">
           <FormItem>
             {getFieldDecorator('userName', {
               rules: [{ required: true, message: '请您输入账号名称！' }],
@@ -72,6 +69,8 @@ const SignInForm = Form.create()(React.createClass({
         </Form>
       </div>
     );
-  },
-}))
+  }
+};
+
+const SignInForm = Form.create()(SignIn);
 export default SignInForm

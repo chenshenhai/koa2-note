@@ -1,19 +1,11 @@
-var merge = require('webpack-merge')
-var webpack = require('webpack')
-var baseWebpackConfig = require('./webpack.base.config');
+process.env.NODE_ENV = 'development';
 
-module.exports = merge(baseWebpackConfig, {
+const merge = require('webpack-merge');
+const config = require('./webpack.base.config');
 
-  devtool: 'source-map',
-  plugins: [
-    
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('development')
-      }
-    }),
-  ]
-})
+// const prodMode = process.env.NODE_ENV === 'production';
 
-
-
+module.exports = merge(config, {
+  mode: 'development',
+  devtool: '#source-map'
+});

@@ -1,22 +1,22 @@
-var webpack = require('webpack');
-var merge = require('webpack-merge');
-var baseWebpackConfig = require('./webpack.base.config');
+process.env.NODE_ENV = 'production';
 
-module.exports = merge(baseWebpackConfig, {
-  // eval-source-map is faster for development
-  
-  plugins: [
-    
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true,
-      compress: {
-        warnings: false,
-      }
-    })
-  ]
-})
+const merge = require('webpack-merge');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const config = require('./webpack.base.config');
+
+module.exports = merge(config, {
+  mode: 'production',
+  // plugins: [
+  //   new UglifyJsPlugin()
+  // ]
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  }
+});

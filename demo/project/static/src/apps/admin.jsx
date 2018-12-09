@@ -1,11 +1,10 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Layout, Menu, Breadcrumb } from 'antd'
 import FormGroup from './../components/form-group.jsx'
 import HeadeNav from './../components/header-nav.jsx'
 import FooterCommon from './../components/footer-common.jsx'
 
-import 'antd/lib/layout/style/css'
+import '../css/index.less';
 
 const { Header, Content, Footer } = Layout
 

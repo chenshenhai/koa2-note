@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Layout, Menu, Breadcrumb } from 'antd'
 import HeadeNav from './../components/header-nav.jsx'
 import FooterCommon from './../components/footer-common.jsx'

@@ -42,7 +42,7 @@
     * [12.3 分层操作](note/project/layer.md)
     * [12.4 数据库设计](note/project/sql.md)
     * [12.5 路由设计](note/project/route.md)
-    * [12.6 webpack2环境搭建](note/project/webpack2.md)
+    * [12.6 webpack4环境搭建](note/project/webpack4.md)
     * [12.7 使用react.js](note/project/react.md)
     * [12.8 登录注册功能实现](note/project/sign.md)
     * [12.9 session登录态判断处理](note/project/session.md) 

@@ -3,10 +3,13 @@ import { Layout, Menu, Icon } from 'antd'
 const { Header, Sider, Content } = Layout
 
 class Work extends React.Component {
-  state = {
-    collapsed: false,
+  constructor(props){
+    super(props)
+    this.state = {
+      collapsed: false,
+    }
   }
-  toggle = () => {
+  toggle() {
     this.setState({
       collapsed: !this.state.collapsed,
     })
@@ -40,7 +43,7 @@ class Work extends React.Component {
               <Icon
                 className="trigger"
                 type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                onClick={this.toggle}
+                onClick={this.toggle.bind(this)}
               />
             </Header>
             <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
