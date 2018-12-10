@@ -3,7 +3,7 @@
 ## 前言
 由于demos/project 前端渲染是通过react.js渲染的，这就需要webpack4 对react.js及其相关JSX，ES6/7代码进行编译和混淆压缩。
 
-## webpack2 
+## webpack4 
 ### 安装和文档
 可访问网[https://webpack.js.org/](https://webpack.js.org/)
 
@@ -29,7 +29,7 @@
         └── utils
 ```
 
-### webpack2 编译基础配置
+### webpack4 编译基础配置
 
 #### babel@7 配置
 ```js

@@ -8,7 +8,7 @@
     - 存储session登录态数据 
 - 渲染
     - 服务端渲染：ejs作为服务端渲染的模板引擎
-    - 前端渲染：用webpack2环境编译react.js动态渲染页面，使用ant-design框架
+    - 前端渲染：用webpack4环境编译react.js动态渲染页面，使用ant-design框架
 
 ## 文件目录设计
 demo源码
