@@ -7,6 +7,8 @@ const app = new Koa()
 
 // 静态资源目录对于相对入口文件index.js的路径
 const staticPath = './static'
+// 静态资源目录在本地的绝对路径
+const fullStaticPath = path.join(__dirname, staticPath)
 
 // 解析资源类型
 function parseMime( url ) {
@@ -16,9 +18,6 @@ function parseMime( url ) {
 }
 
 app.use( async ( ctx ) => {
-  // 静态资源目录在本地的绝对路径
-  let fullStaticPath = path.join(__dirname, staticPath)
-
   // 获取静态资源内容，有可能是文件内容，目录，或404
   let _content = await content( ctx, fullStaticPath )
 
