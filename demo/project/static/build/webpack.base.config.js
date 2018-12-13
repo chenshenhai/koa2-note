@@ -23,7 +23,7 @@ module.exports = {
   },
   output: {
     path: distResolve(''),
-    filename: 'vendorjs/[name].js'
+    filename: 'js/[name].js'
   },
   module: {
     rules: [
