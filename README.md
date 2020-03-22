@@ -17,10 +17,12 @@
 
 
 ## 关于作者
-- [关于作者(我)](https://chenshenhai.github.io)
+- [关于作者(我)](https://chenshenhai.com)
 
-## 附加gitbook快速阅读地址
-[https://chenshenhai.github.io/koa2-note/](https://chenshenhai.github.io/koa2-note/)
+## 快速阅读地址
+
+- 个人博客站点阅读 [https://chenshenhai.com/koa2-note](https://chenshenhai.com/koa2-note)
+- Github Pages 阅读 [https://chenshenhai.github.io/koa2-note/](https://chenshenhai.github.io/koa2-note/)
 
 ## 目录
 * [1. koa2开始]()
