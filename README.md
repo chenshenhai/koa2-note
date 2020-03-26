@@ -2,22 +2,23 @@
 
 ## 序言
 
-从2017年2月份开始写这本开源电子书，是为了记录自己的学习轨迹和分享技术心得，本开源书的Koa2的基础进程教程已经完结，更多的Koa.js的高阶学习会在后续新开几本书进行探索。感谢这一年来所有读者的关注！O(∩_∩)O。
+从2017年2月份开始写这本开源电子书，是为了记录自己的学习轨迹和分享技术心得，本开源书的Koa2的基础进阶教程已经完结，更多的Koa.js的高阶学习会在后续新开几本书进行探索。感谢这一年来所有读者的关注！O(∩_∩)O。
 
 本书为`Koa.js` 2.x 的入门书籍，如果想了解更多 `Koa.js` 的原理，可阅读 [《Koa.js 设计模式-学习笔记》](https://github.com/chenshenhai/koajs-design-note)
 
 更多前端技术学习可关注公众号 `大海码` `DeepSeaCode` 
 
 
+<img src="https://user-images.githubusercontent.com/8216630/43264303-495bf52c-9118-11e8-85cd-4ec6fcc6d066.jpg" width="160" />
 
-![qrcode_for_gh_959d1c4d729a_258](https://user-images.githubusercontent.com/8216630/43264303-495bf52c-9118-11e8-85cd-4ec6fcc6d066.jpg)
-<br/>
 
-<img src="https://user-images.githubusercontent.com/8216630/35775552-970a79cc-09c5-11e8-932b-9ad5a14c0bb5.png"  width="360"/>
+![koa2-note](./note/images/koa2-note.png)
 
 
 ## 关于作者
+
 - [关于作者(我)](https://chenshenhai.com)
+- 本书协议 MIT
 
 ## 快速阅读地址
 
