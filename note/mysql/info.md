@@ -21,8 +21,8 @@ mysql模块是node操作MySQL的引擎，可以在node.js环境下对MySQL数据
 const mysql      = require('mysql')
 const connection = mysql.createConnection({
   host     : '127.0.0.1',   // 数据库地址
-  user     : 'root',    // 数据库用户
-  password : '123456'   // 数据库密码
+  user     : 'root',     // 数据库用户
+  password : '123456',   // 数据库密码
   database : 'my_database'  // 选中数据库
 })
  
@@ -47,8 +47,8 @@ const mysql = require('mysql')
 // 创建数据池
 const pool  = mysql.createPool({
   host     : '127.0.0.1',   // 数据库地址
-  user     : 'root',    // 数据库用户
-  password : '123456'   // 数据库密码
+  user     : 'root',     // 数据库用户
+  password : '123456',   // 数据库密码
   database : 'my_database'  // 选中数据库
 })
  
