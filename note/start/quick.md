@@ -1,6 +1,7 @@
 # koa2 快速开始
 
 ## 环境准备
+
 - 因为node.js v7.6.0开始完全支持async/await，不需要加flag，所以node.js环境都要7.6.0以上
 - node.js环境 版本v7.6以上
     - 直接安装node.js 7.6：node.js官网地址[https://nodejs.org](https://nodejs.org) 
@@ -34,13 +35,14 @@ app.use( async ( ctx ) => {
   ctx.body = 'hello koa2'
 })
 
-app.listen(3000)
-console.log('[demo] start-quick is starting at port 3000')
+app.listen(3000, () => {
+  console.log('[demo] start-quick is starting at port 3000')
+})
 ```
 
 ### 启动demo
 
-由于koa2是基于async/await操作中间件，目前node.js 7.x的harmony模式下才能使用，所以启动的时的脚本如下：
+> 注意: 由于koa2是基于async/await操作中间件，node.js 7.6 以下的版本，需要在 harmony 模式使用，启动时候需要加上 --harmony
 
 ```sh
 node index.js
