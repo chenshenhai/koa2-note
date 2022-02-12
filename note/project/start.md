@@ -44,7 +44,7 @@ module.exports = config
 
 ```sh
 # 安装淘宝镜像cnpm
-npm install -g cnpm --registry=https://registry.npm.taobao.org
+npm install -g cnpm --registry=https://registry.npmmirror.com
 
 # 安装依赖
 cnpm install
